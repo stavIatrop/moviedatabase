@@ -7,11 +7,7 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-<<<<<<< HEAD
     "target": "es6",
-=======
-    "target": "es5",
->>>>>>> 70f208448a3b108d6fcacce238506d19430a9093
     "typeRoots": [
       "node_modules/@types"
     ],

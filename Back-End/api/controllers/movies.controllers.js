@@ -55,7 +55,6 @@ module.exports.moviesGetAll = function(req, res) {
         });  
 };
 
-<<<<<<< HEAD
 module.exports.moviesGetCount = function(req, res) {
 
     Movie
@@ -75,8 +74,6 @@ module.exports.moviesGetCount = function(req, res) {
         });
 };
 
-=======
->>>>>>> 70f208448a3b108d6fcacce238506d19430a9093
 var splitArray = function(input) {
     var output;
     if(input && input.length > 0) {
@@ -133,7 +130,6 @@ module.exports.moviesDeleteOne = function(req, res) {
                     .json();
             }
         })
-<<<<<<< HEAD
 };
 
 module.exports.moviesGetOne = function(req, res) {
@@ -163,6 +159,3 @@ module.exports.moviesGetOne = function(req, res) {
             
         });
 };
-=======
-};
->>>>>>> 70f208448a3b108d6fcacce238506d19430a9093

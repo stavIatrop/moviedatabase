@@ -8,10 +8,7 @@
 
 # dependencies
 /node_modules
-<<<<<<< HEAD
-=======
 /Back-End/node_modules
->>>>>>> 70f208448a3b108d6fcacce238506d19430a9093
 
 # IDEs and editors
 /.idea

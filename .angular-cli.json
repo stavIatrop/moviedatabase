@@ -23,12 +23,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-<<<<<<< HEAD
-        "styles.css",
-        "../node_modules/bootstrap/dist/css/bootstrap.min.css"
-=======
         "styles.css"
->>>>>>> 70f208448a3b108d6fcacce238506d19430a9093
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
