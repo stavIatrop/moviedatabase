@@ -12,6 +12,7 @@ app.use(function(req, res, next) {
     next();
 });
 
+<<<<<<< HEAD
 app.use (function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers',
@@ -19,6 +20,8 @@ app.use (function (req, res, next) {
     next();
     });
 
+=======
+>>>>>>> 70f208448a3b108d6fcacce238506d19430a9093
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.urlencoded({'extended' : false } ));

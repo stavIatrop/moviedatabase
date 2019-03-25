@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # C1
+=======
+# MovieDatabase
+>>>>>>> 70f208448a3b108d6fcacce238506d19430a9093
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 

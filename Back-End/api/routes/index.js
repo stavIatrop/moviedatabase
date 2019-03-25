@@ -9,6 +9,7 @@ router
     .get(moviesController.moviesGetAll)
     .post(moviesController.moviesAddOne);
 
+<<<<<<< HEAD
 router
     .route('/moviesCount')
     .get(moviesController.moviesGetCount);
@@ -17,4 +18,6 @@ router
     .route('/movies/:movieID')
     .get(moviesController.moviesGetOne);
     
+=======
+>>>>>>> 70f208448a3b108d6fcacce238506d19430a9093
 module.exports = router;

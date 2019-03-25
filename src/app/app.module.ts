@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+<<<<<<< HEAD
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -34,6 +35,21 @@ var routes = [
     BrowserModule, HttpModule, RouterModule.forRoot(routes)
   ],
   providers: [WebService],
+=======
+
+
+import { AppComponent } from './app.component';
+
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+>>>>>>> 70f208448a3b108d6fcacce238506d19430a9093
   bootstrap: [AppComponent]
 })
 export class AppModule { }
