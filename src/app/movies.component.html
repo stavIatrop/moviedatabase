@@ -1,0 +1,37 @@
+<div class="jumbotron">
+    <h1>Movie Database</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div *ngFor = "let movie of webService.movie_list | async">
+                <div class="card text-white bg-primary mb-3"
+                    [routerLink] = "['/movies', movie._id]"
+                    style = "cursor: pointer">
+                    <div class="card-header">
+                        {{ movie.title }}
+                    </div>
+                    <div class="card-body">
+                        This movie released in
+                        {{ movie.year }}
+                    </div>
+                    <div class="card-footer">
+                        Cast 
+                        {{ movie.cast }}
+                    </div>
+                </div>
+            </div>
+        </div> <!-- col -->
+    </div>    <!-- row -->
+    <div class="row">
+        <div class="col-sm-6">
+            <button (click)="previousPage()">Previous</button>
+        </div>
+        <div class="col-sm-6 text-right">
+            <button (click)="nextPage()">Next</button>
+        </div>
+    </div>
+    
+
+</div>    <!-- container -->
