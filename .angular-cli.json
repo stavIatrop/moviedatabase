@@ -1,11 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-<<<<<<< HEAD
-    "name": "c1"
-=======
     "name": "movie-database"
->>>>>>> 70f208448a3b108d6fcacce238506d19430a9093
   },
   "apps": [
     {
