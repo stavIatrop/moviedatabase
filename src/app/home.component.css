@@ -1,0 +1,44 @@
+nav {
+
+    background-color: #132f47;
+    width: 100%;
+
+}
+
+.navbar-nav {
+    float:none;
+    
+    margin-left: 80px;
+    display: block;
+    text-align: center;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
+}
+#middleRow {
+
+    background-color: rgb(255, 255, 255);
+}
+
+#logo {
+
+    width: 30%;
+    height: 30%;
+}
+
+#footerRow {
+
+    background-color: #a2a5a1;
+    margin-top: 35%;
+}
+
+#login {
+    margin-left: 900px;
+}
+
+/* #signup {
+    margin-left: 25%;
+} */
+
