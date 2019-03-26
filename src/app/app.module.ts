@@ -8,7 +8,8 @@ import { WebService } from './web.service';
 import { HttpModule } from '@angular/http';
 import { HomeComponent } from './home.component';
 import { MovieComponent } from './movie.component';
-
+import { LoginComponent } from './login.component';
+import { SignUpComponent } from './signup.component';
 
 var routes = [
   {
@@ -22,13 +23,22 @@ var routes = [
   {
     path: 'movies/:id',
     component: MovieComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'signup',
+    component: SignUpComponent
   }
+
 ];
 
 @NgModule({
   declarations: [
     AppComponent, MoviesComponent, HomeComponent,
-    MovieComponent
+    MovieComponent, LoginComponent, SignUpComponent
   ],
   imports: [
     BrowserModule, HttpModule, RouterModule.forRoot(routes)

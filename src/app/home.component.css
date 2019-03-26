@@ -34,8 +34,23 @@ nav {
     float:none;
 } */
 #middleRow {
-
+    margin-top: 10%;
     background-color: rgb(255, 255, 255);
+}
+
+#search {
+    
+    position: absolute;
+    top:50;
+    left: 0;
+    width: 100%;
+    font-style: italic;
+}
+
+.active-blue-4 input[type=text]:focus:not([readonly]) {
+
+    border: 1px solid #132f47;
+    box-shadow: 0 0 0 1px #132f47;
 }
 
 #logo {
@@ -49,7 +64,7 @@ nav {
 #footerRow {
 
     background-color: #a2a5a1;
-    margin-top: 35%;
+    margin-top: 20%;
 }
 
 /* #login {
