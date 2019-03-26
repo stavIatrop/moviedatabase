@@ -1,22 +1,38 @@
 nav {
 
-    background-color: #132f47;
-    width: 100%;
+    margin-top: 22px;
+    
 
 }
 
-.navbar-nav {
+.nav-item {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.navbar {
+    
+}
+
+#navBarRow {
+    
+    background-image: linear-gradient(to bottom right, #235581, #132f47);
+    height: 110px;
+}
+
+/* .navbar-nav {
     float:none;
     
     margin-left: 80px;
     display: block;
     text-align: center;
-}
+} */
 
-.navbar-nav > li {
+/* .navbar-nav > li {
     display: inline-block;
     float:none;
-}
+} */
 #middleRow {
 
     background-color: rgb(255, 255, 255);
@@ -24,8 +40,10 @@ nav {
 
 #logo {
 
-    width: 30%;
-    height: 30%;
+    margin-top: 15px;
+    margin-left: 100px;
+    width: 60%;
+    height: 60%;
 }
 
 #footerRow {
@@ -34,9 +52,9 @@ nav {
     margin-top: 35%;
 }
 
-#login {
+/* #login {
     margin-left: 900px;
-}
+} */
 
 /* #signup {
     margin-left: 25%;

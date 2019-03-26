@@ -1,5 +1,17 @@
 [
-{"title":"Hot Summer Nights","year":2018,"cast":["Timothée Chalamet","Maika Monroe","Alex Roe","Maia Mitchell"],"genres":["Drama"]},{"title":"Puzzle","year":2018,"cast":["Kelly Macdonald","Irrfan Khan","David Denman","Bubba Weiler","Austin Abrams","Liv Hewson"],"genres":["Drama"]},{"title":"Christopher Robin","year":2018,"cast":["Ewan McGregor","Hayley Atwell","Bronte Carmichael","Mark Gatiss","Jim Cummings","Brad Garrett","Nick Mohammed","Peter Capaldi","Sophie Okonedo","Sara Sheen","Toby Jones"],"genres":["Family","Comedy","Drama","Fantasy"]},{"title":"The Darkest Minds","year":2018,"cast":["Amandla Stenberg","Mandy Moore","Gwendoline Christie","Harris Dickinson","Skylan Brooks","Miya Cech","Patrick Gibson","Golden Brooks","Bradley Whitford"],"genres":["Science Fiction","Action","Thriller"]},{"title":"The Spy Who Dumped Me","year":2018,"cast":["Mila Kunis","Kate McKinnon","Sam Heughan"],"genres":["Action","Comedy"]},
+	{
+		"title":"Hot Summer Nights",
+		"year":2018,
+		"cast":["Timothée Chalamet","Maika Monroe","Alex Roe","Maia Mitchell"],
+		"genres":["Drama"]
+	},
+	{
+		"title":"Puzzle",
+		"year":2018,
+		"cast":["Kelly Macdonald","Irrfan Khan","David Denman","Bubba Weiler","Austin Abrams","Liv Hewson"],
+		"genres":["Drama"]
+	},
+		{"title":"Christopher Robin","year":2018,"cast":["Ewan McGregor","Hayley Atwell","Bronte Carmichael","Mark Gatiss","Jim Cummings","Brad Garrett","Nick Mohammed","Peter Capaldi","Sophie Okonedo","Sara Sheen","Toby Jones"],"genres":["Family","Comedy","Drama","Fantasy"]},{"title":"The Darkest Minds","year":2018,"cast":["Amandla Stenberg","Mandy Moore","Gwendoline Christie","Harris Dickinson","Skylan Brooks","Miya Cech","Patrick Gibson","Golden Brooks","Bradley Whitford"],"genres":["Science Fiction","Action","Thriller"]},{"title":"The Spy Who Dumped Me","year":2018,"cast":["Mila Kunis","Kate McKinnon","Sam Heughan"],"genres":["Action","Comedy"]},
 	{
 	"title":"Billionaire Boys Club",
 	"year":2018,
