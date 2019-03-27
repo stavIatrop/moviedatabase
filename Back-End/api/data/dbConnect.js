@@ -18,3 +18,4 @@ mongoose.connection.on('error', function(err) {
 });
 
 require('./movies.model.js');
+require('./users.model.js');

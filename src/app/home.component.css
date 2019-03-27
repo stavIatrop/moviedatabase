@@ -53,6 +53,11 @@ nav {
     box-shadow: 0 0 0 1px #132f47;
 }
 
+.active-blue-4 {
+
+    box-shadow: 1px 1px 2px grey;
+}
+
 #logo {
 
     margin-top: 15px;

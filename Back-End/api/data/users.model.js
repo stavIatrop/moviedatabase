@@ -15,4 +15,4 @@ var userSchema = new mongoose.Schema( {
 
 })
 
-mongoose.model('User', movieSchema, 'movies');
+mongoose.model('User', userSchema, 'users');
