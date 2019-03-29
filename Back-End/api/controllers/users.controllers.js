@@ -51,3 +51,31 @@ module.exports.usersGetOne = function(req, res) {
             
         });
 };
+
+module.exports.UserAuth = function(req, res) {
+
+    var username = req.body.username;
+    var password = req.body.password;
+
+    console.log(username + " " + password);
+
+    User
+        .find({username : username, password : password})
+        .exec(function(err, doc) {
+            var response = {
+                status : 200,
+                message : doc
+            }
+            if(err) {
+                response.status = 500;
+                response.message = err;
+            }else if(!doc) {
+                response.status = 404;
+                response.message= { "message" : "User not found"};
+            }
+            res
+                .status(response.status)
+                .json(response.message);
+        })
+    
+}

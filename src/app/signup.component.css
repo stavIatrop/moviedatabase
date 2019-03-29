@@ -1,0 +1,54 @@
+nav {
+
+    margin-top: 22px;
+    
+
+}
+
+.nav-item {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.navbar {
+    
+}
+
+#navBarRow {
+    
+    background-image: linear-gradient(to bottom right, #235581, #132f47);
+    height: 110px;
+}
+
+/* .navbar-nav {
+    float:none;
+    
+    margin-left: 80px;
+    display: block;
+    text-align: center;
+} */
+
+/* .navbar-nav > li {
+    display: inline-block;
+    float:none;
+} */
+#middleRow {
+    margin-top: 10%;
+    background-color: rgb(255, 255, 255);
+}
+
+
+#logo {
+
+    margin-top: 15px;
+    margin-left: 100px;
+    width: 60%;
+    height: 60%;
+}
+
+#footerRow {
+
+    background-color: #a2a5a1;
+    margin-top: 20%;
+}

@@ -1,4 +1,4 @@
-import { Http } from '@angular/http';
+import { Http, URLSearchParams } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Rx';
 
@@ -11,6 +11,8 @@ export class WebService {
 
     movies_count;
 
+    userAuth;
+    
     constructor(private http: Http) {}
 
     getMovies(start) {
@@ -39,5 +41,20 @@ export class WebService {
                 this.movies_count = response.json();
             })
         
+    }
+
+    checkUserAuth(username, password) {
+        
+        let urlSearchParams = new URLSearchParams();
+        urlSearchParams.append('username', username);
+        urlSearchParams.append('password', password);
+
+        this.http.post(
+                    "http://localhost:3000/api/login", urlSearchParams)
+                    .subscribe(
+                        response => {
+                            console.log(response.json());
+                        }
+                    )
     }
 }

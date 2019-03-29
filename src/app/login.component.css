@@ -55,11 +55,15 @@ nav {
     margin-top: 10%;
 }
 
-/* #login {
-    margin-left: 900px;
-} */
+#btn-login {
 
-/* #signup {
-    margin-left: 25%;
-} */
+    background-color: #132f47;
+    color: white;
+    margin-left: 35%;
+}
 
+#loginCard {
+
+    box-shadow: 1px 1px 2px grey;
+    
+}

@@ -28,5 +28,8 @@ router
     .route('/users/:userID')
     .get(usersController.usersGetOne);
     
+router
+    .route('/login')
+    .post(usersController.UserAuth);
     
 module.exports = router;
