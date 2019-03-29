@@ -15,7 +15,7 @@ export class LoginComponent {
 
   user = {
     username: '',
-    password: ''
+    password: '',
   }
 
   constructor(private webService: WebService,
@@ -31,11 +31,12 @@ export class LoginComponent {
   }
 
   login() {
-    console.log(this.user.username + " " + this.user.password);
+    
     
     if(this.user.username != '' && this.user.password != '') {
 
-      console.log(this.webService.checkUserAuth(this.user.username, this.user.password));
+      this.webService.checkUserAuth(this.user.username, this.user.password);
+      
 
     }
   }

@@ -1,6 +1,7 @@
 import { Http, URLSearchParams } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Rx';
+import { Router} from '@angular/router';
 
 @Injectable()
 export class WebService {
@@ -13,7 +14,15 @@ export class WebService {
 
     userAuth;
     
-    constructor(private http: Http) {}
+    user = {
+        _id : '',
+        username: '',
+        password: '',
+        review_count : Number
+    };
+
+    constructor(private http: Http,
+                private router: Router) {}
 
     getMovies(start) {
         return this.http.get(
@@ -53,7 +62,17 @@ export class WebService {
                     "http://localhost:3000/api/login", urlSearchParams)
                     .subscribe(
                         response => {
-                            console.log(response.json());
+                            this.user = response.json();
+                            
+                            if(Object.keys(this.user).length != 0) {
+                                
+                                sessionStorage.user = this.user;
+                                this.router.navigate(["/"]);
+                                
+                                
+                            }else {
+                                console.log("null");
+                            }
                         }
                     )
     }

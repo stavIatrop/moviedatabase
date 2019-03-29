@@ -72,6 +72,11 @@ nav {
     margin-top: 20%;
 }
 
+#navBarUserLoggedIn {
+
+    /* display: none; */
+}
+
 /* #login {
     margin-left: 900px;
 } */
