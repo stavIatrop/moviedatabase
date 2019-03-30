@@ -66,7 +66,8 @@ export class WebService {
                             
                             if(Object.keys(this.user).length != 0) {
                                 
-                                sessionStorage.user = this.user;
+                                this.user = this.user[0];
+                                sessionStorage.setItem("user", JSON.stringify(this.user));
                                 this.router.navigate(["/"]);
                                 
                                 

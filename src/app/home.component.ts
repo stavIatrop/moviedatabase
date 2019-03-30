@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'home',
@@ -8,6 +9,7 @@ import { Component } from '@angular/core';
 
 export class HomeComponent { 
 
+  constructor(private router : Router) {}
 
   userLoggedIn;
   user = {
@@ -22,9 +24,15 @@ export class HomeComponent {
     if(sessionStorage.user) {
 
       this.userLoggedIn = 1;
-      this.user = sessionStorage.user;
-      console.log(this.user.username);
+      this.user = JSON.parse(sessionStorage.getItem("user")) ;
+      console.log(this.user);
     }
+  }
+
+  signout() {
+
+    sessionStorage.removeItem("user");
+    this.router.navigate(["/"]);
   }
 
 }

@@ -58,7 +58,7 @@
                             <a class="nav-link" href="http://localhost:4200/profile"> {{this.user.username}}</a>
                             </li>
                             <li class="nav-item" id="signup">
-                                <a class="nav-link" href="http://localhost:4200">SIGN OUT</a>
+                                <button id="signoutBtn" class="nav-link" (click)="signout()">SIGN OUT</button>
                             </li>
         
                         </ul>
@@ -80,7 +80,28 @@
                 
             </div>
             <div class="col-md-1"></div>
-             
+            <!-- <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+
+            <div ngDropdown>
+                <button ngDropdownControl>Open Dropdown!</button>
+                <div ngDropdownContent dropdownClass="slide-fade">
+                  <ul>
+                    <li><a href="#">Dropdown Item 1</a></li>
+                    <li><a href="#">Dropdown Item 2</a></li>
+                    <li><a href="#">Dropdown Item 3</a></li>
+                    <li><a href="#">Dropdown Item 4</a></li>
+                  </ul>
+                </div>
+            </div> -->
 
         </div>
     
