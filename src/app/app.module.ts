@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppComponent } from './app.component';
 import { MoviesComponent } from './movies.component';
@@ -44,7 +45,7 @@ var routes = [
   ],
   imports: [
     BrowserModule, HttpModule, RouterModule.forRoot(routes),
-    FormsModule, ReactiveFormsModule
+    FormsModule, ReactiveFormsModule, AngularFontAwesomeModule
   ],
   providers: [WebService],
   bootstrap: [AppComponent]

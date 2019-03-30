@@ -57,7 +57,7 @@
                             <li class="nav-item" >
                                     <div class="dropdown">
                                             <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                {{this.user.username}}
+                                                    <fa name="user"></fa>{{this.user.username}}
                                             </button>
                                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                               <a class="dropdown-item" href="http://localhost:4200/profile">My Profile</a>
@@ -87,13 +87,15 @@
             <div class="col-md-1"></div>
             <div class="col-md-5">
                 <div class="active-blue-4 mb-4">
-                    <input id="search" class="form-control" type="text" placeholder="Search for a movie by title, year or genre..." aria-label="Search">
-             
+                        
+                        <input id="search" class="form-control" type="text" placeholder="Search for a movie by title, year or genre..." aria-label="Search">
+                        <span><fa name="search" ></fa></span>
+
                 </div>
                 
             </div>
-            <div class="col-md-1"></div>
-            
+            <div class="col-md-1"> </div>
+            <!-- <fa name="id-card" animation="spin"></fa> -->
 
             
 
