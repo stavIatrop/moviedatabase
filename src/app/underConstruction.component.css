@@ -33,13 +33,17 @@ nav {
     display: inline-block;
     float:none;
 } */
-
 #middleRow {
-    margin-top: 3%;
+    margin-top: 10%;
     background-color: rgb(255, 255, 255);
 }
 
+#signoutBtn {
 
+    background-image: linear-gradient(to bottom right, #235581, #132f47);
+    box-shadow: 0 0 0 1px #132f47;
+    border: none;
+}
 
 #logo {
 
@@ -51,32 +55,30 @@ nav {
 
 #footerRow {
 
-    background-color: #a2a5a1;
-    margin-top: 10%;
+    background-color: #bebebe;
+    margin-top: 5%;
 }
 
-#btn-login {
+#navBarUserLoggedIn {
 
-    background-color: #132f47;
-    color: white;
-    margin-left: 35%;
+    /* display: none; */
 }
 
-#loginCard {
+#dropdownMenuButton {
 
-    box-shadow: 1px 1px 2px grey;
+    color: rgb(127, 155, 178);
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;;
+}
+
+#dropdownMenuButton:active {
+
+    border-color: none;
+    outline-color: none;
+    box-shadow: none;
     
 }
 
-#login-username:focus {
-
-    border: 1px solid #132f47;
-    box-shadow: 0 0 0 1px #132f47;
-}
-
-#login-password:focus {
-
-    border: 1px solid #132f47;
-    box-shadow: 0 0 0 1px #132f47;
-
+#dropdownMenuButton:hover {
+    color: rgb(198, 207, 216);
 }

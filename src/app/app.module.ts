@@ -13,6 +13,7 @@ import { HomeComponent } from './home.component';
 import { MovieComponent } from './movie.component';
 import { LoginComponent } from './login.component';
 import { SignUpComponent } from './signup.component';
+import { UnderConstructionComponent } from './underConstruction.component';
 
 var routes = [
   {
@@ -34,6 +35,10 @@ var routes = [
   {
     path: 'signup',
     component: SignUpComponent
+  },
+  {
+    path: 'underConstruction',
+    component: UnderConstructionComponent
   }
 
 ];
@@ -41,7 +46,7 @@ var routes = [
 @NgModule({
   declarations: [
     AppComponent, MoviesComponent, HomeComponent,
-    MovieComponent, LoginComponent, SignUpComponent
+    MovieComponent, LoginComponent, SignUpComponent, UnderConstructionComponent
   ],
   imports: [
     BrowserModule, HttpModule, RouterModule.forRoot(routes),

@@ -12,7 +12,8 @@
         "favicon.ico",
         "movieDB.ico",
         "logo.png",
-        "movieLogo.png"
+        "movieLogo.png",
+        "images"
       ],
       "index": "index.html",
       "main": "main.ts",
