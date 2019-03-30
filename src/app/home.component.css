@@ -75,7 +75,7 @@ nav {
 
 #footerRow {
 
-    background-color: #a2a5a1;
+    background-color: #bebebe;
     margin-top: 20%;
 }
 
@@ -83,6 +83,26 @@ nav {
 
     /* display: none; */
 }
+
+#dropdownMenuButton {
+
+    color: rgb(127, 155, 178);
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;;
+}
+
+#dropdownMenuButton:active {
+
+    border-color: none;
+    outline-color: none;
+    box-shadow: none;
+    
+}
+
+#dropdownMenuButton:hover {
+    color: rgb(198, 207, 216);
+}
+
 
 /* #login {
     margin-left: 900px;

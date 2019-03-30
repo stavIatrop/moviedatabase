@@ -30,9 +30,9 @@ export class HomeComponent {
   }
 
   signout() {
-
+    console.log("e2e");
     sessionStorage.removeItem("user");
-    this.router.navigate(["/"]);
+    window.location.reload();
   }
 
 }
