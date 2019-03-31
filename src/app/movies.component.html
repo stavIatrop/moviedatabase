@@ -5,7 +5,13 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <div *ngFor = "let movie of webService.movie_list | async">
+            <!-- <table>
+                <tr *ngFor="let item of webService.movie_list | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                  
+                </tr>
+              </table>
+              <ngb-pagination   [(page)]="page"  [collectionSize]="webService.movie_list.length"></ngb-pagination> -->
+            <!-- <div *ngFor = "let movie of webService.movie_list | async">
                 <div class="card text-white bg-primary mb-3"
                     [routerLink] = "['/movies', movie._id]"
                     style = "cursor: pointer">
@@ -21,17 +27,17 @@
                         {{ movie.cast }}
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div> <!-- col -->
     </div>    <!-- row -->
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-sm-6">
             <button (click)="previousPage()">Previous</button>
         </div>
         <div class="col-sm-6 text-right">
             <button (click)="nextPage()">Next</button>
         </div>
-    </div>
+    </div> -->
     
 
 </div>    <!-- container -->

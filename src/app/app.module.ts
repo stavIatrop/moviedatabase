@@ -2,12 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { AngularPaginatorModule } from 'angular-paginator';
 
 import { AppComponent } from './app.component';
 import { MoviesComponent } from './movies.component';
 import { WebService } from './web.service';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { HomeComponent } from './home.component';
 import { MovieComponent } from './movie.component';
@@ -50,7 +52,7 @@ var routes = [
   ],
   imports: [
     BrowserModule, HttpModule, RouterModule.forRoot(routes),
-    FormsModule, ReactiveFormsModule, AngularFontAwesomeModule
+    FormsModule, ReactiveFormsModule, AngularFontAwesomeModule, AngularPaginatorModule
   ],
   providers: [WebService],
   bootstrap: [AppComponent]
