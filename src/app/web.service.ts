@@ -1,5 +1,5 @@
 import { Http, URLSearchParams } from '@angular/http';
-import { Injectable } from '@angular/core';
+import { Injectable, Input } from '@angular/core';
 import { Subject } from 'rxjs/Rx';
 import { Router} from '@angular/router';
 
@@ -11,6 +11,9 @@ export class WebService {
     movie_list = this.moviesSubject.asObservable();
 
     movies_count;
+    movies_per_page = 5;
+    page_count;
+    pages = [];
 
     userAuth;
     
@@ -20,6 +23,8 @@ export class WebService {
         password: '',
         review_count : Number
     };
+
+    
 
     constructor(private http: Http,
                 private router: Router) {}
@@ -48,8 +53,21 @@ export class WebService {
             'http://localhost:3000/api/moviesCount')
             .subscribe(response => {
                 this.movies_count = response.json();
+                if( this.movies_count % this.movies_per_page == 0) {
+                    this.page_count = this.movies_count / this.movies_per_page;
+                }else {
+                    this.page_count =(this.movies_count / this.movies_per_page) + 1;
+                }
+
+                this.pages = Array(this.page_count).fill(0).map((x,i)=>i);
+                
             })
         
+    }
+
+    getPageCount() {
+
+        this.getMoviesCount();
     }
 
     checkUserAuth(username, password) {

@@ -31,8 +31,10 @@ export class MoviesComponent {
       if (sessionStorage.start) {
         this.start = sessionStorage.start;
       }
+      console.log(this.start);
       this.webService.getMovies(this.start);
-      this.webService.getMoviesCount();
+      this.webService.getPageCount();
+
       // this.webService.movie_list
       //     .subscribe(movies => {
       //         this.movie_list = movies

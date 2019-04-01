@@ -9,7 +9,7 @@ import { MoviesComponent } from './movies.component';
 import { WebService } from './web.service';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { HomeComponent } from './home.component';
 import { MovieComponent } from './movie.component';
@@ -52,7 +52,7 @@ var routes = [
   ],
   imports: [
     BrowserModule, HttpModule, RouterModule.forRoot(routes),
-    FormsModule, ReactiveFormsModule, AngularFontAwesomeModule, AngularPaginatorModule
+    FormsModule, ReactiveFormsModule, AngularFontAwesomeModule, AngularPaginatorModule, NgbModule.forRoot()
   ],
   providers: [WebService],
   bootstrap: [AppComponent]
