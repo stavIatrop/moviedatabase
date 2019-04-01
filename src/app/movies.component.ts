@@ -58,5 +58,25 @@ export class MoviesComponent {
       }
     }
 
+    firstPage() {
+      this.start = 0;
+      sessionStorage.start = Number(this.start);
+      this.webService.getMovies(this.start);
+    }
+
+    lastPage() {
+
+      this.start = this.webService.movies_count - this.webService.movies_per_page;
+      sessionStorage.start = Number(this.start);
+      this.webService.getMovies(this.start);
+    }
+
+    getPage(page) {
+      console.log(page);
+      this.start = (page) * this.webService.movies_per_page;
+      sessionStorage.start = Number(this.start);
+      this.webService.getMovies(this.start);
+    }
+
     start = 0;
 }
