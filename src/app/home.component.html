@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="row rounded" id="navBarRow">
+    <!-- <div class="row rounded" id="navBarRow">
         <div class="col-md-1"></div>
         
         <div class="col-md-1">
@@ -67,12 +67,7 @@
                                             </div>
                                     </div>
                             </li>
-                            <!-- <li class="nav-item" id="login">
-                            <a class="nav-link" href="http://localhost:4200/profile"> {{this.user.username}}</a>
-                            </li> -->
-                            <!-- <li class="nav-item" id="signup">
-                                <button id="signoutBtn" class="nav-link" (click)="signout()">SIGN OUT</button>
-                            </li> -->
+                            
         
                         </ul>
                     </div>
@@ -80,7 +75,7 @@
         </div>
 
         
-    </div>
+    </div> -->
     
         <div class="row justify-content-md-center" id="middleRow">
             
@@ -96,6 +91,14 @@
             </div>
             <div class="col-md-1"> </div>
             <!-- <fa name="id-card" animation="spin"></fa> -->
+        </div>
+
+        <div class="jumbotron">
+            <button *ngIf="!authService.isAuthenticated()"
+                    (click)="authService.login()">Login</button>
+            <button *ngIf="authService.isAuthenticated()"
+                    (click)="authService.logout()">Logout</button>
+
         </div>
     
     

@@ -7,6 +7,20 @@ var moviesController =
 var usersController = 
     require('../controllers/users.controllers.js')
 
+var reviewsController =
+    require('../controllers/reviews.controllers.js');
+
+router
+    .route('/movies/:movieID/reviews')
+    .get(reviewsController.reviewsGetAll)
+    .post(reviewsController.reviewsAddOne);
+
+router
+    .route('/movies/:movieID/reviews/:reviewID')
+    .get(reviewsController.reviewsGetOne)
+    .put(reviewsController.reviewsUpdateOne)
+    .delete(reviewsController.reviewsDeleteOne);
+
 router
     .route('/movies')
     .get(moviesController.moviesGetAll)
@@ -18,7 +32,9 @@ router
 
 router
     .route('/movies/:movieID')
-    .get(moviesController.moviesGetOne);
+    .get(moviesController.moviesGetOne)
+    .put(moviesController.moviesUpdateOne)
+    .delete(moviesController.moviesDeleteOne);
 
 router
     .route('/users')

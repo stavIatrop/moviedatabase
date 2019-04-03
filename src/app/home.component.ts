@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router} from '@angular/router';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'home',
@@ -9,7 +10,8 @@ import { Router} from '@angular/router';
 
 export class HomeComponent { 
 
-  constructor(private router : Router) {}
+  constructor(private router : Router,
+              private authService: AuthService) {}
 
   userLoggedIn;
   user = {

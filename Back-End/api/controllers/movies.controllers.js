@@ -159,3 +159,63 @@ module.exports.moviesGetOne = function(req, res) {
             
         });
 };
+
+module.exports.moviesUpdateOne = function(req, res) {
+
+    var movieID = req.params.movieID;
+    
+    console.log("GET movie " + movieID);
+
+    Movie
+        .findById(movieID)
+        .select("-reviews")
+        .exec(function(err, doc) {
+            var response = {
+                status : 200,
+                message : doc
+            }
+            if(err) {
+                console.log("Error finding movie");
+                response.status = 500;
+                response.message = err;
+            }else if (!doc){
+                response.status = 404;
+                response.message = { "message" : 
+                                        "Movie ID not found"};
+            }
+            console.log("Found movie " + movieID);
+            if(response.status != 200) {
+
+                res
+                .status(response.status)
+                .json(response.message);
+            } else {
+                doc.title = req.body.title;
+                doc.stars = parseInt(req.body.stars);
+                doc.year = parseInt(req.body.year);
+                doc.cast =
+                    splitArray(req.body.cast);
+                doc.genres =
+                    splitArray(req.body.genres);
+                doc.review_count = parseInt(req.body.review_count);
+                doc.description = req.body.description;
+
+                doc.save(function(err, updatedMovie) {
+                    if(err) {
+                        res
+                            .status(500)
+                            .json(err);
+                    } else {
+                        res
+                            .status(204)
+                            .json();
+                            
+
+                    }
+                });
+            }
+            
+            
+        });
+    
+};

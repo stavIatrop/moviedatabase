@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { WebService } from './web.service';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'movies',
@@ -20,7 +21,8 @@ export class MoviesComponent {
     //         "review_count": 12 }
     // ];
 
-    constructor(private webService: WebService) {}
+    constructor(private webService: WebService,
+                private authService: AuthService) {}
 
     // async ngOnInit() {
     //     var response = await this.webService.getMovies();

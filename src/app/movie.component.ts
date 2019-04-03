@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { WebService } from './web.service';
 import { ActivatedRoute } from '@angular/router';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'movie',
@@ -10,7 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 
 export class MovieComponent {
     constructor(private webService: WebService,
-                private route: ActivatedRoute) {}
+                private route: ActivatedRoute,
+                private authService: AuthService) {}
 
     // async ngOnInit() {
     //     var response = await this.webService.getMovie(

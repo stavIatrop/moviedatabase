@@ -1,7 +1,3 @@
-<div class="jumbotron">
-    <h1>Movie Database</h1>
-</div>
-
 <div class="container">
     <div class="row">
             
@@ -41,9 +37,6 @@
             <button class="btn btn-light" (click)="getPage(page)" *ngFor="let page of webService.pages">
                     {{page + 1}}  
             </button>
-                
-            
-            
             <button class="btn btn-light" (click)="lastPage()">Last</button>
             <button class="btn btn-light" (click)="nextPage()">Next</button>
         </div>
@@ -56,6 +49,14 @@
         <div class="col-sm-6 text-right">
             
         </div> -->
+    </div>
+
+    <div class="jumbotron">
+        
+        <button *ngIf="!authService.isAuthenticated()"
+        (click)="authService.login()">Login</button>
+        <button *ngIf="authService.isAuthenticated()"
+        (click)="authService.logout()">Logout</button>
     </div>
     
 

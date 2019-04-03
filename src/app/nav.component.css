@@ -1,0 +1,49 @@
+nav {
+
+    margin-top: 22px;
+    
+
+}
+
+.nav-item {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.navbar {
+    
+}
+
+#navBarRow {
+    
+    background-image: linear-gradient(to bottom right, #235581, #132f47);
+    height: 110px;
+}
+
+#logo {
+
+    margin-top: 15px;
+    margin-left: 100px;
+    width: 60%;
+    height: 60%;
+}
+
+#dropdownMenuButton {
+
+    color: rgb(127, 155, 178);
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;;
+}
+
+#dropdownMenuButton:active {
+
+    border-color: none;
+    outline-color: none;
+    box-shadow: none;
+    
+}
+
+#dropdownMenuButton:hover {
+    color: rgb(198, 207, 216);
+}
