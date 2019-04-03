@@ -216,6 +216,5 @@ module.exports.moviesUpdateOne = function(req, res) {
             }
             
             
-        });
-    
+        });    
 };

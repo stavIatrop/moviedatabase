@@ -24,7 +24,14 @@ export class WebService {
         review_count : Number
     };
 
-    
+    private reviews_private_list = [];
+    private reviewsSubject = new Subject();
+    reviews = this.reviewsSubject.asObservable();
+
+    review_count;
+    reviews_per_page = 5;
+    page_countReviews;
+    pagesReviews = [];
 
     constructor(private http: Http,
                 private router: Router) {}
@@ -45,6 +52,16 @@ export class WebService {
                 this.movie_private_list = [];
                 this.movie_private_list.push(response.json());
                 this.moviesSubject.next(this.movie_private_list);
+                console.log(this.movie_private_list[0].review_count);
+                this.review_count = this.movie_private_list[0].review_count;
+            
+                if( this.review_count % this.reviews_per_page == 0) {
+                    this.page_countReviews = parseInt(this.review_count) / this.reviews_per_page;
+                }else {
+                    this.page_countReviews = Math.floor(parseInt(this.review_count) / this.reviews_per_page) + 1;
+                }
+                console.log(this.page_countReviews)
+                this.pagesReviews = Array(this.page_countReviews).fill(0).map((x,i)=>i);
             })
     }
     
@@ -94,5 +111,20 @@ export class WebService {
                             }
                         }
                     )
+    }
+
+    getReviews(id) {
+        
+        this.http.get (
+                'http://localhost:3000/api/movies/' + id +
+                '/reviews')
+        .subscribe(
+            response => {
+                this.reviews_private_list = response.json();
+                this.reviewsSubject.next(
+                                    this.reviews_private_list);
+                
+            }
+        )
     }
 }

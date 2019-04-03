@@ -7,7 +7,7 @@ module.exports.reviewsGetAll = function(req, res) {
     console.log("GET reviews for movie " + movieID);
 
     var start = 0;
-    var number = 1;
+    var number = 5;
     var maxNumber = 10;
 
     if(req.query && req.query.start) {
@@ -95,8 +95,11 @@ var addReview = function(req, res, thisMovie) {
         stars : parseInt(req.body.stars)
 
     });
-    console.log(thisMovie);
+    
+    var sum = parseInt(thisMovie.review_count) * parseFloat(thisMovie.avg_stars);
     thisMovie.review_count = parseInt(thisMovie.review_count) + 1;
+    thisMovie.avg_stars = (sum + parseInt(req.body.stars) ) / parseInt(thisMovie.review_count );
+    console.log(thisMovie);
     thisMovie.save(function(err, updatedMovie) {
         if(err) {
             res
@@ -124,7 +127,7 @@ module.exports.reviewsAddOne = function(req, res) {
 
     Movie
         .findById(movieID)
-        .select("reviews review_count")
+        .select("reviews review_count avg_stars")
         .exec(function(err, doc) {
             
             // console.log(doc);
@@ -231,7 +234,7 @@ module.exports.reviewsDeleteOne = function(req, res) {
 
     Movie
         .findById(movieID)
-        .select("reviews review_count")
+        .select("reviews review_count avg_stars")
         .exec(function(err, thisMovie) {
             var thisReview;
             var response = {
@@ -267,7 +270,11 @@ module.exports.reviewsDeleteOne = function(req, res) {
                 } else {
                     
                     thisMovie.reviews.id(reviewID).remove();
+                    var sum = parseInt(thisMovie.review_count) * parseFloat(thisMovie.avg_stars);
                     thisMovie.review_count = parseInt(thisMovie.review_count) - 1;
+                    thisMovie.avg_stars = (sum - parseInt(req.body.stars) ) / parseInt(thisMovie.review_count );
+                    console.log(thisMovie);
+                    
                     thisMovie.save(function(err, updatedMovie) {
                         if(err) {
                             res
