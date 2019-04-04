@@ -28,12 +28,24 @@
                             
         
                         </ul>
+
                     </div>
                 </nav>
     </div>
     <div class="col-md-2"></div>
     <div class="col-md-2">
-            <nav *ngIf="!userLoggedIn" id="navBar" class="navbar rounded navbar-expand-lg navbar-dark">
+
+            <nav id="navBar" style="margin-top: 25px;" class="navbar rounded navbar-expand-lg navbar-dark">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <form class="form-inline ml-auto">
+
+                            <button class="btn btn-outline-light" *ngIf="!authService.isAuthenticated()" (click)="authService.login()">Login</button>
+                            <button class="btn btn-outline-light" *ngIf="authService.isAuthenticated()" (click)="authService.logout()">Logout</button>
+                        
+                        </form>
+                    </div>
+            </nav>
+            <!-- <nav *ngIf="!userLoggedIn" id="navBar" class="navbar rounded navbar-expand-lg navbar-dark">
         
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
@@ -47,7 +59,7 @@
         
                         </ul>
                     </div>
-            </nav>
+            </nav> -->
             <nav *ngIf="userLoggedIn" id="navBarUserLoggedIn" class="navbar rounded navbar-expand-lg navbar-dark">
         
                 <div class="collapse navbar-collapse" id="navbarNav">

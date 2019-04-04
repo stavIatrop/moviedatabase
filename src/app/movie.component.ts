@@ -24,6 +24,7 @@ export class MovieComponent {
                 }
 
     reviewForm;
+    currentRate = 3;
 
     // async ngOnInit() {
     //     var response = await this.webService.getMovie(
@@ -34,6 +35,7 @@ export class MovieComponent {
     ngOnInit() {
       this.webService.getMovie(this.route.snapshot.params.id);
       this.webService.getReviews(this.route.snapshot.params.id);
+      this.currentRate = 3;
       // this.webService.movie_list
       //     .subscribe(movies => {
       //         this.movie_list = movies
@@ -78,7 +80,9 @@ export class MovieComponent {
     }
 
     onSubmit() {
-      console.log(this.reviewForm.valid);
+      console.log(this.reviewForm.value);
+      console.log(this.reviewForm.stars);
+      console.log(this.currentRate);
     }
 
     isInvalid(control) {

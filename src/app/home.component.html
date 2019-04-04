@@ -92,15 +92,7 @@
             <div class="col-md-1"> </div>
             <!-- <fa name="id-card" animation="spin"></fa> -->
         </div>
-
-        <div class="jumbotron">
-            <button *ngIf="!authService.isAuthenticated()"
-                    (click)="authService.login()">Login</button>
-            <button *ngIf="authService.isAuthenticated()"
-                    (click)="authService.logout()">Logout</button>
-
-        </div>
-    
+   
     
 
     <div class="row" id="footerRow">       

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="margin-top:100px;">
     <div class="row">
             
         <div class="col-sm-12">
@@ -40,6 +40,7 @@
             <button class="btn btn-light" (click)="lastPage()">Last</button>
             <button class="btn btn-light" (click)="nextPage()">Next</button>
         </div>
+        
         <!-- <div class="col-sm-6">
             
         </div>
@@ -49,15 +50,6 @@
         <div class="col-sm-6 text-right">
             
         </div> -->
-    </div>
+    </div>   
 
-    <div class="jumbotron">
-        
-        <button *ngIf="!authService.isAuthenticated()"
-        (click)="authService.login()">Login</button>
-        <button *ngIf="authService.isAuthenticated()"
-        (click)="authService.logout()">Logout</button>
-    </div>
-    
-
-</div>    <!-- container -->
+</div>    
