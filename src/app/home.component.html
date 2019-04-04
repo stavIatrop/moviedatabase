@@ -77,21 +77,44 @@
         
     </div> -->
     
-        <div class="row justify-content-md-center" id="middleRow">
+        <!-- <div class="row justify-content-md-center" id="middleRow">
+
+                <div class="col-12 col-md-10 col-lg-8">
+                        <form [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="card card-sm" id="searchForm">
+                            <div class="card-body row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <fa id="faSearch" name="search"></fa>
+                                </div>
+                                
+                                <div class="col">
+                                    <input id="search" formControlName="searchWords" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search for a movie by title, year or genre...">
+                                </div>
+                                
+                                <div class="col-auto">
+                                    <button id="searchButton" class="btn btn-lg btn-success" type="submit">Search</button>
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
             
-            <div class="col-md-1"></div>
+            
+        </div> -->
+
+        <!-- <div id="faSearch" class="col-md-1"><fa name="search"></fa></div>
             <div class="col-md-5">
-                <div class="active-blue-4 mb-4">
+
+                  
+                <div id="searchBar" class="active-blue-4 mb-4">
                         
-                        <input id="search" class="form-control" type="text" placeholder="Search for a movie by title, year or genre..." aria-label="Search">
-                        <span><fa name="search" ></fa></span>
+                    <input (input)="onInput()" id="search" class="form-control" type="text" placeholder="Search for a movie by title, year or genre..." aria-label="Search">
+                  
 
                 </div>
                 
             </div>
-            <div class="col-md-1"> </div>
+            <div class="col-md-1"> </div> -->
             <!-- <fa name="id-card" animation="spin"></fa> -->
-        </div>
    
     
 

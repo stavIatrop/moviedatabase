@@ -19,6 +19,7 @@ import { LoginComponent } from './login.component';
 import { SignUpComponent } from './signup.component';
 import { UnderConstructionComponent } from './underConstruction.component';
 import { NavComponent } from './nav.component';
+import { SearchComponent } from './search.component';
 
 var routes = [
   {
@@ -48,6 +49,10 @@ var routes = [
   {
     path: 'callback',
     component: CallbackComponent
+  },
+  {
+    path: 'search',
+    component: SearchComponent
   }
 
 
@@ -56,7 +61,7 @@ var routes = [
 @NgModule({
   declarations: [
     AppComponent, MoviesComponent, HomeComponent,
-    MovieComponent, LoginComponent, SignUpComponent, UnderConstructionComponent, CallbackComponent, NavComponent
+    MovieComponent, LoginComponent, SignUpComponent, UnderConstructionComponent, CallbackComponent, NavComponent, SearchComponent
   ],
   imports: [
     BrowserModule, HttpModule, RouterModule.forRoot(routes),

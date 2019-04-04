@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router} from '@angular/router';
 import { AuthService } from './auth.service';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'home',
@@ -11,7 +12,15 @@ import { AuthService } from './auth.service';
 export class HomeComponent { 
 
   constructor(private router : Router,
-              private authService: AuthService) {}
+              private authService: AuthService,
+              private formBuilder: FormBuilder) {
+
+                this.searchForm = formBuilder.group ( {
+                  searchWords: ""
+                });
+              }
+
+  searchForm;
 
   userLoggedIn;
   user = {
@@ -31,10 +40,21 @@ export class HomeComponent {
     }
   }
 
+  // onSubmit() {
+    
+  //   console.log(this.searchForm.value.searchWords);
+  //   sessionStorage.setItem("searchString", this.searchForm.value.searchWords);
+  //   this.router.navigate(["/search"]);
+  // }
+
   signout() {
     console.log("e2e");
     sessionStorage.removeItem("user");
     window.location.reload();
+  }
+
+  search() {
+    console.log("hey");
   }
 
 }

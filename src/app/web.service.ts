@@ -127,4 +127,12 @@ export class WebService {
             }
         )
     }
+
+    searchString;
+    
+    getResults() {
+
+        this.searchString = sessionStorage.getItem("searchString");
+        console.log(this.searchString);
+    }
 }
