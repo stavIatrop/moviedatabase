@@ -31,15 +31,20 @@ module.exports.search = function(req, res) {
                 for(var i = 0; i < docs.length; i++ ) {
                     
                     var relevance = 0;
+                    var titleWords = docs[i].title.trim().split(/[ ,]+/).filter(Boolean);
+                    var genres = docs[i].genres; 
 
                     for(var j = 0; j < searchWords.length; j++) {
 
-                        var titleWords = docs[i].title.trim().split(/[ ,]+/).filter(Boolean);
-
+                        
+                        console.log(titleWords);
                         
 
                         for( var k = 0; k < titleWords.length; k++) {
 
+                            // console.log(titleWords[k].toUpperCase());
+                            // console.log(searchWords[j].toUpperCase());
+                            // console.log(titleWords[k].toUpperCase() === searchWords[j].toUpperCase());
                             if(titleWords[k].toUpperCase() === searchWords[j].toUpperCase()) {      //if search word matches the title
                                 
                                 
@@ -49,7 +54,8 @@ module.exports.search = function(req, res) {
                             } 
                         }
 
-                        var genres = docs[i].genres; 
+                        
+                        console.log(genres);
 
                         for( var k = 0; k < genres.length; k++) {
 
@@ -59,11 +65,14 @@ module.exports.search = function(req, res) {
                                 relevance++;
                             } 
                         }
+                        console.log(parseInt(searchWords[j]));
+                        console.log(docs[i].year);
+                        console.log(!isNaN( parseInt(searchWords[j])));
 
                         if(!isNaN( parseInt(searchWords[j]) )  ) {              //if search word is a number
 
                             if(docs[i].year == parseInt(searchWords[j])) {      //if search word matches year
-                                relevance;
+                                relevance++;
                             }
                         } 
                         

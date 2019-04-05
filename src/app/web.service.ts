@@ -129,21 +129,33 @@ export class WebService {
     }
 
     searchString;
+    noResults;
     numberOfResults;
+
+    private searchResults_private_list = [];
+    private searchSubject = new Subject();
+    searchResults_list = this.searchSubject.asObservable();
+    
 
     getResults() {
 
         this.searchString = sessionStorage.getItem("searchString");
         console.log(this.searchString);
-        if(this.searchString == "") {
-            this.numberOfResults = 0;
+        if(this.searchString.length == 0) {
+            this.noResults = true;
             return;
         }
         return this.http.get(
             'http://localhost:3000/api/search?searchString=' + this.searchString)
             .subscribe(
                 response => {
-
+                    this.searchResults_private_list = response.json();
+                    if(this.searchResults_private_list.length == 0) {
+                        this.noResults = true;
+                    }
+                    this.numberOfResults = this.searchResults_private_list.length;
+                    this.searchSubject.next(this.searchResults_private_list);
+                    
                 }
             )
     }

@@ -34,6 +34,7 @@ export class SearchComponent {
     
         console.log(this.searchForm.value.searchWords);
         sessionStorage.setItem("searchString", this.searchForm.value.searchWords);
-        this.router.navigate(["/search"]);
+        this.webService.getResults();
+        
       }
 }
