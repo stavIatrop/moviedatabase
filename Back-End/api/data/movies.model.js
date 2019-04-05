@@ -39,7 +39,8 @@ var movieSchema = new mongoose.Schema( {
     },
     review_count : Number,
     reviews : [reviewSchema],
-    description : String
+    description : String,
+    relevance: Number
 
 })
 

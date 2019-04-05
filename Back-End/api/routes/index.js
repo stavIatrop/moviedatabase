@@ -37,6 +37,10 @@ router
     .delete(moviesController.moviesDeleteOne);
 
 router
+    .route('/search')
+    .get(moviesController.search);
+    
+router
     .route('/users')
     .post(usersController.usersAddOne);
 

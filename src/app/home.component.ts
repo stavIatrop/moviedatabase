@@ -40,12 +40,12 @@ export class HomeComponent {
     }
   }
 
-  // onSubmit() {
+  onSubmit() {
     
-  //   console.log(this.searchForm.value.searchWords);
-  //   sessionStorage.setItem("searchString", this.searchForm.value.searchWords);
-  //   this.router.navigate(["/search"]);
-  // }
+    console.log(this.searchForm.value.searchWords);
+    sessionStorage.setItem("searchString", this.searchForm.value.searchWords);
+    this.router.navigate(["/search"]);
+  }
 
   signout() {
     console.log("e2e");

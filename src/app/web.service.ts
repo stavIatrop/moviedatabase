@@ -129,10 +129,22 @@ export class WebService {
     }
 
     searchString;
-    
+    numberOfResults;
+
     getResults() {
 
         this.searchString = sessionStorage.getItem("searchString");
         console.log(this.searchString);
+        if(this.searchString == "") {
+            this.numberOfResults = 0;
+            return;
+        }
+        return this.http.get(
+            'http://localhost:3000/api/search?searchString=' + this.searchString)
+            .subscribe(
+                response => {
+
+                }
+            )
     }
 }

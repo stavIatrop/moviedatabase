@@ -1,6 +1,94 @@
 var mongoose = require('mongoose');
 var Movie = mongoose.model('Movie');
 
+module.exports.search = function(req, res) {
+
+    var searchString = "";
+    if(req.query.searchString) {
+        searchString = req.query.searchString;
+    }
+    
+    var searchWords = searchString.trim().split(/\s+/).filter(Boolean);
+    console.log(searchWords);
+    
+    Movie
+        .find()
+        .exec(function(err, docs) {
+            if(err) {
+                console.log("Error finding movies");
+                res
+                    .status(500)
+                    .json(err)
+            }else {
+
+                console.log("Retrieved data for " +
+                            docs.length + " movies");
+
+                docs2 = [];
+                // relevance = [];
+                var docs2Length = 0;
+
+                for(var i = 0; i < docs.length; i++ ) {
+                    
+                    var relevance = 0;
+
+                    for(var j = 0; j < searchWords.length; j++) {
+
+                        var titleWords = docs[i].title.trim().split(/[ ,]+/).filter(Boolean);
+
+                        
+
+                        for( var k = 0; k < titleWords.length; k++) {
+
+                            if(titleWords[k].toUpperCase() === searchWords[j].toUpperCase()) {      //if search word matches the title
+                                
+                                
+                                //docs2.push(docs[i]);
+                                relevance++;
+
+                            } 
+                        }
+
+                        var genres = docs[i].genres; 
+
+                        for( var k = 0; k < genres.length; k++) {
+
+                            if(genres[k].toUpperCase() === searchWords[j].toUpperCase()) {      //if search word matches one of genres
+                            
+                                //docs2.push(docs[i]);
+                                relevance++;
+                            } 
+                        }
+
+                        if(!isNaN( parseInt(searchWords[j]) )  ) {              //if search word is a number
+
+                            if(docs[i].year == parseInt(searchWords[j])) {      //if search word matches year
+                                relevance;
+                            }
+                        } 
+                        
+                    }
+
+                    if(relevance > 0 ) {
+
+                        docs2.push(docs[i]);
+                        docs2[docs2Length].relevance = relevance;
+                                                
+                        docs2Length++;
+                    }
+                    
+                }
+                
+                res
+                    .status(200)
+                    .json(docs2);
+            }
+            
+    });  
+
+}
+
+
 module.exports.moviesGetAll = function(req, res) {
     
     var start = 0;
