@@ -53,8 +53,4 @@ export class HomeComponent {
     window.location.reload();
   }
 
-  search() {
-    console.log("hey");
-  }
-
 }

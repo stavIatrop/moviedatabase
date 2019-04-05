@@ -1,6 +1,0 @@
--Search(top priority!!!!)
--Search bar in every page
--Sort by
--Add review
--Add a movie
--Display of movies

@@ -39,3 +39,33 @@ input[type=search]:focus:not([readonly]) {
     font-style: italic;
     
 }
+
+.breadcrumb {
+    background-color: white;
+}
+
+.breadcrumbList {
+    list-style: none;
+}
+
+#moviesFa {
+
+    
+    text-decoration: underline;
+    font-size: 1.8rem;
+}
+
+#moviesFa:hover {
+
+    color: #132f47;
+    
+    
+}
+
+#searchRes {
+
+    
+    font-style: italic;
+    font-size: 1.1rem;
+}
+

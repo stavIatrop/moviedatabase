@@ -1,10 +1,49 @@
+<div class="row justify-content-md-center" id="middleRow">
+
+        <div class="col-12 col-md-10 col-lg-8">
+                <form [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="card card-sm" id="searchForm">
+                    <div class="card-body row no-gutters align-items-center">
+                        <div class="col-auto">
+                            <fa id="faSearch" name="search"></fa>
+                        </div>
+                        
+                        <div class="col">
+                            <input id="search" formControlName="searchWords" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search for a movie by title, year or genre...">
+                        </div>
+                        
+                        <div class="col-auto">
+                            <button id="searchButton" class="btn btn-lg btn-success" type="submit">Search</button>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+    
+    
+</div>
+
+<div class="row breadcrumb">
+        <div class="col-md-12">
+          <ul class="list-inline">
+            <li id="moviesFa" class="list-inline-item"><fa name="home"  [routerLink]="['/']" style = "cursor: pointer"></fa></li>
+            <li class="list-inline-item"> > </li>
+            <li id="movies" class="list-inline-item" [routerLink]="['/movies']" style = "cursor: pointer">Movies</li>
+            <li class="list-inline-item"> > </li>
+            <li style="font-size: 1.1rem" *ngFor = "let movie of webService.movie_list | async" class="list-inline-item"><i>{{movie.title}}</i></li>
+               
+                       
+           
+          </ul>
+        </div>
+</div>
+
 <div class="container" style="margin-top:100px;">
     <div class="row">
         <div class="col-sm-12">
             <div *ngFor = "let movie of webService.movie_list | async">
-                <div class="card text-white bg-primary mb-3">
+                <div class="card  mb-3">
                     <div class="card-header">
-                        {{ movie.title }}   {{movie.avg_stars}} stars
+                        {{ movie.title }}   {{movie.avg_stars}} <fa name="star"></fa>
                     </div>
                     <div class="card-body">
                         This movie released in
@@ -21,6 +60,8 @@
     </div>    
 </div>
 
+
+
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
@@ -34,12 +75,11 @@
                     <hr>
                     <p><strong>Votes:</strong>
                     {{ review.votes.like }} like,
-                    {{ review.votes.dislike }} dislike,
+                    {{ review.votes.dislike }} dislike
                     </p>
                 </div>
                 <div class="card-footer">
-                    {{ review.stars }}
-                    stars
+                    {{ review.stars }}<fa name="star"></fa>
                 </div>
             </div>
         </div>

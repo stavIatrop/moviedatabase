@@ -142,6 +142,7 @@ export class WebService {
         this.searchString = sessionStorage.getItem("searchString");
         console.log(this.searchString);
         if(this.searchString.length == 0) {
+            console.log("No results");
             this.noResults = true;
             return;
         }
@@ -150,11 +151,14 @@ export class WebService {
             .subscribe(
                 response => {
                     this.searchResults_private_list = response.json();
+                    this.searchSubject.next(this.searchResults_private_list);
+                    this.numberOfResults = this.searchResults_private_list.length;
+                    
                     if(this.searchResults_private_list.length == 0) {
                         this.noResults = true;
+                    }else {
+                        this.noResults = false;
                     }
-                    this.numberOfResults = this.searchResults_private_list.length;
-                    this.searchSubject.next(this.searchResults_private_list);
                     
                 }
             )

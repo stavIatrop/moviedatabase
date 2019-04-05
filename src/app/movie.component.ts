@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { WebService } from './web.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from './auth.service';
 import { FormBuilder, Validators } from '@angular/forms';
 
@@ -14,7 +14,12 @@ export class MovieComponent {
     constructor(private webService: WebService,
                 private route: ActivatedRoute,
                 private formBuilder: FormBuilder,
-                private authService: AuthService) {
+                private authService: AuthService,
+                private router : Router) {
+
+                  this.searchForm = formBuilder.group ( {
+                    searchWords: ""
+                  });
 
                   this.reviewForm = formBuilder.group( {
                     name: ['', Validators.required],
@@ -25,6 +30,7 @@ export class MovieComponent {
 
     reviewForm;
     currentRate = 3;
+    searchForm;
 
     // async ngOnInit() {
     //     var response = await this.webService.getMovie(
@@ -80,9 +86,10 @@ export class MovieComponent {
     }
 
     onSubmit() {
-      console.log(this.reviewForm.value);
-      console.log(this.reviewForm.stars);
-      console.log(this.currentRate);
+    
+      console.log(this.searchForm.value.searchWords);
+      sessionStorage.setItem("searchString", this.searchForm.value.searchWords);
+      this.router.navigate(["/search"]);
     }
 
     isInvalid(control) {

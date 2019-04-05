@@ -1,60 +1,85 @@
-<div class="row justify-content-md-center">
+<div class="container-fluid">
 
-        <div class="col-12 col-md-10 col-lg-8">
-                <form [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="card card-sm" id="searchForm">
-                    <div class="card-body row no-gutters align-items-center">
-                        <div class="col-auto">
-                            <fa id="faSearch" name="search"></fa>
-                        </div>
-                        <!--end of col-->
-                        <div class="col">
-                            <input id="search" formControlName="searchWords" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search for a movie by title, year or genre...">
-                        </div>
-                        <!--end of col-->
-                        <div class="col-auto">
-                            <button id="searchButton" class="btn btn-lg btn-success" type="submit">Search</button>
-                        </div>
-                        <!--end of col-->
-                    </div>
-                </form>
-            </div>
-</div>
+        <div class="row justify-content-md-center">
 
-<h2> {{webService.numberOfResults}} found</h2>
-<div *ngIf="!webService.noResults" class="row searchRes justify-content-md-center">
-
-           
-            <div class="col-sm-8">
-                    <div *ngFor = "let movie of webService.searchResults_list | async">
-                        <div class="row">
-                                <div class="col-sm-2"><a [routerLink] = "['/movies', movie._id]" ><img class="rounded" src="../movieLogo.png" width="185" height="278"  alt=""></a></div>
-                                <div class="col-sm-6">
-                                    <div class="card  mb-10" [routerLink] = "['/movies', movie._id]" style = "border:none;cursor: pointer">
-                                        <div class="card-header">
-                                                {{ movie.title }}
-                                        </div>
-                                        <h6 class="card-subtitle text-muted">Indoor</h6>
-                                        <div class="card-body">
-                                                This movie released in
-                                                {{ movie.year }}
-                                        </div>
-                                    </div>
+                <div class="col-12 col-md-10 col-lg-8">
+                        <form [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="card card-sm" id="searchForm">
+                            <div class="card-body row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <fa id="faSearch" name="search"></fa>
                                 </div>
-                        </div>
-                        <br>
-                       
-                        
-                            
-                            
+                                <!--end of col-->
+                                <div class="col">
+                                    <input id="search" formControlName="searchWords" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search for a movie by title, year or genre...">
+                                </div>
+                                <!--end of col-->
+                                <div class="col-auto">
+                                    <button id="searchButton" class="btn btn-lg btn-success" type="submit">Search</button>
+                                </div>
+                                <!--end of col-->
+                            </div>
+                        </form>
                     </div>
-            </div>
+        </div>
+        <div class="row breadcrumb">
+                <div class="col-md-12">
+                  <ul class="list-inline">
+                    <li id="moviesFa" class="list-inline-item"><fa name="home" [routerLink]="['/']" style = "cursor: pointer"></fa></li>
+                    <li class="list-inline-item"> > </li>
+                    <li id="searchRes" class="list-inline-item">Search Results for: "{{webService.searchString}}"</li>
+                  </ul>
+                </div>
+        </div>
+        <h5 *ngIf="!webService.noResults"> {{webService.numberOfResults}} results found:</h5>
+        <div *ngIf="!webService.noResults" class="row searchRes justify-content-md-center">
+        
+                   
+                    <div class="col-sm-8">
+                            <div *ngFor = "let movie of webService.searchResults_list | async">
+                                <div class="row">
+                                        <div class="col-sm-2"><a [routerLink] = "['/movies', movie._id]" ><img class="rounded" src="../movieLogo.png" width="185" height="278"  alt=""></a></div>
+                                        <div class="col-sm-6">
+                                            <div class="card  mb-10" [routerLink] = "['/movies', movie._id]" style = "border:none;cursor: pointer">
+                                                <div class="card-header">
+                                                        {{ movie.title }} <span>{{movie.avg_stars}}<fa name="star"></fa></span>
+                                                </div>
+                                                <h6 class="card-subtitle text-muted">{{ movie.year }}</h6>
+                                                <div class="card-body">
+                                                        
+                                                        {{ movie.description }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                                <br>
+                                       
+                            </div>
+                    </div>
+        
+                    
+        </div>
+        
+        <div *ngIf="!webService.noResults" class="row justify-content-md-center">
+                <div class="col-md">
+                    <button class="btn btn-light" (click)="previousPage()">Previous</button>
+                    <button class="btn btn-light" (click)="firstPage()">First</button>
+                    
+                    <button class="btn btn-light" (click)="getPage(page)" *ngFor="let page of webService.pages">
+                            {{page + 1}}  
+                    </button>
+                    <button class="btn btn-light" (click)="lastPage()">Last</button>
+                    <button class="btn btn-light" (click)="nextPage()">Next</button>
+                </div>
+        </div> 
+        
+        <div *ngIf="webService.noResults" class="row searchRes justify-content-md-center">
+        
+            <h2>No Results found</h2>
+        
+        </div>
+
 </div>
 
-<div *ngIf="webService.noResults" class="row searchRes justify-content-md-center">
-
-    <h2>No Results found</h2>
-
-</div>
 
 
 

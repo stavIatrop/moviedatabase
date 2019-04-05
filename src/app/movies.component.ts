@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { Router} from '@angular/router';
 import { WebService } from './web.service';
 import { AuthService } from './auth.service';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'movies',
@@ -9,20 +11,16 @@ import { AuthService } from './auth.service';
 })
 
 export class MoviesComponent {
-    // business_list = [
-    //     { "name": "Pizza Place",
-    //         "city": "Coleriane",
-    //         "review_count": 10 },
-    //     { "name": "Wine Lake",
-    //         "city": "Ballymoney",
-    //         "review_count": 7 },
-    //     { "name": "Beer Tavern",
-    //         "city": "Ballymena",
-    //         "review_count": 12 }
-    // ];
 
     constructor(private webService: WebService,
-                private authService: AuthService) {}
+                private authService: AuthService,
+                private formBuilder: FormBuilder,
+                private router: Router) {
+
+                  this.searchForm = formBuilder.group ( {
+                    searchWords: ""
+                  });
+                }
 
     // async ngOnInit() {
     //     var response = await this.webService.getMovies();
@@ -41,6 +39,15 @@ export class MoviesComponent {
       //     .subscribe(movies => {
       //         this.movie_list = movies
       //     })
+    }
+
+    searchForm;
+
+    onSubmit() {
+    
+      console.log(this.searchForm.value.searchWords);
+      sessionStorage.setItem("searchString", this.searchForm.value.searchWords);
+      this.router.navigate(["/search"]);
     }
 
     nextPage() {

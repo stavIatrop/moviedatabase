@@ -1,0 +1,4 @@
+-Search(top priority!!!!), Sort, pagination
+-Add review
+-Add a movie
+-Display of movies(started, not finished)
