@@ -33,6 +33,14 @@ nav {
     display: inline-block;
     float:none;
 } */
+.breadcrumb {
+    background-color: white;
+}
+
+.breadcrumbList {
+    list-style: none;
+}
+
 #middleRow {
     margin-top: 10%;
     background-color: rgb(255, 255, 255);

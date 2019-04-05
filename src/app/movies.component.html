@@ -2,14 +2,6 @@
     <div class="row">
             
         <div class="col-sm-12">
-            <!-- <table> -->
-                
-                <!-- <tr *ngFor='let movie of (webService.movie_list | async) | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize'> -->
-                <!-- <tr *ngFor='let movie of (webService.movie_list | async) | slice: 0:pageSize'>
-                  {{movie.title}}
-                </tr>
-              </table>
-              <ngb-pagination  [pageSize]="pageSize" [collectionSize]="5" aria-label="Default pagination"></ngb-pagination> -->
             <div *ngFor = "let movie of webService.movie_list | async">
                 <div class="card text-white bg-primary mb-3"
                     [routerLink] = "['/movies', movie._id]"
