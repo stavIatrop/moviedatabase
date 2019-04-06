@@ -11,5 +11,5 @@ export class AppComponent {
   constructor (private authService: AuthService) {
     authService.handleAuthentication();
   }
-  title = 'Movie Database';
+  title = 'Movie Nerds';
 }

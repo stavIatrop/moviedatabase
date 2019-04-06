@@ -33,6 +33,11 @@ export class WebService {
     page_countReviews;
     pagesReviews = [];
 
+    numberOfResults;
+    searchRes_per_page = 5;
+    page_countSearch;
+    pagesSearch = [];
+
     constructor(private http: Http,
                 private router: Router) {}
 
@@ -70,10 +75,11 @@ export class WebService {
             'http://localhost:3000/api/moviesCount')
             .subscribe(response => {
                 this.movies_count = response.json();
+
                 if( this.movies_count % this.movies_per_page == 0) {
-                    this.page_count = this.movies_count / this.movies_per_page;
+                    this.page_count = parseInt(this.movies_count) / this.movies_per_page;
                 }else {
-                    this.page_count =(this.movies_count / this.movies_per_page) + 1;
+                    this.page_count = Math.floor(parseInt(this.movies_count) / this.movies_per_page) + 1;
                 }
 
                 this.pages = Array(this.page_count).fill(0).map((x,i)=>i);
@@ -130,12 +136,18 @@ export class WebService {
 
     searchString;
     noResults;
-    numberOfResults;
+    
 
     private searchResults_private_list = [];
     private searchSubject = new Subject();
-    searchResults_list = this.searchSubject.asObservable();
-    
+    searchResults_list_All = this.searchSubject.asObservable();
+    searchResults_list = [];
+
+    getSliceOfSearch(start) {
+
+        
+        this.searchResults_list = this.searchResults_private_list.slice(start, start + this.searchRes_per_page);
+    }
 
     getResults() {
 
@@ -159,6 +171,21 @@ export class WebService {
                     }else {
                         this.noResults = false;
                     }
+
+                    if( this.numberOfResults % this.searchRes_per_page == 0) {
+                        this.page_countSearch = this.numberOfResults / this.searchRes_per_page;
+                    }else {
+                        this.page_countSearch = Math.floor(parseInt(this.numberOfResults) / this.searchRes_per_page) + 1;
+                    }
+                    
+                    if(this.searchRes_per_page <= this.searchResults_private_list.length) {
+                        this.searchResults_list = this.searchResults_private_list.slice(0, this.searchRes_per_page);
+                    } else {
+                        this.searchResults_list = this.searchResults_private_list.slice(0, this.searchResults_private_list.length);
+                    }
+                    
+
+                    this.pagesSearch = Array(this.page_countSearch).fill(0).map((x,i)=>i);
                     
                 }
             )

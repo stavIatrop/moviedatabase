@@ -35,9 +35,9 @@
         
                    
                     <div class="col-sm-8">
-                            <div *ngFor = "let movie of webService.searchResults_list | async">
+                            <div *ngFor = "let movie of webService.searchResults_list">
                                 <div class="row">
-                                        <div class="col-sm-2"><a [routerLink] = "['/movies', movie._id]" ><img class="rounded" src="../movieLogo.png" width="185" height="278"  alt=""></a></div>
+                                        <div class="col-sm-2"><a [routerLink] = "['/movies', movie._id]" ><img class="rounded" src="../images/movieLogo.png" width="185" height="278"  alt=""></a></div>
                                         <div class="col-sm-6">
                                             <div class="card  mb-10" [routerLink] = "['/movies', movie._id]" style = "border:none;cursor: pointer">
                                                 <div class="card-header">
@@ -61,14 +61,14 @@
         
         <div *ngIf="!webService.noResults" class="row justify-content-md-center">
                 <div class="col-md">
-                    <button class="btn btn-light" (click)="previousPage()">Previous</button>
-                    <button class="btn btn-light" (click)="firstPage()">First</button>
+                    <button class="btn btn-light" (click)="previousPageSearch()">Previous</button>
+                    <button class="btn btn-light" (click)="firstPageSearch()">First</button>
                     
-                    <button class="btn btn-light" (click)="getPage(page)" *ngFor="let page of webService.pages">
+                    <button class="btn btn-light" (click)="getPageSearch(page)" *ngFor="let page of webService.pagesSearch">
                             {{page + 1}}  
                     </button>
-                    <button class="btn btn-light" (click)="lastPage()">Last</button>
-                    <button class="btn btn-light" (click)="nextPage()">Next</button>
+                    <button class="btn btn-light" (click)="lastPageSearch()">Last</button>
+                    <button class="btn btn-light" (click)="nextPageSearch()">Next</button>
                 </div>
         </div> 
         

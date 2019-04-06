@@ -55,6 +55,8 @@ export class MoviesComponent {
       if(this.webService.movies_count > this.start) {
         sessionStorage.start = Number(this.start);
         this.webService.getMovies(this.start);
+      } else {
+        this.start = Number(this.start) - 5;
       }
       
     }

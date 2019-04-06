@@ -53,6 +53,8 @@ export class MovieComponent {
       if(this.webService.review_count > this.start) {
         sessionStorage.startReview = Number(this.start);
         this.webService.getReviews(this.start);
+      } else {
+        this.start = Number(this.start) - this.webService.reviews_per_page;
       }
       
     }
