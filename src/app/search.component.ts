@@ -29,7 +29,24 @@ export class SearchComponent {
 
     onChangeView() {
       console.log(this.selectedOptionView);
+
+      var page;
+      
+      page = (Number(this.start) / this.webService.searchRes_per_page) + 1 ;
+
+      var pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "white";
+      document.getElementById(pageString).style.color = "black";
+
+      page = 1;
+      pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "#132f47";
+      document.getElementById(pageString).style.color = "white";
+
       this.start = 0;
+      
       if(this.selectedOptionView == "All") {
 
         this.webService.searchRes_per_page = this.webService.numberOfResults;
@@ -65,8 +82,38 @@ export class SearchComponent {
     onChangeSort() {
       console.log(this.selectedOptionSort);
 
-      if(this.selectedOptionSort == "relevance") {
+      var page;
+      
+      page = (Number(this.start) / this.webService.searchRes_per_page) + 1 ;
+
+      var pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "white";
+      document.getElementById(pageString).style.color = "black";
+
+      page = 1;
+      pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "#132f47";
+      document.getElementById(pageString).style.color = "white";
+
+      this.start = 0;
+
+      if (this.selectedOptionSort == "relevance") {
         
+        this.webService.sortByRelevance();
+      
+      }else if (this.selectedOptionSort == "title") {
+
+        this.webService.sortByTitle();
+
+      }else if (this.selectedOptionSort == "year") {
+
+        this.webService.sortByYear();
+
+      }else {
+
+        this.webService.sortByDefault();
       }
       
     }

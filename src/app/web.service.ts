@@ -180,7 +180,9 @@ export class WebService {
                     if(this.searchRes_per_page <= this.searchResults_private_list.length) {
                         this.searchResults_list = this.searchResults_private_list.slice(0, this.searchRes_per_page);
                     } else {
+
                         this.searchResults_list = this.searchResults_private_list.slice(0, this.searchResults_private_list.length);
+                        
                     }
                     
 
@@ -188,5 +190,67 @@ export class WebService {
                     
                 }
             )
+    }
+
+    sortByRelevance() {
+
+        this.searchResults_list = this.searchResults_private_list;
+        this.searchResults_list.sort(function(a, b) {
+            return b.relevance - a.relevance;
+        })
+        
+
+        if(this.searchRes_per_page <= this.searchResults_list.length) {
+            this.searchResults_list = this.searchResults_list.slice(0, this.searchRes_per_page);
+        } else {
+            this.searchResults_list = this.searchResults_list.slice(0, this.searchResults_list.length);
+        }
+
+        console.log(this.searchResults_list);
+    }
+
+    compare(a,b) {
+        if (a.last_nom < b.last_nom)
+          return -1;
+        if (a.last_nom > b.last_nom)
+          return 1;
+        return 0;
+      }
+
+    sortByTitle() {
+    
+        this.searchResults_list = this.searchResults_private_list;
+        
+        this.searchResults_list.sort((a,b) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0)); 
+
+        if(this.searchRes_per_page <= this.searchResults_list.length) {
+            this.searchResults_list = this.searchResults_list.slice(0, this.searchRes_per_page);
+        } else {
+            this.searchResults_list = this.searchResults_list.slice(0, this.searchResults_list.length);
+        }
+
+        console.log(this.searchResults_list);
+    }
+
+    sortByYear() {
+
+        this.searchResults_list = this.searchResults_private_list;
+        this.searchResults_list.sort(function(a, b) {
+            
+            return b.year - a.year;
+        })
+        
+
+        if(this.searchRes_per_page <= this.searchResults_list.length) {
+            this.searchResults_list = this.searchResults_list.slice(0, this.searchRes_per_page);
+        } else {
+            this.searchResults_list = this.searchResults_list.slice(0, this.searchResults_list.length);
+        }
+
+        console.log(this.searchResults_list);
+    }
+
+    sortByDefault() {
+
     }
 }

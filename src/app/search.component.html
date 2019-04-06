@@ -71,7 +71,7 @@
         
                    
                     <div class="col-sm-8">
-                            <div *ngFor = "let movie of webService.searchResults_list">
+                            <div *ngFor = "let movie of webService.searchResults_list_All | async">
                                 <div class="row">
                                         <div class="col-sm-2"><a [routerLink] = "['/movies', movie._id]" ><img class="rounded" src="../images/movieLogo.png" width="185" height="278"  alt=""></a></div>
                                         <div class="col-sm-6">
