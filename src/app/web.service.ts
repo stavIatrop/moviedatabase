@@ -144,7 +144,6 @@ export class WebService {
     searchResults_list = [];
 
     getSliceOfSearch(start) {
-
         
         this.searchResults_list = this.searchResults_private_list.slice(start, start + this.searchRes_per_page);
     }

@@ -30,8 +30,44 @@
                   </ul>
                 </div>
         </div>
-        <h5 *ngIf="!webService.noResults"> {{webService.numberOfResults}} results found:</h5>
-        <div *ngIf="!webService.noResults" class="row searchRes justify-content-md-center">
+        <div *ngIf="!webService.noResults" class="row">
+            
+            <div class="col-sm-2"><h5> {{webService.numberOfResults}} results found for "{{webService.searchString}}" :</h5></div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-1">
+                    
+                    <div class="input-group mb-3">
+                            <p style="margin-top:4px;">View:</p>
+                            <select (change)="onChangeView()" [(ngModel)]="selectedOptionView"  id="selectView">
+                              <option value="0" selected>Choose...</option>
+                              <option value="5">5</option>
+                              <option value="10">10</option>
+                              <option value="15">15</option>
+                              <option value="All">All</option>
+                            </select>
+                
+                    </div>
+            </div>
+            <div class="col-sm-2">
+                    
+                    <div class="input-group mb-3">
+                            <p style="margin-top: 4px; margin-left:30px;">Sort by:</p>
+                            <select (change)="onChangeSort()" [(ngModel)]="selectedOptionSort"  id="selectSort">
+                              <option value="0" selected>Choose...</option>
+                              <option value="relevance">Relevance</option>
+                              <option value="title">Title</option>
+                              <option value="year">Year</option>
+                            </select>
+                
+                    </div>
+            </div>
+            
+        
+        </div>
+        
+
+
+        <div *ngIf="!webService.noResults" class="row searchResRow justify-content-md-center">
         
                    
                     <div class="col-sm-8">
@@ -59,12 +95,13 @@
                     
         </div>
         
-        <div *ngIf="!webService.noResults" class="row justify-content-md-center">
+        <div *ngIf="!webService.noResults" class="row">
+            <div class="col-md-2"></div>
                 <div class="col-md">
                     <button class="btn btn-light" (click)="previousPageSearch()">Previous</button>
                     <button class="btn btn-light" (click)="firstPageSearch()">First</button>
                     
-                    <button class="btn btn-light" (click)="getPageSearch(page)" *ngFor="let page of webService.pagesSearch">
+                    <button class="btn btn-light" (click)="getPageSearch(page)" *ngFor="let page of webService.pagesSearch" id="pageButton{{page + 1}}" >
                             {{page + 1}}  
                     </button>
                     <button class="btn btn-light" (click)="lastPageSearch()">Last</button>

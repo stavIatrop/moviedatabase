@@ -64,8 +64,32 @@ input[type=search]:focus:not([readonly]) {
 
 #searchRes {
 
-    
+
     font-style: italic;
     font-size: 1.1rem;
 }
 
+.searchResRow {
+    margin-top: 30px;
+}
+
+#selectView {
+
+    margin-top: -43px;
+    margin-left: 50px;
+    height: 30px;
+
+}
+
+#pageButton:focus {
+
+    color: white;
+    background-color: #132f47;
+}
+#selectSort {
+
+    margin-bottom: 10%;
+    margin-left: 10px;
+    height: 30px;
+
+}

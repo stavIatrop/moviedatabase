@@ -1,4 +1,4 @@
--Search(top priority!!!!), Sort, pagination
+-Search(top priority!!!!), Sort
 -Add review
 -Like, Dislike buttons in review
 -Add a movie
