@@ -100,3 +100,9 @@ input[type=search]:focus:not([readonly]) {
     height: 30px;
 
 }
+
+#submitReview {
+
+    background-color: #132f47;
+    color: white; 
+}

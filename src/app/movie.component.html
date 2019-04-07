@@ -158,7 +158,7 @@
             </div>
             
             <span *ngIf="isIncomplete()">You must complete all fields</span>
-            <button *ngIf="!isIncomplete()" type="submit" class="btn btn-primary">Submit</button>
+            <button *ngIf="!isIncomplete()" type="submit" id="submitReview" class="btn">Submit</button>
         </form>
     </span>
     <span *ngIf = "!authService.isAuthenticated()">

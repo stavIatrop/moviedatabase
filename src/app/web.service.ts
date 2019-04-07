@@ -65,6 +65,7 @@ export class WebService {
                 this.moviesSubject.next(this.movie_private_list);
                 console.log(this.movie_private_list[0].review_count);
                 this.movieID = id;
+                this.review_count = this.movie_private_list[0].review_count;
                 this.getReviews(id, 0, this.reviews_per_page);
                 // this.review_count = this.movie_private_list[0].review_count;
             
@@ -134,7 +135,7 @@ export class WebService {
         .subscribe(
             response => {
 
-                this.review_count = this.movie_private_list[0].review_count;
+                
                 console.log(this.review_count);
                 
                 if( this.review_count == 0) {
@@ -180,11 +181,11 @@ export class WebService {
 
         this.searchString = sessionStorage.getItem("searchString");
         console.log(this.searchString);
-        // if(this.searchString.length == 0) {
-        //     console.log("No results");
-        //     this.noResults = true;
-        //     return;
-        // }
+        if(this.searchString.length == 0) {
+            console.log("No results");
+            this.noResults = true;
+            return;
+        }
         return this.http.get(
             'http://localhost:3000/api/search?searchString=' + this.searchString + "&start=" + start + "&perPage=" + this.searchRes_per_page + "&sort=" + sort)
             .subscribe(
@@ -195,16 +196,12 @@ export class WebService {
                     this.numberOfResults = res[0].numberOfResults;
                     this.searchResults_private_list = res[0].docs2;
 
-                    
-                    
-                    console.log(this.searchResults_private_list);
-                    this.searchSubject.next(this.searchResults_private_list) ;
-                    
                     if(this.searchResults_private_list.length == 0) {
                         this.noResults = true;
                         return;
 
                     }else {
+
                         this.noResults = false;
                         
                     }
@@ -220,6 +217,13 @@ export class WebService {
                     console.log(this.numberOfResults);
 
                     this.pagesSearch = Array(this.page_countSearch).fill(0).map((x,i)=>i);
+
+                    setTimeout( () => { this.searchSubject.next(this.searchResults_private_list); }, 200 );
+                    
+
+                    console.log(this.searchResults_private_list);
+
+                    
 
                     
                 }

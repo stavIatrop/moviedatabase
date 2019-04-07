@@ -297,7 +297,7 @@ export class MovieComponent {
     onSubmitReview() {
 
       this.review.movieID = this.webService.movieID;
-      console.log(this.review);
+      this.webService.postReview(this.review, this.selectedOptionSort);
       this.reviewForm.reset();
     }
 
