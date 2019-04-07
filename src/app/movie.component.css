@@ -83,3 +83,20 @@ input[type=search]:focus:not([readonly]) {
     
     
 }
+
+
+#selectSort {
+
+    margin-bottom: 10%;
+    margin-left: 10px;
+    height: 30px;
+
+}
+
+#selectView {
+
+    margin-top: 0px;
+    margin-left: 10px;
+    height: 30px;
+
+}

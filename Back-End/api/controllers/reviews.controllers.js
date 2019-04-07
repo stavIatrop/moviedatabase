@@ -8,13 +8,18 @@ module.exports.reviewsGetAll = function(req, res) {
 
     var start = 0;
     var number = 5;
-    var maxNumber = 10;
+    var sort = "";
 
     if(req.query && req.query.start) {
         start = parseInt(req.query.start);
     }
     if(req.query && req.query.number) {
         number = parseInt(req.query.number);
+    }
+
+    if(req.query && req.query.sort) {
+
+        sort = req.query.sort
     }
 
     Movie
@@ -40,14 +45,40 @@ module.exports.reviewsGetAll = function(req, res) {
                                         "Movie ID not found" + movieID};
             }else {
 
+                if(sort == '-date') {
+
+                    doc.reviews.sort(function(a, b) {
+                        return b.date - a.date;
+                    })
+
+                }else if( sort == 'date') {
+
+                    doc.reviews.sort(function(a, b) {
+                        return a.date - b.date;
+                    })
+                }else if( sort == 'avg_stars') {
+
+                    doc.reviews.sort(function(a, b) {
+                        return a.stars - b.stars;
+                    })
+                }else if( sort == '-avg_stars') {
+
+                    doc.reviews.sort(function(a, b) {
+                        return b.stars - a.stars;
+                    })
+                }else if(sort == "default") {     //default
+
+                    doc.reviews.sort(function(a, b) {
+                        return b.date - a.date;
+                    })
+                }
                 
-                doc.reviews.sort(function(a, b) {
-                    return b.date - a.date;
-                })
-                
+                doc.reviews = doc.reviews.slice(start, start + number);
                 response.message = doc.reviews ?
                                     doc.reviews : []
-            };
+
+            }
+            console.log(response.message);
             res
                 .status(response.status)
                 .json(response.message);
@@ -99,6 +130,7 @@ var addReview = function(req, res, thisMovie) {
     var sum = parseInt(thisMovie.review_count) * parseFloat(thisMovie.avg_stars);
     thisMovie.review_count = parseInt(thisMovie.review_count) + 1;
     thisMovie.avg_stars = (sum + parseInt(req.body.stars) ) / parseInt(thisMovie.review_count );
+    thisMovie.avg_stars = thisMovie.avg_stars.toFixed(1);
     console.log(thisMovie);
     thisMovie.save(function(err, updatedMovie) {
         if(err) {
@@ -273,6 +305,7 @@ module.exports.reviewsDeleteOne = function(req, res) {
                     var sum = parseInt(thisMovie.review_count) * parseFloat(thisMovie.avg_stars);
                     thisMovie.review_count = parseInt(thisMovie.review_count) - 1;
                     thisMovie.avg_stars = (sum - parseInt(req.body.stars) ) / parseInt(thisMovie.review_count );
+                    thisMovie.avg_stars = thisMovie.avg_stars.toFixed(1);
                     console.log(thisMovie);
                     
                     thisMovie.save(function(err, updatedMovie) {

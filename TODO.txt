@@ -1,4 +1,4 @@
--Add review
+-Add review, fix pagination (Math.ceil in search and movies)
 -Like, Dislike buttons in review
 -Add a movie
 -Display of movies(started, not finished)

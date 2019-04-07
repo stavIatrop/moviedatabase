@@ -54,17 +54,17 @@ export class SearchComponent {
 
         this.webService.searchRes_per_page = this.webService.numberOfResults;
         
-        this.webService.getResults(this.start, "default");
+        this.webService.getResults(this.start, this.selectedOptionSort);
         return;
 
       }else if(parseInt(this.selectedOptionView) != 0) {
         this.webService.searchRes_per_page = parseInt(this.selectedOptionView);
-        this.webService.getResults(this.start, "default");
+        this.webService.getResults(this.start, this.selectedOptionSort);
 
       }else {
         //default view 5
         this.webService.searchRes_per_page = 5;
-        this.webService.getResults(this.start, "default");
+        this.webService.getResults(this.start, this.selectedOptionSort);
         
       }      
       
@@ -115,9 +115,12 @@ export class SearchComponent {
         page = (Number(this.start) / this.webService.searchRes_per_page) + 1 ;
 
         var pageString = "pageButton" + page.toString();
+        if(document.getElementById(pageString) ) {
 
-        document.getElementById(pageString).style.backgroundColor = "white";
-        document.getElementById(pageString).style.color = "black";
+          document.getElementById(pageString).style.backgroundColor = "white";
+          document.getElementById(pageString).style.color = "black";
+        }
+        
         console.log(this.searchForm.value.searchWords);
         
         sessionStorage.setItem("searchString", this.searchForm.value.searchWords);

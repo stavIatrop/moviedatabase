@@ -32,8 +32,8 @@ export class MoviesComponent {
         this.start = sessionStorage.start;
       }
       console.log(this.start);
-      this.webService.getMovies(this.start);
-      this.webService.getPageCount();
+      this.webService.getMovies(this.start , "default");
+      //this.webService.getMoviesCount();
 
       // this.webService.movie_list
       //     .subscribe(movies => {
@@ -42,6 +42,82 @@ export class MoviesComponent {
     }
 
     searchForm;
+
+    selectedOptionView = "0";
+    selectedOptionSort = "0";
+
+    onChangeView() {
+
+      console.log(this.selectedOptionView);
+
+      var page;
+      
+      page = (Number(this.start) / this.webService.movies_per_page) + 1 ;
+
+      var pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "white";
+      document.getElementById(pageString).style.color = "black";
+
+      page = 1;
+      pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "#132f47";
+      document.getElementById(pageString).style.color = "white";
+
+      this.start = 0;
+      
+      if(this.selectedOptionView == "All") {
+
+        this.webService.movies_per_page = this.webService.movies_count;
+        
+        this.webService.getMovies(this.start, this.selectedOptionSort);
+        return;
+
+      }else if(parseInt(this.selectedOptionView) != 0) {
+        this.webService.movies_per_page = parseInt(this.selectedOptionView);
+        this.webService.getMovies(this.start, this.selectedOptionSort);
+
+      }else {
+        //default view 5
+        this.webService.movies_per_page = 5;
+        this.webService.getMovies(this.start, this.selectedOptionSort);
+        
+      }
+    }
+
+    onChangeSort() {
+
+      console.log(this.selectedOptionSort);
+
+      var page;
+      
+      page = (Number(this.start) / this.webService.movies_per_page) + 1 ;
+
+      var pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "white";
+      document.getElementById(pageString).style.color = "black";
+
+      page = 1;
+      pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "#132f47";
+      document.getElementById(pageString).style.color = "white";
+
+      this.start = 0;
+
+      if(this.selectedOptionSort == "0") {
+
+        this.webService.getMovies(this.start, "default");
+
+      }else {
+
+        this.webService.getMovies(this.start, this.selectedOptionSort);
+
+      }
+    }
+
 
     onSubmit() {
     
@@ -54,7 +130,32 @@ export class MoviesComponent {
       this.start = Number(this.start) + 5;
       if(this.webService.movies_count > this.start) {
         sessionStorage.start = Number(this.start);
-        this.webService.getMovies(this.start);
+
+        var page;
+      
+        page = (Number(this.start - this.webService.movies_per_page ) / this.webService.movies_per_page) + 1 ;
+
+        var pageString = "pageButton" + page.toString();
+
+        document.getElementById(pageString).style.backgroundColor = "white";
+        document.getElementById(pageString).style.color = "black";
+
+        if(this.selectedOptionSort == "0") {
+
+          this.webService.getMovies(this.start, "default");
+        }else 
+        {
+          this.webService.getMovies(this.start, this.selectedOptionSort)
+        }
+
+        page = (Number(this.start) / this.webService.movies_per_page) + 1 ;
+
+        pageString = "pageButton" + page.toString();
+
+        document.getElementById(pageString).style.backgroundColor = "#132f47";
+        document.getElementById(pageString).style.color = "white";
+
+        
       } else {
         this.start = Number(this.start) - 5;
       }
@@ -63,30 +164,124 @@ export class MoviesComponent {
 
     previousPage() {
       if(this.start > 0) {
+        var page;
+      
+        page = (Number(this.start  ) / this.webService.movies_per_page) + 1 ;
+  
+        var pageString = "pageButton" + page.toString();
+  
+        document.getElementById(pageString).style.backgroundColor = "white";
+        document.getElementById(pageString).style.color = "black";
+
+
         this.start = Number(this.start) - 5;
         sessionStorage.start = Number(this.start);
-        this.webService.getMovies(this.start);
+
+        if(this.selectedOptionSort == "0") {
+
+          this.webService.getMovies(this.start, "default");
+        }else 
+        {
+          this.webService.getMovies(this.start, this.selectedOptionSort)
+        }
+            page = (Number(this.start) / this.webService.movies_per_page) + 1 ;
+
+        pageString = "pageButton" + page.toString();
+
+        document.getElementById(pageString).style.backgroundColor = "#132f47";
+        document.getElementById(pageString).style.color = "white";
       }
     }
 
     firstPage() {
+
+      var page;
+      
+      page = (Number(this.start) / this.webService.movies_per_page) + 1 ;
+
+      var pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "white";
+      document.getElementById(pageString).style.color = "black";
+
+
       this.start = 0;
       sessionStorage.start = Number(this.start);
-      this.webService.getMovies(this.start);
+      
+      if(this.selectedOptionSort == "0") {
+
+        this.webService.getMovies(this.start, "default");
+      }else 
+      {
+        this.webService.getMovies(this.start, this.selectedOptionSort)
+      }
+        page = 1;
+      pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "#132f47";
+      document.getElementById(pageString).style.color = "white";
     }
 
     lastPage() {
 
+      var page;
+
+      page = (Number(this.start) / this.webService.movies_per_page) + 1 ;
+
+      var pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "white";
+      document.getElementById(pageString).style.color = "black";
+
       this.start = this.webService.movies_count - this.webService.movies_per_page;
+
       sessionStorage.start = Number(this.start);
-      this.webService.getMovies(this.start);
+      
+      if(this.selectedOptionSort == "0") {
+
+        this.webService.getMovies(this.start, "default");
+      }else 
+      {
+        this.webService.getMovies(this.start, this.selectedOptionSort)
+      }
+
+        page = (Number(this.start) / this.webService.movies_per_page) + 1 ;
+
+      pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "#132f47";
+      document.getElementById(pageString).style.color = "white";
+
     }
 
     getPage(page) {
-      console.log(page);
+
+      var page1;
+      
+      page1 = (Number(this.start) / this.webService.movies_per_page) + 1 ;
+
+      var pageString = "pageButton" + page1.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "white";
+      document.getElementById(pageString).style.color = "black";
+      
       this.start = (page) * this.webService.movies_per_page;
       sessionStorage.start = Number(this.start);
-      this.webService.getMovies(this.start);
+      
+      if(this.selectedOptionSort == "0") {
+
+        this.webService.getMovies(this.start, "default");
+      }else 
+      {
+        this.webService.getMovies(this.start, this.selectedOptionSort)
+      }
+
+      pageString = "pageButton" + (page + 1).toString();
+
+      document.getElementById(pageString).style.backgroundColor = "#132f47";
+      document.getElementById(pageString).style.color = "white";
+
+        
     }
 
     start = 0;

@@ -119,9 +119,9 @@ module.exports.search = function(req, res) {
 
                 }
                 var numberOfResults = docs2.length;
-                console.log(start + perPage);
+                
                 docs2 = docs2.slice(parseInt(start), parseInt(start) + parseInt(perPage));
-                console.log(docs2);
+                
                 var results = [{ numberOfResults : numberOfResults , docs2 : docs2}];
                 
                 res
@@ -139,6 +139,7 @@ module.exports.moviesGetAll = function(req, res) {
     var start = 0;
     var number = 5;
     var maxNumber = 10;
+    var sort = "";
 
     if(req.query && req.query.start) {
         start = parseInt(req.query.start);
@@ -146,6 +147,10 @@ module.exports.moviesGetAll = function(req, res) {
     if(req.query && req.query.number) {
         number = parseInt(req.query.number);
     }
+
+    if(req.query && req.query.sort) {
+        sort = req.query.sort;
+    } 
 
     if(isNaN(start) || isNaN(number)) {
         res
@@ -156,18 +161,20 @@ module.exports.moviesGetAll = function(req, res) {
         return;
     }
 
-    if(number > maxNumber) {
+    // if(number > maxNumber) {
 
-        res
-            .status(400)
-            .json( { "message" :
-                        "Max value for number is " + maxNumber});
-        return;
-    }
-
+    //     res
+    //         .status(400)
+    //         .json( { "message" :
+    //                     "Max value for number is " + maxNumber});
+    //     return;
+    // }
+    
+    console.log(sort);
 
     Movie
         .find()
+        .sort(sort)
         .skip(start)
         .limit(number)
         .exec(function(err, docs) {
@@ -180,6 +187,8 @@ module.exports.moviesGetAll = function(req, res) {
 
                 console.log("Retrieved data for " +
                             docs.length + " movies");
+
+                
                 res
                     .status(200)
                     .json(docs);

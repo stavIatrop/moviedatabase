@@ -38,9 +38,14 @@ export class MovieComponent {
     //     this.movie = response.json();
     // }
 
+    start = 0;
+
+    selectedOptionView = "0";
+    selectedOptionSort = "0";
+
     ngOnInit() {
       this.webService.getMovie(this.route.snapshot.params.id);
-      this.webService.getReviews(this.route.snapshot.params.id);
+      //this.webService.getReviews(this.route.snapshot.params.id, this.start, "default" );
       this.currentRate = 3;
       // this.webService.movie_list
       //     .subscribe(movies => {
@@ -48,11 +53,109 @@ export class MovieComponent {
       //     })
     }
 
+
+    onChangeView() {
+
+      console.log(this.selectedOptionView);
+
+      var page;
+      
+      page = Math.ceil(Number(this.start) / this.webService.reviews_per_page) + 1 ;
+
+      var pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "white";
+      document.getElementById(pageString).style.color = "black";
+
+      page = 1;
+      pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "#132f47";
+      document.getElementById(pageString).style.color = "white";
+
+      this.start = 0;
+      
+      if(this.selectedOptionView == "All") {
+
+        this.webService.reviews_per_page = this.webService.review_count;
+        
+        this.webService.getReviews(this.webService.movieID,this.start, this.selectedOptionSort);
+        return;
+
+      }else if(parseInt(this.selectedOptionView) != 0) {
+        this.webService.reviews_per_page = parseInt(this.selectedOptionView);
+        this.webService.getReviews(this.webService.movieID, this.start, this.selectedOptionSort);
+
+      }else {
+        //default view 5
+        this.webService.reviews_per_page = 5;
+        this.webService.getReviews(this.webService.movieID,this.start, this.selectedOptionSort);
+        
+      }
+    }
+
+    onChangeSort() {
+
+      console.log(this.selectedOptionSort);
+
+      var page;
+      
+      page = Math.ceil(Number(this.start) / this.webService.reviews_per_page) + 1 ;
+
+      var pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "white";
+      document.getElementById(pageString).style.color = "black";
+
+      page = 1;
+      pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "#132f47";
+      document.getElementById(pageString).style.color = "white";
+
+      this.start = 0;
+
+      if(this.selectedOptionSort == "0") {
+
+        this.webService.getReviews(this.webService.movieID, this.start, "default");
+
+      }else {
+
+        this.webService.getReviews(this.webService.movieID, this.start, this.selectedOptionSort);
+
+      }
+    }
+
+
     nextPage() {
       this.start = Number(this.start) + this.webService.reviews_per_page;
       if(this.webService.review_count > this.start) {
         sessionStorage.startReview = Number(this.start);
-        this.webService.getReviews(this.start);
+
+        var page;
+      
+        page = Math.ceil(Number(this.start - this.webService.reviews_per_page ) / this.webService.reviews_per_page) + 1 ;
+  
+        var pageString = "pageButton" + page.toString();
+  
+        document.getElementById(pageString).style.backgroundColor = "white";
+        document.getElementById(pageString).style.color = "black";
+
+        if(this.selectedOptionSort == "0") {
+
+          this.webService.getReviews(this.webService.movieID, this.start, "default");
+        }else 
+        {
+          this.webService.getReviews(this.webService.movieID, this.start, this.selectedOptionSort)
+        }
+
+        page = Math.ceil(Number(this.start) / this.webService.reviews_per_page) + 1 ;
+
+        pageString = "pageButton" + page.toString();
+
+        document.getElementById(pageString).style.backgroundColor = "#132f47";
+        document.getElementById(pageString).style.color = "white";
+
       } else {
         this.start = Number(this.start) - this.webService.reviews_per_page;
       }
@@ -61,30 +164,120 @@ export class MovieComponent {
 
     previousPage() {
       if(this.start > 0) {
+        var page;
+      
+        page = Math.ceil(Number(this.start  ) / this.webService.reviews_per_page) + 1 ;
+  
+        var pageString = "pageButton" + page.toString();
+  
+        document.getElementById(pageString).style.backgroundColor = "white";
+        document.getElementById(pageString).style.color = "black";
+
         this.start = Number(this.start) - this.webService.reviews_per_page;
         sessionStorage.startReview = Number(this.start);
-        this.webService.getReviews(this.start);
+        
+        if(this.selectedOptionSort == "0") {
+
+          this.webService.getReviews(this.webService.movieID, this.start, "default");
+        }else 
+        {
+          this.webService.getReviews(this.webService.movieID, this.start, this.selectedOptionSort)
+        }
+        page = Math.ceil(Number(this.start) / this.webService.reviews_per_page) + 1 ;
+
+        pageString = "pageButton" + page.toString();
+
+        document.getElementById(pageString).style.backgroundColor = "#132f47";
+        document.getElementById(pageString).style.color = "white";
       }
     }
 
     firstPage() {
+
+      var page;
+      
+      page = Math.ceil(Number(this.start) / this.webService.reviews_per_page) + 1 ;
+
+      var pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "white";
+      document.getElementById(pageString).style.color = "black";
+
+
       this.start = 0;
       sessionStorage.startReview = Number(this.start);
-      this.webService.getReviews(this.start);
+      
+      if(this.selectedOptionSort == "0") {
+
+        this.webService.getReviews(this.webService.movieID, this.start, "default");
+      }else 
+      {
+        this.webService.getReviews(this.webService.movieID, this.start, this.selectedOptionSort)
+      }
+      page = 1;
+      pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "#132f47";
+      document.getElementById(pageString).style.color = "white";
     }
 
     lastPage() {
 
+      var page;
+
+      page = Math.ceil(Number(this.start) / this.webService.reviews_per_page) + 1 ;
+
+      var pageString = "pageButton" + page.toString();
+
+      document.getElementById(pageString).style.backgroundColor = "white";
+      document.getElementById(pageString).style.color = "black";
+
       this.start = this.webService.review_count - this.webService.reviews_per_page;
       sessionStorage.startReview = Number(this.start);
-      this.webService.getReviews(this.start);
+      
+      if(this.selectedOptionSort == "0") {
+
+        this.webService.getReviews(this.webService.movieID, this.start, "default");
+      }else 
+      {
+        this.webService.getReviews(this.webService.movieID, this.start, this.selectedOptionSort)
+      }
+
+      page = Math.ceil(Number(this.start) / this.webService.reviews_per_page) + 1 ;
+
+      pageString = "pageButton" + page.toString();
+
+      console.log(page);
+      document.getElementById(pageString).style.backgroundColor = "#132f47";
+      document.getElementById(pageString).style.color = "white";
     }
 
     getPage(page) {
-      console.log(page);
+      
+      var page1;
+      
+      page1 = Math.ceil(Number(this.start) / this.webService.reviews_per_page) + 1 ;
+
+      var pageString = "pageButton" + page1.toString();
+      
+      document.getElementById(pageString).style.backgroundColor = "white";
+      document.getElementById(pageString).style.color = "black";
+      
       this.start = (page) * this.webService.reviews_per_page;
       sessionStorage.startReview = Number(this.start);
-      this.webService.getReviews(this.start);
+      
+      if(this.selectedOptionSort == "0") {
+
+        this.webService.getReviews(this.webService.movieID, this.start, "default");
+      }else 
+      {
+        this.webService.getReviews(this.webService.movieID, this.start, this.selectedOptionSort)
+      }
+
+      pageString = "pageButton" + (page + 1).toString();
+
+      document.getElementById(pageString).style.backgroundColor = "#132f47";
+      document.getElementById(pageString).style.color = "white";
     }
 
     onSubmit() {
@@ -104,6 +297,6 @@ export class MovieComponent {
               this.isInvalid('review'));
     }
     
-    start = 0;
+    
     movie = { };
 }

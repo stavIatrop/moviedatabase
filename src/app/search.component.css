@@ -76,7 +76,7 @@ input[type=search]:focus:not([readonly]) {
 #selectView {
 
     margin-top: -43px;
-    margin-left: 50px;
+    margin-left: 75px;
     height: 30px;
 
 }
@@ -86,6 +86,7 @@ input[type=search]:focus:not([readonly]) {
     color: white;
     background-color: #132f47;
 }
+
 #selectSort {
 
     margin-bottom: 10%;

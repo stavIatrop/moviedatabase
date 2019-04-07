@@ -32,6 +32,44 @@
         </div>
 </div>
 
+<div class="row">
+            
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4"></div>
+    <div class="col-sm-2">
+            
+            <div class="input-group mb-3">
+                    <p style="margin-top:4px;">View <fa name="list"></fa>:</p>
+                    <select (change)="onChangeView()" [(ngModel)]="selectedOptionView"  id="selectView">
+                      <option value="0" selected>Choose...</option>
+                      <option value="5">5 Items</option>
+                      <option value="10">10 Items</option>
+                      <option value="15">15 Items</option>
+                      <option value="All">All Items</option>
+                    </select>
+        
+            </div>
+    </div>
+    <div class="col-sm-3">
+            
+            <div class="input-group mb-3">
+                    <p style="margin-top: 4px; margin-left:0px;">Sort by <fa name="sort"></fa>:</p>
+                    <select (change)="onChangeSort()" [(ngModel)]="selectedOptionSort"  id="selectSort">
+                      <option value="0" selected>Choose...</option>
+                      <option value='-avg_stars'>Rating (Top Rated First)</option>
+                      <option value='avg_stars'>Rating (Less Rated First)</option>
+                      <option value='title'>Title (Ascending)</option>
+                      <option value='-title'>Title (Descending)</option>
+                      <option value='year'>Year (Older First) </option>
+                      <option value='-year'>Year (Recent First) </option>
+                    </select>
+        
+            </div>
+    </div>
+    
+
+</div>
+
 <div class="container" style="margin-top:100px;">
     <div class="row">
             
@@ -60,7 +98,7 @@
             <button class="btn btn-light" (click)="previousPage()">Previous</button>
             <button class="btn btn-light" (click)="firstPage()">First</button>
             
-            <button class="btn btn-light" (click)="getPage(page)" *ngFor="let page of webService.pages">
+            <button class="btn btn-light" (click)="getPage(page)" *ngFor="let page of webService.pages" id="pageButton{{page + 1}}">
                     {{page + 1}}  
             </button>
             <button class="btn btn-light" (click)="lastPage()">Last</button>
