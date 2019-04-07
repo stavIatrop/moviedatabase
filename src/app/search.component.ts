@@ -27,7 +27,10 @@ export class SearchComponent {
     selectedOptionView = "0";
     selectedOptionSort = "0";
 
+    start = 0;
+
     onChangeView() {
+
       console.log(this.selectedOptionView);
 
       var page;
@@ -50,32 +53,20 @@ export class SearchComponent {
       if(this.selectedOptionView == "All") {
 
         this.webService.searchRes_per_page = this.webService.numberOfResults;
-        this.webService.page_countSearch = 1;
-        this.webService.pagesSearch = Array(this.webService.page_countSearch).fill(0).map((x,i)=>i);
-        this.webService.getSliceOfSearch(this.start);
+        
+        this.webService.getResults(this.start, "default");
         return;
 
       }else if(parseInt(this.selectedOptionView) != 0) {
         this.webService.searchRes_per_page = parseInt(this.selectedOptionView);
+        this.webService.getResults(this.start, "default");
 
       }else {
         //default view 5
         this.webService.searchRes_per_page = 5;
+        this.webService.getResults(this.start, "default");
         
-      }
-
-      if( this.webService.numberOfResults % this.webService.searchRes_per_page == 0) {
-
-        this.webService.page_countSearch = this.webService.numberOfResults / this.webService.searchRes_per_page;
-
-      }else {
-
-        this.webService.page_countSearch = Math.floor(parseInt(this.webService.numberOfResults) / this.webService.searchRes_per_page) + 1;
-
-      }
-      this.webService.pagesSearch = Array(this.webService.page_countSearch).fill(0).map((x,i)=>i);
-      this.webService.getSliceOfSearch(this.start);
-      
+      }      
       
     }
 
@@ -99,36 +90,39 @@ export class SearchComponent {
 
       this.start = 0;
 
-      if (this.selectedOptionSort == "relevance") {
-        
-        this.webService.sortByRelevance();
-      
-      }else if (this.selectedOptionSort == "title") {
+      if(this.selectedOptionSort == "0") {
 
-        this.webService.sortByTitle();
-
-      }else if (this.selectedOptionSort == "year") {
-
-        this.webService.sortByYear();
+        this.webService.getResults(this.start, "default");
 
       }else {
 
-        this.webService.sortByDefault();
+        this.webService.getResults(this.start, this.selectedOptionSort);
+
       }
-      
+            
     }
 
     ngOnInit() {
 
-        this.webService.getResults();
+        this.webService.getResults(this.start, "default");
         
     }
 
     onSubmit() {
     
+        var page;
+        
+        page = (Number(this.start) / this.webService.searchRes_per_page) + 1 ;
+
+        var pageString = "pageButton" + page.toString();
+
+        document.getElementById(pageString).style.backgroundColor = "white";
+        document.getElementById(pageString).style.color = "black";
         console.log(this.searchForm.value.searchWords);
+        
         sessionStorage.setItem("searchString", this.searchForm.value.searchWords);
-        this.webService.getResults();    
+        this.start = 0;
+        this.webService.getResults(this.start, "default");    
     }
 
     nextPageSearch() {
@@ -137,7 +131,7 @@ export class SearchComponent {
 
       if(this.webService.numberOfResults > this.start) {
         sessionStorage.startRes = Number(this.start);
-        this.webService.getSliceOfSearch(Number(this.start));
+
         var page;
       
         page = (Number(this.start - this.webService.searchRes_per_page ) / this.webService.searchRes_per_page) + 1 ;
@@ -146,6 +140,16 @@ export class SearchComponent {
   
         document.getElementById(pageString).style.backgroundColor = "white";
         document.getElementById(pageString).style.color = "black";
+
+        if(this.selectedOptionSort == "0") {
+
+          this.webService.getResults(this.start, "default");
+        }else 
+        {
+          this.webService.getResults(this.start, this.selectedOptionSort)
+        }
+        
+        
   
       }else {
         this.start = Number(this.start) - this.webService.searchRes_per_page;
@@ -184,7 +188,15 @@ export class SearchComponent {
         document.getElementById(pageString).style.color = "white";
 
         sessionStorage.startRes = Number(this.start);
-        this.webService.getSliceOfSearch(this.start);
+        
+        if(this.selectedOptionSort == "0") {
+
+          this.webService.getResults(this.start, "default");
+        }else 
+        {
+          this.webService.getResults(this.start, this.selectedOptionSort)
+        }
+
       }
     }
 
@@ -206,7 +218,15 @@ export class SearchComponent {
 
       this.start = (page) * this.webService.searchRes_per_page;
       sessionStorage.startRes = Number(this.start);
-      this.webService.getSliceOfSearch(this.start);
+      
+      if(this.selectedOptionSort == "0") {
+
+        this.webService.getResults(this.start, "default");
+      }else 
+      {
+        this.webService.getResults(this.start, this.selectedOptionSort)
+      }
+
     }
 
     firstPageSearch() {
@@ -229,7 +249,15 @@ export class SearchComponent {
 
       this.start = 0;
       sessionStorage.startRes = Number(this.start);
-      this.webService.getSliceOfSearch(this.start);
+     
+      if(this.selectedOptionSort == "0") {
+
+        this.webService.getResults(this.start, "default");
+      }else 
+      {
+        this.webService.getResults(this.start, this.selectedOptionSort)
+      }
+
     }
 
     lastPageSearch() {
@@ -256,8 +284,15 @@ export class SearchComponent {
 
       
       sessionStorage.startRes = Number(this.start);
-      this.webService.getSliceOfSearch(this.start);
+      
+      if(this.selectedOptionSort == "0") {
+
+        this.webService.getResults(this.start, "default");
+      }else 
+      {
+        this.webService.getResults(this.start, this.selectedOptionSort)
+      }
     }
 
-    start = 0;
+    
 }

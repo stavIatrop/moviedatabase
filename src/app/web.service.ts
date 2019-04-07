@@ -112,8 +112,6 @@ export class WebService {
                                 this.router.navigate(["/"]);
                                 
                                 
-                            }else {
-                                console.log("null");
                             }
                         }
                     )
@@ -140,15 +138,15 @@ export class WebService {
 
     private searchResults_private_list = [];
     private searchSubject = new Subject();
-    searchResults_list_All = this.searchSubject.asObservable();
-    searchResults_list = [];
+    searchResults_list = this.searchSubject.asObservable();
+    //searchResults_list = [];
 
-    getSliceOfSearch(start) {
+    // getSliceOfSearch(start) {
         
-        this.searchResults_list = this.searchResults_private_list.slice(start, start + this.searchRes_per_page);
-    }
+    //     this.searchResults_list = this.searchResults_private_list.slice(start, start + this.searchRes_per_page);
+    // }
 
-    getResults() {
+    getResults(start, sort) {
 
         this.searchString = sessionStorage.getItem("searchString");
         console.log(this.searchString);
@@ -158,33 +156,32 @@ export class WebService {
             return;
         }
         return this.http.get(
-            'http://localhost:3000/api/search?searchString=' + this.searchString)
+            'http://localhost:3000/api/search?searchString=' + this.searchString + "&start=" + start + "&perPage=" + this.searchRes_per_page + "&sort=" + sort)
             .subscribe(
                 response => {
-                    this.searchResults_private_list = response.json();
+                    var res = response.json();
+                    this.numberOfResults = res[0].numberOfResults;
+                    this.searchResults_private_list = res[0].docs2;
                     this.searchSubject.next(this.searchResults_private_list);
-                    this.numberOfResults = this.searchResults_private_list.length;
+                    
+
+                    
                     
                     if(this.searchResults_private_list.length == 0) {
                         this.noResults = true;
                     }else {
                         this.noResults = false;
                     }
-
                     if( this.numberOfResults % this.searchRes_per_page == 0) {
                         this.page_countSearch = this.numberOfResults / this.searchRes_per_page;
                     }else {
                         this.page_countSearch = Math.floor(parseInt(this.numberOfResults) / this.searchRes_per_page) + 1;
                     }
-                    
-                    if(this.searchRes_per_page <= this.searchResults_private_list.length) {
-                        this.searchResults_list = this.searchResults_private_list.slice(0, this.searchRes_per_page);
-                    } else {
+                    console.log(this.page_countSearch);
+                    console.log(this.searchRes_per_page);
+                    console.log(this.numberOfResults);
 
-                        this.searchResults_list = this.searchResults_private_list.slice(0, this.searchResults_private_list.length);
-                        
-                    }
-                    
+
 
                     this.pagesSearch = Array(this.page_countSearch).fill(0).map((x,i)=>i);
                     
@@ -192,65 +189,63 @@ export class WebService {
             )
     }
 
-    sortByRelevance() {
+    // sortByRelevance() {
 
-        this.searchResults_list = this.searchResults_private_list;
-        this.searchResults_list.sort(function(a, b) {
-            return b.relevance - a.relevance;
-        })
+    //     this.searchResults_list = this.searchResults_private_list;
+    //     this.searchResults_list.sort(function(a, b) {
+    //         return b.relevance - a.relevance;
+    //     })
         
 
-        if(this.searchRes_per_page <= this.searchResults_list.length) {
-            this.searchResults_list = this.searchResults_list.slice(0, this.searchRes_per_page);
-        } else {
-            this.searchResults_list = this.searchResults_list.slice(0, this.searchResults_list.length);
-        }
+    //     if(this.searchRes_per_page <= this.searchResults_list.length) {
+    //         this.searchResults_list = this.searchResults_list.slice(0, this.searchRes_per_page);
+    //     } else {
+    //         this.searchResults_list = this.searchResults_list.slice(0, this.searchResults_list.length);
+    //     }
 
-        console.log(this.searchResults_list);
-    }
+    //     console.log(this.searchResults_list);
+    // }
 
-    compare(a,b) {
-        if (a.last_nom < b.last_nom)
-          return -1;
-        if (a.last_nom > b.last_nom)
-          return 1;
-        return 0;
-      }
+    // compare(a,b) {
+    //     if (a.last_nom < b.last_nom)
+    //       return -1;
+    //     if (a.last_nom > b.last_nom)
+    //       return 1;
+    //     return 0;
+    //   }
 
-    sortByTitle() {
+    // sortByTitle() {
     
-        this.searchResults_list = this.searchResults_private_list;
+    //     this.searchResults_list = this.searchResults_private_list;
         
-        this.searchResults_list.sort((a,b) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0)); 
+    //     this.searchResults_list.sort((a,b) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0)); 
 
-        if(this.searchRes_per_page <= this.searchResults_list.length) {
-            this.searchResults_list = this.searchResults_list.slice(0, this.searchRes_per_page);
-        } else {
-            this.searchResults_list = this.searchResults_list.slice(0, this.searchResults_list.length);
-        }
+    //     if(this.searchRes_per_page <= this.searchResults_list.length) {
+    //         this.searchResults_list = this.searchResults_list.slice(0, this.searchRes_per_page);
+    //     } else {
+    //         this.searchResults_list = this.searchResults_list.slice(0, this.searchResults_list.length);
+    //     }
 
-        console.log(this.searchResults_list);
-    }
+    //     console.log(this.searchResults_list);
+    // }
 
-    sortByYear() {
+    // sortByYear() {
 
-        this.searchResults_list = this.searchResults_private_list;
-        this.searchResults_list.sort(function(a, b) {
+    //     this.searchResults_list = this.searchResults_private_list;
+    //     this.searchResults_list.sort(function(a, b) {
             
-            return b.year - a.year;
-        })
+    //         return b.year - a.year;
+    //     })
         
 
-        if(this.searchRes_per_page <= this.searchResults_list.length) {
-            this.searchResults_list = this.searchResults_list.slice(0, this.searchRes_per_page);
-        } else {
-            this.searchResults_list = this.searchResults_list.slice(0, this.searchResults_list.length);
-        }
+    //     if(this.searchRes_per_page <= this.searchResults_list.length) {
+    //         this.searchResults_list = this.searchResults_list.slice(0, this.searchRes_per_page);
+    //     } else {
+    //         this.searchResults_list = this.searchResults_list.slice(0, this.searchResults_list.length);
+    //     }
 
-        console.log(this.searchResults_list);
-    }
+    //     console.log(this.searchResults_list);
+    // }
 
-    sortByDefault() {
-
-    }
+   
 }

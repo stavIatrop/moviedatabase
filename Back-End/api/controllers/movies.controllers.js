@@ -8,11 +8,34 @@ module.exports.search = function(req, res) {
         searchString = req.query.searchString;
     }
     
+    var start = 0;
+    if(req.query.start) {
+        start = req.query.start;
+    }
+
+    var perPage = 5;
+    if(req.query.perPage) {
+        
+        perPage = req.query.perPage;
+    }
+
+    var sort = "";
+    if(req.query.sort) {
+        sort = req.query.sort;
+    }
+
+    
     var searchWords = searchString.trim().split(/\s+/).filter(Boolean);
     console.log(searchWords);
+    console.log(start);
+    console.log(perPage);
+    console.log(sort);
+
+    
     
     Movie
         .find()
+        .sort(sort)
         .exec(function(err, docs) {
             if(err) {
                 console.log("Error finding movies");
@@ -37,7 +60,7 @@ module.exports.search = function(req, res) {
                     for(var j = 0; j < searchWords.length; j++) {
 
                         
-                        console.log(titleWords);
+                        //console.log(titleWords);
                         
 
                         for( var k = 0; k < titleWords.length; k++) {
@@ -55,7 +78,7 @@ module.exports.search = function(req, res) {
                         }
 
                         
-                        console.log(genres);
+                        //console.log(genres);
 
                         for( var k = 0; k < genres.length; k++) {
 
@@ -65,9 +88,9 @@ module.exports.search = function(req, res) {
                                 relevance++;
                             } 
                         }
-                        console.log(parseInt(searchWords[j]));
-                        console.log(docs[i].year);
-                        console.log(!isNaN( parseInt(searchWords[j])));
+                        // console.log(parseInt(searchWords[j]));
+                        // console.log(docs[i].year);
+                        // console.log(!isNaN( parseInt(searchWords[j])));
 
                         if(!isNaN( parseInt(searchWords[j]) )  ) {              //if search word is a number
 
@@ -87,10 +110,23 @@ module.exports.search = function(req, res) {
                     }
                     
                 }
+                if(sort == "relevance") {
+
+                    docs2.sort(function(a, b) {
+            
+                        return b.relevance - a.relevance;
+                    })
+
+                }
+                var numberOfResults = docs2.length;
+                console.log(start + perPage);
+                docs2 = docs2.slice(parseInt(start), parseInt(start) + parseInt(perPage));
+                console.log(docs2);
+                var results = [{ numberOfResults : numberOfResults , docs2 : docs2}];
                 
                 res
                     .status(200)
-                    .json(docs2);
+                    .json(results);
             }
             
     });  
