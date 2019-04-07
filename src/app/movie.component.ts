@@ -24,13 +24,20 @@ export class MovieComponent {
                   this.reviewForm = formBuilder.group( {
                     name: ['', Validators.required],
                     review: ['', Validators.required],
-                    stars: Number
+                    stars: 0
                   })
                 }
 
     reviewForm;
     currentRate = 3;
     searchForm;
+
+    review = {
+      movieID: '',
+      name: '',
+      review: '',
+      stars: 5
+    }
 
     // async ngOnInit() {
     //     var response = await this.webService.getMovie(
@@ -46,7 +53,7 @@ export class MovieComponent {
     ngOnInit() {
       this.webService.getMovie(this.route.snapshot.params.id);
       //this.webService.getReviews(this.route.snapshot.params.id, this.start, "default" );
-      this.currentRate = 3;
+      //this.currentRate = 3;
       // this.webService.movie_list
       //     .subscribe(movies => {
       //         this.movie_list = movies
@@ -280,11 +287,18 @@ export class MovieComponent {
       document.getElementById(pageString).style.color = "white";
     }
 
-    onSubmit() {
+    onSubmitSearch() {
     
       console.log(this.searchForm.value.searchWords);
       sessionStorage.setItem("searchString", this.searchForm.value.searchWords);
       this.router.navigate(["/search"]);
+    }
+
+    onSubmitReview() {
+
+      this.review.movieID = this.webService.movieID;
+      console.log(this.review);
+      this.reviewForm.reset();
     }
 
     isInvalid(control) {

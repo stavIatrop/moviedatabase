@@ -126,7 +126,7 @@ export class WebService {
     }
 
     
-
+    noReviews = true;
     getReviews(id, start, sort) {
         
         this.http.get (
@@ -135,7 +135,16 @@ export class WebService {
             response => {
 
                 this.review_count = this.movie_private_list[0].review_count;
+                console.log(this.review_count);
                 
+                if( this.review_count == 0) {
+                    this.noReviews = true;
+                    
+                    return;
+                }else {
+                    this.noReviews = false;
+
+                }
                 if( this.review_count % this.reviews_per_page == 0) {
                     this.page_countReviews = parseInt(this.review_count) / this.reviews_per_page;
                 }else {
@@ -217,6 +226,26 @@ export class WebService {
             )
     }
 
+    postReview(review, sort) {
+
+        
+        let urlSearchParams = new URLSearchParams();
+        urlSearchParams.append('username', review.name);
+        urlSearchParams.append('text', review.review);
+        urlSearchParams.append('stars', review.stars);
+
+        this.http.post("http://localhost:3000/api/movies/" +
+                    review.movieID + "/reviews", urlSearchParams)
+                    .subscribe(
+                        response => {
+                            this.review_count = this.review_count + 1;
+                            this.getReviews(review.movieID, 0, sort);
+                        }
+        )
+            
+
+
+    }
     // sortByRelevance() {
 
     //     this.searchResults_list = this.searchResults_private_list;

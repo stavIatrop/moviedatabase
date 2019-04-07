@@ -1,7 +1,7 @@
 <div class="row justify-content-md-center" id="middleRow">
 
         <div class="col-12 col-md-10 col-lg-8">
-                <form [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="card card-sm" id="searchForm">
+                <form [formGroup]="searchForm" (ngSubmit)="onSubmitSearch()" class="card card-sm" id="searchForm">
                     <div class="card-body row no-gutters align-items-center">
                         <div class="col-auto">
                             <fa id="faSearch" name="search"></fa>
@@ -61,8 +61,8 @@
         </div> 
     </div>    
 </div>
-<div class="row" style="margin-top:40px;"><div class="col-sm-2"></div><div class="col-sm-1"><h5 style="margin-left: 60px;">Reviews:</h5></div></div>
-<div class="row">
+<div *ngIf="!webService.noReviews" class="row" style="margin-top:40px;"><div class="col-sm-2"></div><div class="col-sm-1"><h5 style="margin-left: 60px;">Reviews:</h5></div></div>
+<div *ngIf="!webService.noReviews" class="row">
             
         <div class="col-sm-2"></div>
         <div class="col-sm-4"></div>
@@ -99,7 +99,7 @@
     </div>
 
 <div class="container">
-    <div class="row">
+    <div  class="row">
         <div class="col-sm-12">
             <div class="card bg-light mb-3" *ngFor ="let review of webService.reviews | async">
                 <div class="card-header">
@@ -120,7 +120,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div *ngIf="!webService.noReviews" class="row">
         <div class="col-md">
             <button class="btn btn-light" (click)="previousPage()">Previous</button>
             <button class="btn btn-light" (click)="firstPage()">First</button>
@@ -131,25 +131,18 @@
             <button class="btn btn-light" (click)="lastPage()">Last</button>
             <button class="btn btn-light" (click)="nextPage()">Next</button>
         </div>
-        <!-- <div class="col-sm-6">
-            
-        </div>
-        <div class="col-sm-6">
-            
-        </div>
-        <div class="col-sm-6 text-right">
-            
-        </div> -->
+        
     </div>
+    <span *ngIf = "authService.isAuthenticated()">
         <h2>Please review this business</h2>
-        <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="reviewForm" (ngSubmit)="onSubmitReview()">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" class="form-control" formControlName="name" [ngClass]="{'error' : isInvalid('name')}">
+                <input type="text" id="name" name="name" class="form-control" formControlName="name" [ngClass]="{'error' : isInvalid('name')}" [(ngModel)]="review.name">
             </div>
             <div class="form-group" >
                 <label for="review">Please leave your review below</label>
-                <textarea id="review" rows="3" name="review" class="form-control" formControlName="review" [ngClass]="{'error' : isInvalid('review')}"></textarea>
+                <textarea id="review" rows="3" name="review" class="form-control" formControlName="review" [(ngModel)]="review.review" [ngClass]="{'error' : isInvalid('review')}"></textarea>
             </div>
             <div class="form-group">
                 <label for="stars">Please provide a rating (5 = best)</label>
@@ -161,10 +154,16 @@
                     <option value="5">5 stars</option>
                 </select> -->
                 <br>
-                <ngb-rating class="form-control" formControlName="stars" name="stars" [(rate)]="currentRate" max="5"></ngb-rating>
+                <ngb-rating class="form-control" formControlName="stars"  [(ngModel)]="review.stars" name="stars" [(rate)]="currentRate" max="5"></ngb-rating>
             </div>
             
             <span *ngIf="isIncomplete()">You must complete all fields</span>
             <button *ngIf="!isIncomplete()" type="submit" class="btn btn-primary">Submit</button>
         </form>
+    </span>
+    <span *ngIf = "!authService.isAuthenticated()">
+            <h5 class="text-primary">
+                Please log in to leave a review for this business
+            </h5>
+        </span>
 </div>

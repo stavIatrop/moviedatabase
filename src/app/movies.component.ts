@@ -52,7 +52,7 @@ export class MoviesComponent {
 
       var page;
       
-      page = (Number(this.start) / this.webService.movies_per_page) + 1 ;
+      page = Math.ceil(Number(this.start) / this.webService.movies_per_page) + 1 ;
 
       var pageString = "pageButton" + page.toString();
 
@@ -92,7 +92,7 @@ export class MoviesComponent {
 
       var page;
       
-      page = (Number(this.start) / this.webService.movies_per_page) + 1 ;
+      page = Math.ceil(Number(this.start) / this.webService.movies_per_page) + 1 ;
 
       var pageString = "pageButton" + page.toString();
 
@@ -133,7 +133,7 @@ export class MoviesComponent {
 
         var page;
       
-        page = (Number(this.start - this.webService.movies_per_page ) / this.webService.movies_per_page) + 1 ;
+        page = Math.ceil(Number(this.start - this.webService.movies_per_page ) / this.webService.movies_per_page) + 1 ;
 
         var pageString = "pageButton" + page.toString();
 
@@ -148,7 +148,7 @@ export class MoviesComponent {
           this.webService.getMovies(this.start, this.selectedOptionSort)
         }
 
-        page = (Number(this.start) / this.webService.movies_per_page) + 1 ;
+        page = Math.ceil(Number(this.start) / this.webService.movies_per_page) + 1 ;
 
         pageString = "pageButton" + page.toString();
 
@@ -166,7 +166,7 @@ export class MoviesComponent {
       if(this.start > 0) {
         var page;
       
-        page = (Number(this.start  ) / this.webService.movies_per_page) + 1 ;
+        page = Math.ceil(Number(this.start  ) / this.webService.movies_per_page) + 1 ;
   
         var pageString = "pageButton" + page.toString();
   
@@ -184,7 +184,7 @@ export class MoviesComponent {
         {
           this.webService.getMovies(this.start, this.selectedOptionSort)
         }
-            page = (Number(this.start) / this.webService.movies_per_page) + 1 ;
+            page = Math.ceil(Number(this.start) / this.webService.movies_per_page) + 1 ;
 
         pageString = "pageButton" + page.toString();
 
@@ -197,7 +197,7 @@ export class MoviesComponent {
 
       var page;
       
-      page = (Number(this.start) / this.webService.movies_per_page) + 1 ;
+      page = Math.ceil(Number(this.start) / this.webService.movies_per_page) + 1 ;
 
       var pageString = "pageButton" + page.toString();
 
@@ -226,7 +226,7 @@ export class MoviesComponent {
 
       var page;
 
-      page = (Number(this.start) / this.webService.movies_per_page) + 1 ;
+      page = Math.ceil(Number(this.start) / this.webService.movies_per_page) + 1 ;
 
       var pageString = "pageButton" + page.toString();
 
@@ -245,7 +245,7 @@ export class MoviesComponent {
         this.webService.getMovies(this.start, this.selectedOptionSort)
       }
 
-        page = (Number(this.start) / this.webService.movies_per_page) + 1 ;
+        page = Math.ceil(Number(this.start) / this.webService.movies_per_page) + 1 ;
 
       pageString = "pageButton" + page.toString();
 
@@ -258,7 +258,7 @@ export class MoviesComponent {
 
       var page1;
       
-      page1 = (Number(this.start) / this.webService.movies_per_page) + 1 ;
+      page1 = Math.ceil(Number(this.start) / this.webService.movies_per_page) + 1 ;
 
       var pageString = "pageButton" + page1.toString();
 

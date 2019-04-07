@@ -35,7 +35,7 @@ export class SearchComponent {
 
       var page;
       
-      page = (Number(this.start) / this.webService.searchRes_per_page) + 1 ;
+      page = Math.ceil(Number(this.start) / this.webService.searchRes_per_page) + 1 ;
 
       var pageString = "pageButton" + page.toString();
 
@@ -75,7 +75,7 @@ export class SearchComponent {
 
       var page;
       
-      page = (Number(this.start) / this.webService.searchRes_per_page) + 1 ;
+      page = Math.ceil(Number(this.start) / this.webService.searchRes_per_page) + 1 ;
 
       var pageString = "pageButton" + page.toString();
 
@@ -112,7 +112,7 @@ export class SearchComponent {
     
         var page;
         
-        page = (Number(this.start) / this.webService.searchRes_per_page) + 1 ;
+        page = Math.ceil(Number(this.start) / this.webService.searchRes_per_page) + 1 ;
 
         var pageString = "pageButton" + page.toString();
         if(document.getElementById(pageString) ) {
@@ -125,7 +125,7 @@ export class SearchComponent {
         
         sessionStorage.setItem("searchString", this.searchForm.value.searchWords);
         this.start = 0;
-        this.webService.getResults(this.start, "default");    
+        this.webService.getResults(this.start, this.selectedOptionSort);    
     }
 
     nextPageSearch() {
@@ -137,7 +137,7 @@ export class SearchComponent {
 
         var page;
       
-        page = (Number(this.start - this.webService.searchRes_per_page ) / this.webService.searchRes_per_page) + 1 ;
+        page = Math.ceil(Number(this.start - this.webService.searchRes_per_page ) / this.webService.searchRes_per_page) + 1 ;
   
         var pageString = "pageButton" + page.toString();
   
@@ -159,7 +159,7 @@ export class SearchComponent {
       }
 
      
-      page = (Number(this.start) / this.webService.searchRes_per_page) + 1 ;
+      page = Math.ceil(Number(this.start) / this.webService.searchRes_per_page) + 1 ;
 
       pageString = "pageButton" + page.toString();
 
@@ -174,7 +174,7 @@ export class SearchComponent {
 
         var page;
       
-        page = (Number(this.start  ) / this.webService.searchRes_per_page) + 1 ;
+        page = Math.ceil(Number(this.start  ) / this.webService.searchRes_per_page) + 1 ;
   
         var pageString = "pageButton" + page.toString();
   
@@ -183,7 +183,7 @@ export class SearchComponent {
 
         this.start = Number(this.start) - this.webService.searchRes_per_page;
 
-        page = (Number(this.start) / this.webService.searchRes_per_page) + 1 ;
+        page = Math.ceil(Number(this.start) / this.webService.searchRes_per_page) + 1 ;
 
         pageString = "pageButton" + page.toString();
 
@@ -207,7 +207,7 @@ export class SearchComponent {
 
       var page1;
       
-      page1 = (Number(this.start) / this.webService.searchRes_per_page) + 1 ;
+      page1 = Math.ceil(Number(this.start) / this.webService.searchRes_per_page) + 1 ;
 
       var pageString = "pageButton" + page1.toString();
 
@@ -237,7 +237,7 @@ export class SearchComponent {
 
       var page;
       
-      page = (Number(this.start) / this.webService.searchRes_per_page) + 1 ;
+      page = Math.ceil(Number(this.start) / this.webService.searchRes_per_page) + 1 ;
 
       var pageString = "pageButton" + page.toString();
 
@@ -267,7 +267,7 @@ export class SearchComponent {
 
       var page;
 
-      page = (Number(this.start) / this.webService.searchRes_per_page) + 1 ;
+      page = Math.ceil(Number(this.start) / this.webService.searchRes_per_page) + 1 ;
 
       var pageString = "pageButton" + page.toString();
 
@@ -278,7 +278,7 @@ export class SearchComponent {
 
       console.log(this.start);
 
-      page = (Number(this.start) / this.webService.searchRes_per_page) + 1 ;
+      page = Math.ceil(Number(this.start) / this.webService.searchRes_per_page) + 1 ;
 
       pageString = "pageButton" + page.toString();
 
