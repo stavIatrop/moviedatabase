@@ -66,7 +66,7 @@ module.exports.reviewsGetAll = function(req, res) {
                     doc.reviews.sort(function(a, b) {
                         return b.stars - a.stars;
                     })
-                }else if(sort == "default") {     //default
+                }else if(sort == "default" || sort == "0") {     //default
 
                     doc.reviews.sort(function(a, b) {
                         return b.date - a.date;
@@ -220,7 +220,8 @@ module.exports.reviewsUpdateOne = function(req, res) {
                 };
             } else {
                 //get review and edit
-               
+                console.log(thisMovie);
+                
                 thisReview = thisMovie.reviews.id(reviewID);
                 console.log(thisReview);
                 if(!thisReview) {
@@ -237,15 +238,19 @@ module.exports.reviewsUpdateOne = function(req, res) {
                     res
                         .status(response.status)
                         .json(response.message);
+
                 } else {
+
+                    
                     thisReview.username = req.body.username;
                     thisReview.text = req.body.text;
                     thisReview.stars = parseInt(req.body.stars);
-                    thisReview.votes.like = req.body.votes;
+                    
+                    thisReview.votes = JSON.parse(req.body.votes);
                     thisReview.movieID = req.params.movieID;
                     thisReview.date = req.body.date;
 
-                    console.log(thisMovie);
+                    console.log(thisReview);
                     thisMovie.save(function(err, updatedMovie) {
                         console.log(updatedMovie);
                         if(err) {

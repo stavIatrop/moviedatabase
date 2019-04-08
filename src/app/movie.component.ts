@@ -3,6 +3,7 @@ import { WebService } from './web.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from './auth.service';
 import { FormBuilder, Validators } from '@angular/forms';
+import { c } from '@angular/core/src/render3';
 
 @Component({
   selector: 'movie',
@@ -53,6 +54,12 @@ export class MovieComponent {
 
     ngOnInit() {
       this.webService.getMovie(this.route.snapshot.params.id);
+      // let roundedItems = document.getElementsByClassName("rounded") as HTMLCollectionOf<HTMLElement>;
+      // for(var i = 0; i < roundedItems.length; i++ ) {
+
+      //   roundedItems[i].style.boxShadow = "0 0 0 1px rgb(19, 47, 71)";
+      //   roundedItems[i].style.marginLeft = "40px;";
+      // }
       //this.webService.getReviews(this.route.snapshot.params.id, this.start, "default" );
       //this.currentRate = 3;
       // this.webService.movie_list
@@ -312,56 +319,81 @@ export class MovieComponent {
               this.isInvalid('review'));
     }
 
-    likeSubmit(review) {
+    likeSubmit(review, i) {
 
-      console.log(review);
-      if(document.getElementById("likeButton").style.backgroundColor === "rgb(19, 47, 71)") {
+      console.log("likeButton" + i);
+     
+      if(document.getElementById("likeButton" + i).style.backgroundColor == "rgb(19, 47, 71)") {
 
-        document.getElementById("likeButton").style.color = "black";
-        document.getElementById("likeButton").style.backgroundColor = "rgb(240, 241, 242)";
-        (<HTMLInputElement> document.getElementById("dislikeButton")).disabled = false;
-
-        // review.votes.like = review.votes.like - 1;
+        setTimeout( () => { document.getElementById("likeButton" + i).style.color = "black";
+                            document.getElementById("likeButton" + i).style.backgroundColor = "rgb(240, 241, 242)";
+                            (<HTMLInputElement> document.getElementById("dislikeButton" + i)).removeAttribute('disabled');}, 100);
         
-        // console.log(review.votes);
-        // this.webService.updateVotes(review, this.selectedOptionSort);
+
+        review.votes.like = review.votes.like - 1;
+
+        this.webService.updateVotes(this.webService.movieID, review, this.selectedOptionSort);
 
       } else {      //if it is not clicked, make dislike button disabled
 
-        (<HTMLInputElement> document.getElementById("dislikeButton")).disabled = true;
-        document.getElementById("likeButton").style.color = "white";
-        document.getElementById("likeButton").style.backgroundColor = "#132f47";
+        setTimeout( () => { (<HTMLInputElement> document.getElementById("dislikeButton" + i)).setAttribute('disabled', 'true');
+                            document.getElementById("likeButton" + i).style.color = "white";
+                            document.getElementById("likeButton" + i).style.backgroundColor = "#132f47";}, 100);
 
-        // review.votes.like = review.votes.like + 1;
-        // console.log(review.votes);
-
-        // this.webService.updateVotes(review, this.selectedOptionSort);
+        
+        review.votes.like = review.votes.like + 1;
+        
+        
+        this.webService.updateVotes(this.webService.movieID, review, this.selectedOptionSort);
       }
       
     }
 
-    dislikeSubmit(review) {
+    // hoverLike(review, i) {
 
-      if(document.getElementById("dislikeButton").style.backgroundColor == "rgb(19, 47, 71)") {     
+    //   document.getElementById("likeButton" + i).style.backgroundImage = "linear-gradient(to bottom right, #235581, #132f47)";
 
-        document.getElementById("dislikeButton").style.color = "black";
-        document.getElementById("dislikeButton").style.backgroundColor = "rgb(240, 241, 242)";
-        (<HTMLInputElement> document.getElementById("likeButton")).disabled = false;
+    // }
 
-        // review.votes.dislike = review.votes.dislike - 1;
-        // console.log(review.votes);
-        // this.webService.updateVotes(review, this.selectedOptionSort);
+    // leaveLike(review, i) {
+
+    //   document.getElementById("likeButton" + i).style.backgroundImage = "none";
+    // }
+
+    // hoverDislike(review, i) {
+
+    //   document.getElementById("dislikeButton" + i).style.backgroundImage = "linear-gradient(to bottom right, #235581, #132f47)";
+
+    // }
+
+    // leaveDislike(review, i) {
+
+    //   document.getElementById("dislikeButton" + i).style.backgroundImage = "none";
+    // }
+    dislikeSubmit(review, i) {
+
+      if(document.getElementById("dislikeButton" + i).style.backgroundColor == "rgb(19, 47, 71)") {     
+
+        setTimeout( () => { document.getElementById("dislikeButton" + i).style.color = "black";
+                            document.getElementById("dislikeButton" + i).style.backgroundColor = "rgb(240, 241, 242)";
+                            (<HTMLInputElement> document.getElementById("likeButton" + i)).removeAttribute('disabled');}, 100);
+        
+
+        review.votes.dislike = review.votes.dislike - 1;
+
+        this.webService.updateVotes(this.webService.movieID, review, this.selectedOptionSort);
 
       } else {        //if it is not clicked, make like button disabled
-
-        (<HTMLInputElement> document.getElementById("likeButton")).disabled = true;
-        document.getElementById("dislikeButton").style.color = "white";
-        document.getElementById("dislikeButton").style.backgroundColor = "#132f47";
+        
+        setTimeout( () => { document.getElementById("likeButton" + i).setAttribute('disabled', 'true');
+                             document.getElementById("dislikeButton" + i).style.color = "white";
+                             document.getElementById("dislikeButton" + i).style.backgroundColor = "#132f47";}, 100);
+        
+        
 
         review.votes.dislike = review.votes.dislike + 1;
-        console.log(review.votes);
-
-        this.webService.updateVotes(review, this.selectedOptionSort);
+        
+        this.webService.updateVotes(this.webService.movieID, review, this.selectedOptionSort);
       }
     }
     

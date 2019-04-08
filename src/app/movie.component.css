@@ -107,7 +107,24 @@ input[type=search]:focus:not([readonly]) {
     color: white; 
 }
 
-#likeButton {
+p button {
+
+    box-shadow: 0 0 0 1px rgb(19, 47, 71);
+    margin-left: 40px;
+}
+
+p button:hover{
+
+    background-image: linear-gradient(to bottom right, #235581, #132f47);
+
+}
+
+p button:disabled {
+
+    background-image: none;
+}
+
+/* #likeButton {
 
     box-shadow: 0 0 0 1px rgb(19, 47, 71);
     margin-left: 40px;
@@ -140,5 +157,5 @@ input[type=search]:focus:not([readonly]) {
 
     background-image: none;
     
-}
+} */
 

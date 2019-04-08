@@ -101,7 +101,7 @@
 <div class="container">
     <div  class="row">
         <div class="col-sm-12">
-            <div class="card bg-light mb-3" *ngFor ="let review of webService.reviews | async">
+            <div class="card bg-light mb-3" *ngFor ="let review of webService.reviews | async; index as i">
                 <div class="card-header">
                     Review by {{ review.username }}
                     on {{ review.date | date }}
@@ -115,7 +115,7 @@
                     <p><strong>Votes:</strong>
                         {{ review.votes.like }} <fa name="thumbs-up"></fa>,
                         {{ review.votes.dislike }} <fa name="thumbs-down"></fa>
-                        <button class="btn rounded" (click)="likeSubmit(review)" id="likeButton"><fa name="thumbs-up"></fa>Like!</button> <button class="btn rounded" (click)="dislikeSubmit(review)" id="dislikeButton"><fa name="thumbs-down"></fa>Dislike!</button>
+                        <button  class="btn rounded" (click)="likeSubmit(review, i)" id="likeButton{{i}}"><fa name="thumbs-up"></fa>Like!</button> <button  class="btn rounded" (click)="dislikeSubmit(review, i)" id="dislikeButton{{i}}"><fa name="thumbs-down"></fa>Dislike!</button>
                     </p>
                    
                    
@@ -166,7 +166,7 @@
     </span>
     <span *ngIf = "!authService.isAuthenticated()">
             <h5 class="text-primary">
-                Please log in to leave a review for this business
+                Please log in to leave a review for this movie
             </h5>
         </span>
 </div>

@@ -66,7 +66,7 @@ export class WebService {
                 console.log(this.movie_private_list[0].review_count);
                 this.movieID = id;
                 this.review_count = this.movie_private_list[0].review_count;
-                this.getReviews(id, 0, this.reviews_per_page);
+                this.getReviews(id, 0, "default");
                 // this.review_count = this.movie_private_list[0].review_count;
             
                 // if( this.review_count % this.reviews_per_page == 0) {
@@ -136,7 +136,7 @@ export class WebService {
             response => {
 
                 
-                console.log(this.review_count);
+                //console.log(this.review_count);
                 
                 if( this.review_count == 0) {
                     this.noReviews = true;
@@ -151,7 +151,7 @@ export class WebService {
                 }else {
                     this.page_countReviews = Math.floor(parseInt(this.review_count) / this.reviews_per_page) + 1;
                 }
-                console.log(this.page_countReviews)
+                //console.log(this.page_countReviews)
                 this.pagesReviews = Array(this.page_countReviews).fill(0).map((x,i)=>i);
 
                 this.reviews_private_list = response.json();
@@ -251,20 +251,23 @@ export class WebService {
 
     }
 
-    updateVotes(review, sort) {
+    updateVotes(movieId, review, sort) {
 
+        console.log(review);
         let urlSearchParams = new URLSearchParams();
-        urlSearchParams.append('username', review.name);
-        urlSearchParams.append('text', review.review);
+        urlSearchParams.append('username', review.username);
+        urlSearchParams.append('text', review.text);
         urlSearchParams.append('stars', review.stars);
-        urlSearchParams.append('votes', review.votes);
+        
+        urlSearchParams.append('votes', JSON.stringify(review.votes));
         urlSearchParams.append('date', review.date);
 
+        
         this.http.put("http://localhost:3000/api/movies/" +
-                        review.movieID + "/reviews/" + review._id, urlSearchParams)
+                        movieId + "/reviews/" + review._id, urlSearchParams)
                         .subscribe(
                             response => {
-                                this.getReviews(review.movieID, 0, sort);
+                                this.getReviews(movieId, 0, sort);
                             }
                         )
 

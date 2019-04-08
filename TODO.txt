@@ -1,4 +1,5 @@
--Add review
--Like, Dislike buttons in review
 -Add a movie
+-click on username
+-Like, dislike with sessionStorage
+-keep the sort when going back to page
 -Display of movies(started, not finished)
