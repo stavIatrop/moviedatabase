@@ -103,6 +103,42 @@ input[type=search]:focus:not([readonly]) {
 
 #submitReview {
 
-    background-color: #132f47;
+    background-color: rgb(19, 47, 71);
     color: white; 
 }
+
+#likeButton {
+
+    box-shadow: 0 0 0 1px rgb(19, 47, 71);
+    margin-left: 40px;
+}
+
+#likeButton:hover {
+
+    background-image: linear-gradient(to bottom right, #235581, #132f47);
+}
+
+#likeButton:disabled{
+
+    background-image: none;
+    
+}
+
+#dislikeButton {
+
+    box-shadow: 0 0 0 1px rgb(19, 47, 71);
+    
+    margin-left: 10px;
+}
+
+#dislikeButton:hover {
+
+    background-image: linear-gradient(to bottom right, #235581, #132f47);
+}
+
+#dislikeButton:disabled{
+
+    background-image: none;
+    
+}
+

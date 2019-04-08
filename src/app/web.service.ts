@@ -250,6 +250,30 @@ export class WebService {
 
 
     }
+
+    updateVotes(review, sort) {
+
+        let urlSearchParams = new URLSearchParams();
+        urlSearchParams.append('username', review.name);
+        urlSearchParams.append('text', review.review);
+        urlSearchParams.append('stars', review.stars);
+        urlSearchParams.append('votes', review.votes);
+        urlSearchParams.append('date', review.date);
+
+        this.http.put("http://localhost:3000/api/movies/" +
+                        review.movieID + "/reviews/" + review._id, urlSearchParams)
+                        .subscribe(
+                            response => {
+                                this.getReviews(review.movieID, 0, sort);
+                            }
+                        )
+
+
+
+
+        
+
+    }
     // sortByRelevance() {
 
     //     this.searchResults_list = this.searchResults_private_list;

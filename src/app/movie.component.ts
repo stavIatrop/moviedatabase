@@ -39,6 +39,7 @@ export class MovieComponent {
       stars: 5
     }
 
+
     // async ngOnInit() {
     //     var response = await this.webService.getMovie(
     //                                     this.route.snapshot.params.id);
@@ -309,6 +310,59 @@ export class MovieComponent {
     isIncomplete() {
       return this.isInvalid('name' ||
               this.isInvalid('review'));
+    }
+
+    likeSubmit(review) {
+
+      console.log(review);
+      if(document.getElementById("likeButton").style.backgroundColor === "rgb(19, 47, 71)") {
+
+        document.getElementById("likeButton").style.color = "black";
+        document.getElementById("likeButton").style.backgroundColor = "rgb(240, 241, 242)";
+        (<HTMLInputElement> document.getElementById("dislikeButton")).disabled = false;
+
+        // review.votes.like = review.votes.like - 1;
+        
+        // console.log(review.votes);
+        // this.webService.updateVotes(review, this.selectedOptionSort);
+
+      } else {      //if it is not clicked, make dislike button disabled
+
+        (<HTMLInputElement> document.getElementById("dislikeButton")).disabled = true;
+        document.getElementById("likeButton").style.color = "white";
+        document.getElementById("likeButton").style.backgroundColor = "#132f47";
+
+        // review.votes.like = review.votes.like + 1;
+        // console.log(review.votes);
+
+        // this.webService.updateVotes(review, this.selectedOptionSort);
+      }
+      
+    }
+
+    dislikeSubmit(review) {
+
+      if(document.getElementById("dislikeButton").style.backgroundColor == "rgb(19, 47, 71)") {     
+
+        document.getElementById("dislikeButton").style.color = "black";
+        document.getElementById("dislikeButton").style.backgroundColor = "rgb(240, 241, 242)";
+        (<HTMLInputElement> document.getElementById("likeButton")).disabled = false;
+
+        // review.votes.dislike = review.votes.dislike - 1;
+        // console.log(review.votes);
+        // this.webService.updateVotes(review, this.selectedOptionSort);
+
+      } else {        //if it is not clicked, make like button disabled
+
+        (<HTMLInputElement> document.getElementById("likeButton")).disabled = true;
+        document.getElementById("dislikeButton").style.color = "white";
+        document.getElementById("dislikeButton").style.backgroundColor = "#132f47";
+
+        review.votes.dislike = review.votes.dislike + 1;
+        console.log(review.votes);
+
+        this.webService.updateVotes(review, this.selectedOptionSort);
+      }
     }
     
     

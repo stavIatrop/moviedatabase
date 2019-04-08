@@ -123,7 +123,8 @@ var addReview = function(req, res, thisMovie) {
         username : req.body.username,
         votes : { "like" : 0, "dislike" : 0},
         text : req.body.text,
-        stars : parseInt(req.body.stars)
+        stars : parseInt(req.body.stars),
+        movie_id : req.params.movieID
 
     });
     
@@ -132,6 +133,7 @@ var addReview = function(req, res, thisMovie) {
     thisMovie.avg_stars = (sum + parseInt(req.body.stars) ) / parseInt(thisMovie.review_count );
     thisMovie.avg_stars = thisMovie.avg_stars.toFixed(1);
     console.log(thisMovie);
+
     thisMovie.save(function(err, updatedMovie) {
         if(err) {
             res
@@ -239,6 +241,10 @@ module.exports.reviewsUpdateOne = function(req, res) {
                     thisReview.username = req.body.username;
                     thisReview.text = req.body.text;
                     thisReview.stars = parseInt(req.body.stars);
+                    thisReview.votes.like = req.body.votes;
+                    thisReview.movieID = req.params.movieID;
+                    thisReview.date = req.body.date;
+
                     console.log(thisMovie);
                     thisMovie.save(function(err, updatedMovie) {
                         console.log(updatedMovie);

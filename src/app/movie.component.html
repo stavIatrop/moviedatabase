@@ -109,13 +109,16 @@
                 <div class="card-body">
                     {{ review.text }}
                     <hr>
-                    <p><strong>Votes:</strong>
-                    {{ review.votes.like }} like,
-                    {{ review.votes.dislike }} dislike
-                    </p>
+                    {{ review.stars }}<fa name="star"></fa>
                 </div>
                 <div class="card-footer">
-                    {{ review.stars }}<fa name="star"></fa>
+                    <p><strong>Votes:</strong>
+                        {{ review.votes.like }} <fa name="thumbs-up"></fa>,
+                        {{ review.votes.dislike }} <fa name="thumbs-down"></fa>
+                        <button class="btn rounded" (click)="likeSubmit(review)" id="likeButton"><fa name="thumbs-up"></fa>Like!</button> <button class="btn rounded" (click)="dislikeSubmit(review)" id="dislikeButton"><fa name="thumbs-down"></fa>Dislike!</button>
+                    </p>
+                   
+                   
                 </div>
             </div>
         </div>
