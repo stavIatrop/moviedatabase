@@ -1,0 +1,45 @@
+<div class="row justify-content-md-center" id="middleRow">
+
+    <div class="col-12 col-md-10 col-lg-8">
+            <form [formGroup]="searchForm" (ngSubmit)="onSubmitSearch()" class="card card-sm" id="searchForm">
+                <div class="card-body row no-gutters align-items-center">
+                    <div class="col-auto">
+                        <fa id="faSearch" name="search"></fa>
+                    </div>
+                    
+                    <div class="col">
+                        <input id="search" formControlName="searchWords" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search for a movie by title, year or genre...">
+                    </div>
+                    
+                    <div class="col-auto">
+                        <button id="searchButton" class="btn btn-lg btn-success" type="submit">Search</button>
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
+
+
+</div>
+
+<div class="row breadcrumb">
+    <div class="col-md-12">
+      <ul class="list-inline">
+        <li id="moviesFa" class="list-inline-item"><fa name="home"  [routerLink]="['/']" style = "cursor: pointer"></fa></li>
+        <li class="list-inline-item"> > </li>
+        <li id="movie" class="list-inline-item" [routerLink]="['/addMovie']" style = "cursor: pointer"><i>Add Movie</i></li>
+        
+                   
+       
+      </ul>
+    </div>
+</div>
+
+<div class="container">
+
+    <span *ngIf = "!authService.isAuthenticated()">
+        <h5 class="text-primary">
+            Please log in to add a movie
+        </h5>
+    </span>
+</div>

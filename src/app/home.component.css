@@ -122,11 +122,11 @@ input[type=search]:focus:not([readonly]) {
     height: 60%;
 }
 
-#footerRow {
+/* #footerRow {
 
     background-color: #bebebe;
     margin-top: 20%;
-}
+} */
 
 #dropdownMenuButton {
 

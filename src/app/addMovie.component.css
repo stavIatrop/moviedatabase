@@ -1,0 +1,72 @@
+#search {
+
+    
+    /* position: absolute;
+    top:50;
+    left: 0; */
+    width: 100%;
+    font-style: italic;
+    
+}
+
+#faSearch {
+
+    margin-top: 8px;
+    margin-right: 10px;
+}
+
+input {
+
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+input[type=search]:focus:not([readonly]) {
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #132f47;
+    outline: none;
+    outline-color: white;
+    /* box-shadow: 0 0 0 1px #132f47; */
+    box-shadow: 0 0 0 1px white;
+}
+
+#searchButton {
+    
+    margin-left: 10px;
+    box-shadow: 0 0 0 1px #132f47;
+    border: none;
+    background-color: #132f47;
+}
+
+#searchForm {
+    border: none;
+}
+
+.breadcrumb {
+    background-color: white;
+}
+
+.breadcrumbList {
+    list-style: none;
+}
+
+#moviesFa {
+
+    
+    text-decoration: underline;
+    font-size: 1.8rem;
+}
+
+#moviesFa:hover {
+
+    color: #132f47; 
+}
+
+#movie {
+
+    font-size: 1.1rem;
+}

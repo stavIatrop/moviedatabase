@@ -181,7 +181,7 @@ export class WebService {
 
         this.searchString = sessionStorage.getItem("searchString");
         console.log(this.searchString);
-        if(this.searchString.length == 0) {
+        if(this.searchString == "") {
             console.log("No results");
             this.noResults = true;
             return;
