@@ -115,8 +115,10 @@
                     <p><strong>Votes:</strong>
                         {{ review.votes.like }} <fa name="thumbs-up"></fa>,
                         {{ review.votes.dislike }} <fa name="thumbs-down"></fa>
-                        <button  class="btn rounded" (click)="likeSubmit(review, i)" id="likeButton{{i}}"><fa name="thumbs-up"></fa>Like!</button> <button  class="btn rounded" (click)="dislikeSubmit(review, i)" id="dislikeButton{{i}}"><fa name="thumbs-down"></fa>Dislike!</button>
+                        <button  class="btn rounded" (click)="likeSubmit(review, i)" id="likeButton{{i}}"><fa name="thumbs-up"></fa>Like!</button> <button  class="btn rounded" (click)="dislikeSubmit(review, i)" id="dislikeButton{{i}}"><fa name="thumbs-down"></fa>Dislike!</button> 
                     </p>
+                    <span *ngIf = "authService.isAuthenticated()"><button id="deleteButton" (click)="delete(review)" type="button" class="btn btn-danger"><fa name="trash"></fa>Delete</button></span>
+                    
                    
                    
                 </div>
@@ -165,8 +167,9 @@
         </form>
     </span>
     <span *ngIf = "!authService.isAuthenticated()">
-            <h5 class="text-primary">
-                Please log in to leave a review for this movie
+            <h5 id="text">
+                Please log in to leave a review for this movie or delete a review
             </h5>
         </span>
+        
 </div>

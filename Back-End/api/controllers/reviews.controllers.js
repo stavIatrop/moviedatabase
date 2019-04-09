@@ -192,6 +192,87 @@ module.exports.reviewsAddOne = function(req, res) {
         })
 };
 
+module.exports.reviewsDeleteOne = function(req, res) {
+
+    var movieID = req.params.movieID;
+    var reviewID = req.params.reviewID;
+    console.log("Delete reviewID " + reviewID + 
+                    " from movieID " + movieID);
+
+    Movie
+        .findById(movieID)
+        .select("reviews review_count avg_stars")
+        .exec(function(err, thisMovie) {
+            var thisReview;
+            var response = {
+                status : 200,
+                message : {}
+            };
+            if(err) {
+                console.log("Error finding movie");
+                response.status = 500;
+                response.message = err;
+            }else if (!thisMovie){
+                console.log("Movie ID not found", movieID)
+                response.status = 404;
+                response.message = { "message" : 
+                                        "Movie ID not found " + movieID
+                };
+            } else {
+                //get review and edit
+                thisReview = thisMovie.reviews.id(reviewID);
+                if(!thisReview) {
+                    response.status = 404;
+                    response.message = {
+                            "message" : " Review ID not found " + reviewID
+                    };
+                }
+
+                //check for error
+
+                if(response.status !== 200) {
+                    res
+                        .status(response.status)
+                        .json(response.message);
+                } else {
+                    
+                    console.log(thisMovie)
+                    thisMovie.reviews.id(reviewID).remove();
+                    var sum = parseInt(thisMovie.review_count) * parseFloat(thisMovie.avg_stars);
+                    console.log(sum);
+                    thisMovie.review_count = parseInt(thisMovie.review_count) - 1;
+                    console.log(thisMovie.review_count);
+                    if(thisMovie.review_count != 0) {
+
+                        thisMovie.avg_stars = (sum - parseInt(req.query.stars) ) / parseInt(thisMovie.review_count);
+                        console.log(thisMovie.avg_stars);
+                        thisMovie.avg_stars = thisMovie.avg_stars.toFixed(1);
+
+                    }else {
+                        thisMovie.avg_stars = 0;
+                    }
+
+                    console.log(thisMovie.avg_stars);
+                    console.log(thisMovie);
+                    
+                    thisMovie.save(function(err, updatedMovie) {
+                        if(err) {
+                            res
+                                .status(500)
+                                .json(err);
+                        } else {
+                            console.log(updatedMovie);
+                            res
+                                .status(204)
+                                .json();
+                        }
+                    });
+                }
+            }
+        });
+}
+
+
 module.exports.reviewsUpdateOne = function(req, res) {
 
     var movieID = req.params.movieID;
@@ -267,70 +348,3 @@ module.exports.reviewsUpdateOne = function(req, res) {
             }
         });
 };
-
-module.exports.reviewsDeleteOne = function(req, res) {
-
-    var movieID = req.params.movieID;
-    var reviewID = req.params.reviewID;
-    console.log("PUT reviewID " + reviewID + 
-                    " for movieID " + movieID);
-
-    Movie
-        .findById(movieID)
-        .select("reviews review_count avg_stars")
-        .exec(function(err, thisMovie) {
-            var thisReview;
-            var response = {
-                status : 200,
-                message : {}
-            };
-            if(err) {
-                console.log("Error finding movie");
-                response.status = 500;
-                response.message = err;
-            }else if (!thisMovie){
-                console.log("Movie ID not found", movieID)
-                response.status = 404;
-                response.message = { "message" : 
-                                        "Movie ID not found " + movieID
-                };
-            } else {
-                //get review and edit
-                thisReview = thisMovie.reviews.id(reviewID);
-                if(!thisReview) {
-                    response.status = 404;
-                    response.message = {
-                            "message" : " Review ID not found " + reviewID
-                    };
-                }
-
-                //check for error
-
-                if(response.status !== 200) {
-                    res
-                        .status(response.status)
-                        .json(response.message);
-                } else {
-                    
-                    thisMovie.reviews.id(reviewID).remove();
-                    var sum = parseInt(thisMovie.review_count) * parseFloat(thisMovie.avg_stars);
-                    thisMovie.review_count = parseInt(thisMovie.review_count) - 1;
-                    thisMovie.avg_stars = (sum - parseInt(req.body.stars) ) / parseInt(thisMovie.review_count );
-                    thisMovie.avg_stars = thisMovie.avg_stars.toFixed(1);
-                    console.log(thisMovie);
-                    
-                    thisMovie.save(function(err, updatedMovie) {
-                        if(err) {
-                            res
-                                .status(500)
-                                .json(err);
-                        } else {
-                            res
-                                .status(204)
-                                .json();
-                        }
-                    });
-                }
-            }
-        });
-}

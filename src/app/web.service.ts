@@ -24,6 +24,7 @@ export class WebService {
         review_count : Number
     };
 
+    
     private reviews_private_list = [];
     private reviewsSubject = new Subject();
     reviews = this.reviewsSubject.asObservable();
@@ -38,6 +39,7 @@ export class WebService {
     page_countSearch;
     pagesSearch = [];
 
+    
     constructor(private http: Http,
                 private router: Router) {}
 
@@ -56,7 +58,7 @@ export class WebService {
     }
 
     movieID;
-    getMovie(id) {
+    getMovie(id, sort) {
         return this.http.get(
             'http://localhost:3000/api/movies/' + id)
             .subscribe(response => {
@@ -66,7 +68,7 @@ export class WebService {
                 console.log(this.movie_private_list[0].review_count);
                 this.movieID = id;
                 this.review_count = this.movie_private_list[0].review_count;
-                this.getReviews(id, 0, "default");
+                this.getReviews(id, 0, sort);
                 // this.review_count = this.movie_private_list[0].review_count;
             
                 // if( this.review_count % this.reviews_per_page == 0) {
@@ -242,13 +244,11 @@ export class WebService {
                     review.movieID + "/reviews", urlSearchParams)
                     .subscribe(
                         response => {
-                            this.review_count = this.review_count + 1;
-                            this.getReviews(review.movieID, 0, sort);
+                            // this.review_count = this.review_count + 1;
+                            // this.getReviews(review.movieID, 0, sort);
+                            this.getMovie(review.movieID,  sort);
                         }
         )
-            
-
-
     }
 
     updateVotes(movieId, review, sort) {
@@ -270,11 +270,22 @@ export class WebService {
                                 this.getReviews(movieId, 0, sort);
                             }
                         )
+    }
 
-
-
+     
+    deleteReview(movieId, review, sort)  {
 
         
+        this.http.delete("http://localhost:3000/api/movies/" +
+                            movieId + "/reviews/" + review._id + "?stars=" + review.stars)
+                            .subscribe(
+                                response => {
+                                    this.getReviews(movieId, 0, sort);
+                                   this.getMovie(movieId, sort);
+
+                                }
+                            )
+
 
     }
     // sortByRelevance() {

@@ -53,7 +53,7 @@ export class MovieComponent {
     selectedOptionSort = "0";
 
     ngOnInit() {
-      this.webService.getMovie(this.route.snapshot.params.id);
+      this.webService.getMovie(this.route.snapshot.params.id, this.selectedOptionSort);
       // let roundedItems = document.getElementsByClassName("rounded") as HTMLCollectionOf<HTMLElement>;
       // for(var i = 0; i < roundedItems.length; i++ ) {
 
@@ -397,6 +397,10 @@ export class MovieComponent {
       }
     }
     
+    delete(review) {
+      
+      this.webService.deleteReview(this.webService.movieID, review, this.selectedOptionSort);
+    }
     
     movie = { };
 }

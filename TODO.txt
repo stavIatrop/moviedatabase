@@ -1,6 +1,5 @@
 -Add a movie (started)!!
 -Delete movie
--Delete review
 -click on username
 -Like, dislike with sessionStorage
 -keep the sort when going back to page

@@ -124,6 +124,16 @@ p button:disabled {
     background-image: none;
 }
 
+#deleteButton:hover {
+    
+    background-image: linear-gradient(to bottom right, #bb2828, #f50000);
+}
+
+#text {
+
+    color: #132f47;
+}
+
 /* #likeButton {
 
     box-shadow: 0 0 0 1px rgb(19, 47, 71);

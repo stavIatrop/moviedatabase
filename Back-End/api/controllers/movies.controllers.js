@@ -26,10 +26,10 @@ module.exports.search = function(req, res) {
 
     
     var searchWords = searchString.trim().split(/\s+/).filter(Boolean);
-    console.log(searchWords);
-    console.log(start);
-    console.log(perPage);
-    console.log(sort);
+    // console.log(searchWords);
+    // console.log(start);
+    // console.log(perPage);
+    // console.log(sort);
 
     
     
