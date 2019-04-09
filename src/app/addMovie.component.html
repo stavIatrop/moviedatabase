@@ -37,8 +37,37 @@
 
 <div class="container">
 
+    <span *ngIf = "authService.isAuthenticated()">
+        <h2 id="text">Please add a movie</h2>
+        <form [formGroup]="movieForm" (ngSubmit)="onSubmitMovie()">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" class="form-control" formControlName="title" [ngClass]="{'error' : isInvalid('title')}" [(ngModel)]="movie.title">
+            </div>
+            <div class="form-group" >
+                <label for="description">Please write a description for the movie below</label>
+                <textarea id="description" rows="3" name="description" class="form-control" formControlName="description" [(ngModel)]="movie.description" ></textarea>
+            </div>
+            <div class="form-group">
+                <label for="year">Year</label>
+                <input type="number" id="year" name="year" class="form-control" formControlName="year" [ngClass]="{'error' : isInvalid('year')}" [(ngModel)]="movie.year">
+            </div>
+            <div class="form-group" >
+                <label for="cast">Cast(Names divided by comma)</label>
+                <textarea id="cast" rows="3" name="cast" class="form-control" formControlName="cast" [(ngModel)]="movie.cast" ></textarea>
+            </div>
+            <div class="form-group" >
+                <label for="genres">Genres(Genres divided by comma)</label>
+                <textarea id="genres" rows="3" name="genres" class="form-control" formControlName="genres" [(ngModel)]="movie.genres" ></textarea>
+            </div>
+            
+            <span *ngIf="isIncomplete()">You must complete all fields</span>
+            <button *ngIf="!isIncomplete()" type="submit" id="submitMovie" class="btn">Submit</button>
+        </form>
+    </span>
+
     <span *ngIf = "!authService.isAuthenticated()">
-        <h5 class="text-primary">
+        <h5 id="text">
             Please log in to add a movie
         </h5>
     </span>
