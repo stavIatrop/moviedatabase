@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { WebService } from './web.service';
+import { MovieComponent } from './movie.component';
 
 @Component({
     selector: 'addMovie',
@@ -23,7 +24,7 @@ export class AddMovieComponent {
 
                   this.movieForm = formBuilder.group( {
                     title: ['', Validators.required],
-                    year: [Number, Validators.required],
+                    year: ['', Validators.required],
                     cast : [String],
                     genres : [String],
                     description : ''
@@ -74,8 +75,10 @@ export class AddMovieComponent {
     }
 
     isIncomplete() {
+
+      
       return (this.isInvalid('title') ||
-              this.isInvalid('year'));
+              this.isInvalid('year') || this.movieForm.value.title == "" || this.movieForm.value.year == "");
     }
 
 

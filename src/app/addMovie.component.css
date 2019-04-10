@@ -106,3 +106,26 @@ input[type=search]:focus:not([readonly]) {
     background-color: rgb(19, 47, 71);
     color: white; 
 }
+
+#titleAsterisk {
+
+    color: red;
+    position: absolute;
+    margin-left: 5px;
+    font-size: 10px;
+}
+
+#yearAsterisk {
+
+    color: red;
+    position: absolute;
+    margin-left: 5px;
+    font-size: 10px;
+}
+
+#compAsterisk {
+
+    color: red;
+    margin-bottom: 5px;
+    font-size: 10px;
+}

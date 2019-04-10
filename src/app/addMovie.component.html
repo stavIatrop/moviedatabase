@@ -27,7 +27,7 @@
       <ul class="list-inline">
         <li id="moviesFa" class="list-inline-item"><fa name="home"  [routerLink]="['/']" style = "cursor: pointer"></fa></li>
         <li class="list-inline-item"> > </li>
-        <li id="movie" class="list-inline-item" [routerLink]="['/addMovie']" style = "cursor: pointer"><i>Add Movie</i></li>
+        <li id="movie" class="list-inline-item"><i>Add Movie</i></li>
         
                    
        
@@ -41,18 +41,18 @@
         <h2 id="text">Please add a movie</h2>
         <form [formGroup]="movieForm" (ngSubmit)="onSubmitMovie()">
             <div class="form-group">
-                <label for="title">Title</label>
+                <label  for="title">Title<fa id="titleAsterisk" name="asterisk"></fa></label>
                 <input type="text" id="title" name="title" class="form-control" formControlName="title" [ngClass]="{'error' : isInvalid('title')}" [(ngModel)]="movie.title">
             </div>
             <div class="form-group" >
-                <label for="description">Please write a description for the movie below</label>
+                <label for="description">Movie Description</label>
                 <textarea id="description" rows="3" name="description" class="form-control" formControlName="description" [(ngModel)]="movie.description" ></textarea>
             </div>
             <div class="form-group">
-                <label for="year">Year</label>
-                <select id="year" name="year" class="form-control" formControlName="year" [(ngModel)]="movie.year">
+                <label  for="year">Year<fa id="yearAsterisk" name="asterisk"></fa></label>
+                <select id="year" name="year" class="form-control" formControlName="year" [ngClass]="{'error' : isInvalid('year')}" [(ngModel)]="movie.year">
                     
-                    <option *ngFor ="let year of webService.yearArray" value="{{year}}">{{year}}</option>
+                    <option  *ngFor ="let year of webService.yearArray" value="{{year}}">{{year}}</option>
                     
                 </select>
                 <!-- <input type="number" id="year" name="year" class="form-control" formControlName="year" [ngClass]="{'error' : isInvalid('year')}" [(ngModel)]="movie.year"> -->
@@ -66,7 +66,7 @@
                 <textarea id="genres" rows="3" name="genres" class="form-control" formControlName="genres" [(ngModel)]="movie.genres" ></textarea>
             </div>
             
-            <span *ngIf="isIncomplete()">You must complete all fields</span>
+            <span *ngIf="isIncomplete()">You must complete all compulsory (<fa id="compAsterisk" name="asterisk"></fa>) fields</span>
             <button *ngIf="!isIncomplete()" type="submit" id="submitMovie" class="btn">Submit</button>
         </form>
     </span>
