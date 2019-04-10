@@ -39,10 +39,20 @@ export class WebService {
     page_countSearch;
     pagesSearch = [];
 
-    
+    yearArray = [];
+
     constructor(private http: Http,
                 private router: Router) {}
 
+    
+    fillYearArray(){
+
+        for(var i = 1999; i < 2020; i++) {
+
+            this.yearArray.push(i);
+        }
+
+    }
     getMovies(start, sort) {
         return this.http.get(
             'http://localhost:3000/api/movies?start=' + start + "&number=" + this.movies_per_page + "&sort=" + sort)

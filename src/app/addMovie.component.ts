@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
 import { FormBuilder, Validators } from '@angular/forms';
+import { WebService } from './web.service';
 
 @Component({
     selector: 'addMovie',
@@ -13,7 +14,8 @@ export class AddMovieComponent {
 
     constructor(private router : Router,
                 private authService: AuthService,
-                private formBuilder: FormBuilder) {
+                private formBuilder: FormBuilder,
+                private webService: WebService) {
 
                   this.searchForm = formBuilder.group ( {
                       searchWords: ""
@@ -37,12 +39,13 @@ export class AddMovieComponent {
       description: '',
       cast: [],
       genres: [],
-      year: Number
+      year: ''
     }
 
 
     ngOnInit() {
 
+      this.webService.fillYearArray();
     }
 
     onSubmit() {
