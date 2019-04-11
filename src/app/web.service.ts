@@ -242,6 +242,24 @@ export class WebService {
             )
     }
 
+    postMovie(movie, cast, genres) {
+
+        let urlSearchParams = new URLSearchParams();
+        urlSearchParams.append('title', movie.title);
+        urlSearchParams.append('year', movie.year);
+        urlSearchParams.append('description', movie.description);
+        urlSearchParams.append('cast', cast);
+        urlSearchParams.append('genres', genres);
+
+        this.http.post("http://localhost:3000/api/movies", urlSearchParams)
+                .subscribe(
+                    response => {
+                        console.log(response.json());
+                    }
+                )
+        
+
+    }
     postReview(review, sort) {
 
         

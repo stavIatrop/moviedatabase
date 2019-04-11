@@ -58,15 +58,24 @@ export class AddMovieComponent {
 
     onSubmitMovie() {
 
-      console.log(this.isInvalid('title'));
-      console.log(this.movieForm.value.title);
-      console.log(this.movieForm.value.year);
-      console.log(this.movieForm.value.description);
-      console.log(this.movieForm.value.cast);
-      console.log(this.movieForm.value.genres);
+      var cast = this.movieForm.value.cast.split(/[,]/);
+      
+      for(var i = 0; i < cast.length;  i++) {
+        cast[i] = cast[i].trim();
+      }
+      cast = cast.filter(Boolean);
+      
+      var genres = this.movieForm.value.genres.split(/[,]/);
+      
+      for(var i = 0; i < genres.length;  i++) {
+        genres[i] = genres[i].trim();
+      }
+      genres = genres.filter(Boolean);
+      
+      this.webService.postMovie(this.movieForm.value, cast, genres);
 
-
-      console.log(this.isInvalid('year'));
+      this.movieForm.reset();
+      
     }
 
     isInvalid(control) {

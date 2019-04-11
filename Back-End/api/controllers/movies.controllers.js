@@ -233,8 +233,10 @@ module.exports.moviesAddOne = function(req, res) {
             
             title : req.body.title,
             year : parseInt(req.body.year),
-            cast : splitArray(req.body.cast),
-            genres : splitArray(req.body.genres),
+            // cast : splitArray(req.body.cast),
+            // genres : splitArray(req.body.genres),
+            cast: req.body.cast,
+            genres: req.body.genres,
             avg_stars : 0,
             review_count : 0,
             reviews : [],
