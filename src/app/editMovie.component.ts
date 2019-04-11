@@ -93,11 +93,17 @@ export class EditMovieComponent {
         }
         genres = genres.filter(Boolean);
         
+        this.movieForm.value.cast = cast;
+        this.movieForm.value.genres = genres;
         
-        this.webService.updateMovie(this.movieEdit._id, this.movieForm.value, cast, genres);
+        this.webService.updateMovie(this.movieEdit._id, this.movieForm.value);
 
     }
 
+    onChange() {
+      document.getElementById("saved").style.display = "none";
+    }
+    
     isInvalid(control) {
         return this.movieForm.controls[control].invalid &&
                 this.movieForm.controls[control].touched

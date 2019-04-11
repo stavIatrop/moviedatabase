@@ -337,8 +337,8 @@ module.exports.moviesUpdateOne = function(req, res) {
                 doc.title = req.body.title;
                 
                 doc.year = parseInt(req.body.year);
-                doc.cast = splitArray(req.body.cast);
-                doc.genres = splitArray(req.body.genres);
+                doc.cast = req.body.cast;
+                doc.genres = req.body.genres;
                 
                 doc.description = req.body.description;
 

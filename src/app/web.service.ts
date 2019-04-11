@@ -2,6 +2,7 @@ import { Http, URLSearchParams } from '@angular/http';
 import { Injectable, Input } from '@angular/core';
 import { Subject } from 'rxjs/Rx';
 import { Router} from '@angular/router';
+import { BlockingProxy } from 'blocking-proxy';
 
 @Injectable()
 export class WebService {
@@ -275,20 +276,23 @@ export class WebService {
 
     }
 
-    updateMovie(movieId, movie, cast, genres) {
+    updateMovie(movieId, movie) {
 
         let urlSearchParams = new URLSearchParams();
         urlSearchParams.append('title', movie.title);
         urlSearchParams.append('year', movie.year);
         urlSearchParams.append('description', movie.description);
-        urlSearchParams.append('cast', cast);
-        urlSearchParams.append('genres', genres);
+        urlSearchParams.append('cast', movie.cast);
+        urlSearchParams.append('genres', movie.genres);
+        movie._id = movieId;
+        console.log(movie);
         
         this.http.put("http://localhost:3000/api/movies/" +
                     movieId, urlSearchParams)
                     .subscribe(
                         response => {
-                            
+                            document.getElementById("saved").style.display = "inline-block";
+                            sessionStorage.setItem("movieEdit", JSON.stringify(movie));
                         }
                     )
 
