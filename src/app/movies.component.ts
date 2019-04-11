@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router} from '@angular/router';
 import { WebService } from './web.service';
 import { AuthService } from './auth.service';
@@ -284,5 +284,40 @@ export class MoviesComponent {
         
     }
 
+    delete(movie) {
+      
+      console.log(this.start);
+      if(this.start == this.webService.movies_count - 1) {
+        this.start = Number(this.start) - this.webService.movies_per_page;
+      }
+      this.webService.deleteMovie( movie, this.start, this.selectedOptionSort);
+    }
+
+    edit(movie) {
+
+      sessionStorage.setItem("movieEdit", JSON.stringify(movie));
+      this.router.navigate(["/editMovie"]);
+
+    }
     start = 0;
+
+   
+    @HostListener('window:scroll') onScroll() {
+      
+      this.scrollFunction();
+    }
+    scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("toTop").style.display = "block";
+      } else {
+        document.getElementById("toTop").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    topFunction() {
+        
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
 }

@@ -335,13 +335,11 @@ module.exports.moviesUpdateOne = function(req, res) {
                 .json(response.message);
             } else {
                 doc.title = req.body.title;
-                doc.stars = parseInt(req.body.stars);
+                
                 doc.year = parseInt(req.body.year);
-                doc.cast =
-                    splitArray(req.body.cast);
-                doc.genres =
-                    splitArray(req.body.genres);
-                doc.review_count = parseInt(req.body.review_count);
+                doc.cast = splitArray(req.body.cast);
+                doc.genres = splitArray(req.body.genres);
+                
                 doc.description = req.body.description;
 
                 doc.save(function(err, updatedMovie) {

@@ -1,4 +1,3 @@
--Delete movie
 -click on username
 -Like, dislike with sessionStorage
 -keep the sort when going back to page

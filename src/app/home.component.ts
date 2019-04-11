@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router} from '@angular/router';
 import { AuthService } from './auth.service';
 import { FormBuilder } from '@angular/forms';
@@ -32,12 +32,12 @@ export class HomeComponent {
   }
   ngOnInit() {
 
-    if(sessionStorage.user) {
+    // if(sessionStorage.user) {
 
-      this.userLoggedIn = 1;
-      this.user = JSON.parse(sessionStorage.getItem("user")) ;
-      console.log(this.user);
-    }
+    //   this.userLoggedIn = 1;
+    //   this.user = JSON.parse(sessionStorage.getItem("user")) ;
+    //   console.log(this.user);
+    // }
   }
 
   onSubmit() {
@@ -51,6 +51,26 @@ export class HomeComponent {
     console.log("e2e");
     sessionStorage.removeItem("user");
     window.location.reload();
+  }
+
+
+  @HostListener('window:scroll') onScroll() {
+      
+    this.scrollFunction();
+  }
+  scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("toTop").style.display = "block";
+    } else {
+      document.getElementById("toTop").style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  topFunction() {
+      
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
 
 }

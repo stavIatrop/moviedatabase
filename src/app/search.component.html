@@ -30,6 +30,9 @@
                   </ul>
                 </div>
         </div>
+
+        <button (click)="topFunction()" id="toTop" title="Go to top"><fa name="arrow-up"></fa></button>
+
         <div *ngIf="!webService.noResults" class="row">
             
             <div class="col-sm-2"><h5> <fa name="search"></fa> {{webService.numberOfResults}} results found for "{{webService.searchString}}" :</h5></div>

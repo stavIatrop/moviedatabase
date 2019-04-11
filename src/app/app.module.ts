@@ -22,6 +22,8 @@ import { NavComponent } from './nav.component';
 import { SearchComponent } from './search.component';
 import { AddMovieComponent } from './addMovie.component';
 import { FooterComponent } from './foot.component';
+import { EditMovieComponent } from './editMovie.component';
+
 
 var routes = [
   {
@@ -59,6 +61,10 @@ var routes = [
   {
     path: 'addMovie',
     component: AddMovieComponent
+  },
+  {
+    path: 'editMovie',
+    component: EditMovieComponent
   }
 
 
@@ -67,7 +73,8 @@ var routes = [
 @NgModule({
   declarations: [
     AppComponent, MoviesComponent, HomeComponent,
-    MovieComponent, LoginComponent, SignUpComponent, UnderConstructionComponent, CallbackComponent, NavComponent, SearchComponent, AddMovieComponent, FooterComponent
+    MovieComponent, LoginComponent, SignUpComponent, UnderConstructionComponent, CallbackComponent, NavComponent,
+    SearchComponent, AddMovieComponent, FooterComponent, EditMovieComponent
   ],
   imports: [
     BrowserModule, HttpModule, RouterModule.forRoot(routes),

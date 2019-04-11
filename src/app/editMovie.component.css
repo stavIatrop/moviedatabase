@@ -1,7 +1,6 @@
-.error { background-color: #fff0f0; }
+#search {
 
-
-#search {  
+    
     /* position: absolute;
     top:50;
     left: 0; */
@@ -58,13 +57,36 @@ input[type=search]:focus:not([readonly]) {
 #moviesFa {
 
     
-    text-decoration: underline;
     font-size: 1.8rem;
 }
 
 #moviesFa:hover {
 
-    color: #132f47; 
+    color: #132f47;
+}
+
+#movies {
+
+    text-decoration: underline;
+    font-size: 1.1rem;
+    
+}
+
+#movies:hover {
+
+    color: #132f47;
+    
+}
+
+#moviesEdit {
+
+    font-size: 1.1rem;
+    font-style: italic;
+    
+}
+
+#text {
+    color: #132f47;
 }
 
 #title {
@@ -92,16 +114,7 @@ input[type=search]:focus:not([readonly]) {
     box-shadow: 0 0 0 1px #132f47;
 }
 
-#movie {
-
-    font-size: 1.1rem;
-}
-
-#text {
-    color: #132f47;
-}
-
-#submitMovie {
+#updateMovie {
 
     background-color: rgb(19, 47, 71);
     color: white; 
@@ -148,4 +161,4 @@ input[type=search]:focus:not([readonly]) {
 
 #toTop:hover {
     background-image: linear-gradient(to bottom right, #235581, #132f47);
-  }
+}

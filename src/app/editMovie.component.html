@@ -1,0 +1,80 @@
+<div class="row justify-content-md-center" id="middleRow">
+
+        <div class="col-12 col-md-10 col-lg-8">
+                <form [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="card card-sm" id="searchForm">
+                    <div class="card-body row no-gutters align-items-center">
+                        <div class="col-auto">
+                            <fa id="faSearch" name="search"></fa>
+                        </div>
+                        
+                        <div class="col">
+                            <input id="search" formControlName="searchWords" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search for a movie by title, year or genre...">
+                        </div>
+                        
+                        <div class="col-auto">
+                            <button id="searchButton" class="btn btn-lg btn-success" type="submit">Search</button>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+    
+    
+</div>
+
+<div class="row breadcrumb">
+        <div class="col-md-12">
+          <ul class="list-inline">
+            <li id="moviesFa" class="list-inline-item"><fa name="home"  [routerLink]="['/']" style = "cursor: pointer"></fa></li>
+            <li class="list-inline-item"> > </li>
+            <li id="movies" class="list-inline-item" [routerLink]="['/']" style = "cursor: pointer">Movies</li>
+            <li class="list-inline-item"> > </li>
+            <li id="moviesEdit" class="list-inline-item" >Edit Movie</li>
+          </ul>
+        </div>
+</div>
+
+<button (click)="topFunction()" id="toTop" title="Go to top"><fa name="arrow-up"></fa></button>
+
+<div class="container">
+
+        <span *ngIf = "authService.isAuthenticated()">
+            <h2 id="text">Edit movie</h2>
+            <form [formGroup]="movieForm" (ngSubmit)="onUpdateMovie()">
+                <div class="form-group">
+                    <label  for="title">Title<fa id="titleAsterisk" name="asterisk"></fa></label>
+                    <input type="text" id="title"  name="title" class="form-control" formControlName="title" [ngClass]="{'error' : isInvalid('title')}" [(ngModel)]="movie.title">
+                </div>
+                <div class="form-group" >
+                    <label for="description">Movie Description</label>
+                    <textarea id="description" rows="3" name="description" class="form-control" formControlName="description" [(ngModel)]="movie.description" ></textarea>
+                </div>
+                <div class="form-group">
+                    <label  for="year">Year<fa id="yearAsterisk" name="asterisk"></fa></label>
+                    <select id="year" name="year" class="form-control" formControlName="year" [ngClass]="{'error' : isInvalid('year')}" [(ngModel)]="movie.year">
+                        
+                        <option  *ngFor ="let year of webService.yearArray" value="{{year}}">{{year}}</option>
+                        
+                    </select>
+                    
+                </div>
+                <div class="form-group" >
+                    <label for="cast">Cast(Names divided by comma)</label>
+                    <textarea id="cast" rows="3" name="cast" class="form-control" formControlName="cast" [(ngModel)]="movie.cast" ></textarea>
+                </div>
+                <div class="form-group" >
+                    <label for="genres">Genres(Genres divided by comma)</label>
+                    <textarea id="genres" rows="3" name="genres" class="form-control" formControlName="genres" [(ngModel)]="movie.genres" ></textarea>
+                </div>
+                
+                <span *ngIf="isIncomplete()">You must complete all compulsory (<fa id="compAsterisk" name="asterisk"></fa>) fields</span>
+                <button *ngIf="!isIncomplete()" type="submit" id="updateMovie" class="btn">Save Changes</button>
+            </form>
+        </span>
+    
+        <span *ngIf = "!authService.isAuthenticated()">
+            <h5 id="text">
+                Please log in to edit this movie
+            </h5>
+        </span>
+    </div>

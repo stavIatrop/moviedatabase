@@ -36,8 +36,8 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <form class="form-inline ml-auto">
 
-                            <button class="btn btn-outline-light" *ngIf="!authService.isAuthenticated()" (click)="authService.login()">Login</button>
-                            <button class="btn btn-outline-light" *ngIf="authService.isAuthenticated()" (click)="authService.logout()">Logout</button>
+                            <button class="btn btn-outline-light" *ngIf="!authService.isAuthenticated()" (click)="authService.login()">Login <fa name="sign-in"></fa></button>
+                            <button class="btn btn-outline-light" *ngIf="authService.isAuthenticated()" (click)="authService.logout()">Logout <fa name="sign-out"></fa></button>
                         
                         </form>
                     </div>

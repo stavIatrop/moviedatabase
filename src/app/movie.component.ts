@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { WebService } from './web.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from './auth.service';
@@ -401,6 +401,25 @@ export class MovieComponent {
       
       this.webService.deleteReview(this.webService.movieID, review, this.selectedOptionSort);
     }
-    
+
+    @HostListener('window:scroll') onScroll() {
+      
+      this.scrollFunction();
+    }
+    scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("toTop").style.display = "block";
+      } else {
+        document.getElementById("toTop").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    topFunction() {
+        
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
     movie = { };
 }

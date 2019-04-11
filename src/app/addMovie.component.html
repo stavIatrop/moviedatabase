@@ -28,17 +28,17 @@
         <li id="moviesFa" class="list-inline-item"><fa name="home"  [routerLink]="['/']" style = "cursor: pointer"></fa></li>
         <li class="list-inline-item"> > </li>
         <li id="movie" class="list-inline-item"><i>Add Movie</i></li>
-        
-                   
-       
       </ul>
     </div>
 </div>
 
+<button (click)="topFunction()" id="toTop" title="Go to top"><fa name="arrow-up"></fa></button>
+
+
 <div class="container">
 
     <span *ngIf = "authService.isAuthenticated()">
-        <h2 id="text">Please add a movie</h2>
+        <h2 id="text">Add a movie</h2>
         <form [formGroup]="movieForm" (ngSubmit)="onSubmitMovie()">
             <div class="form-group">
                 <label  for="title">Title<fa id="titleAsterisk" name="asterisk"></fa></label>

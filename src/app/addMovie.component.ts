@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
 import { FormBuilder, Validators } from '@angular/forms';
@@ -88,6 +88,26 @@ export class AddMovieComponent {
       
       return (this.isInvalid('title') ||
               this.isInvalid('year') || this.movieForm.value.title == "" || this.movieForm.value.year == "");
+    }
+
+
+    @HostListener('window:scroll') onScroll() {
+      
+      this.scrollFunction();
+    }
+    scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("toTop").style.display = "block";
+      } else {
+        document.getElementById("toTop").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    topFunction() {
+        
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
 
 

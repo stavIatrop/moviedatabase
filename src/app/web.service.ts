@@ -260,6 +260,41 @@ export class WebService {
         
 
     }
+
+    deleteMovie(movie, start, sort)  {
+
+        
+        this.http.delete("http://localhost:3000/api/movies/" + movie._id)
+                            .subscribe(
+                                response => {
+                                    this.getMovies(start, sort );
+
+                                }
+                            )
+
+
+    }
+
+    updateMovie(movieId, movie, cast, genres) {
+
+        let urlSearchParams = new URLSearchParams();
+        urlSearchParams.append('title', movie.title);
+        urlSearchParams.append('year', movie.year);
+        urlSearchParams.append('description', movie.description);
+        urlSearchParams.append('cast', cast);
+        urlSearchParams.append('genres', genres);
+        
+        this.http.put("http://localhost:3000/api/movies/" +
+                    movieId, urlSearchParams)
+                    .subscribe(
+                        response => {
+                            
+                        }
+                    )
+
+    }
+
+
     postReview(review, sort) {
 
         
@@ -313,8 +348,6 @@ export class WebService {
 
                                 }
                             )
-
-
     }
     // sortByRelevance() {
 
