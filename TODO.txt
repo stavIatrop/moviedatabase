@@ -1,4 +1,6 @@
+-rating search sort by
+-delete edit in movie component
 -click on username
 -Like, dislike with sessionStorage
 -keep the sort when going back to page
--Display of movies(started, not finished)
+-footer

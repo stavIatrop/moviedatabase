@@ -78,21 +78,24 @@
                     <div class="col-sm-8">
                             <div *ngFor = "let movie of webService.searchResults_list | async">
                                 <div class="row">
-                                        <div class="col-sm-2"><a [routerLink] = "['/movies', movie._id]" ><img class="rounded" src="../images/movieLogo.png" width="185" height="278"  alt=""></a></div>
+                                        <div class="col-sm-2"><a [routerLink] = "['/movies', movie._id]" ><img class="rounded" src="../images/movie.jpg" width="185" height="278"  alt=""></a></div>
                                         <div class="col-sm-6">
-                                            <div class="card  mb-10" [routerLink] = "['/movies', movie._id]" style = "border:none;cursor: pointer">
-                                                <div class="card-header">
-                                                        {{ movie.title }} <span>{{movie.avg_stars}}<fa name="star"></fa></span>
+                                            <div class="card  mb-10" >
+                                                <div class="card-header"  [routerLink] = "['/movies', movie._id]" style = "cursor: pointer">
+                                                        {{ movie.title }} <span id="stars">{{movie.avg_stars}}<fa id="starsFa" name="star"></fa></span>
                                                 </div>
-                                                <h6 class="card-subtitle text-muted">{{ movie.year }}</h6>
+                                                <h6 id="subtitle" class="card-subtitle text-muted">{{ movie.year }}</h6>
                                                 <div class="card-body">
                                                         
                                                         {{ movie.description }}
                                                 </div>
+                                                <div class="card-footer" style = "border:none;cursor: pointer">
+                                                    <a style="color:#132f47" [routerLink] = "['/movies', movie._id]">More...</a>
+                                                </div>
                                             </div>
                                         </div>
                                 </div>
-                                <br>
+                                <br><br>
                                        
                             </div>
                     </div>

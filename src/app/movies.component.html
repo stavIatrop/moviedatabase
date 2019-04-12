@@ -82,22 +82,32 @@
                         </h5>
                 </span>
             <div *ngFor = "let movie of webService.movie_list | async">
-                <div class="card mb-3">
-                    <div class="card-header" [routerLink] = "['/movies', movie._id]" style = "cursor: pointer">
-                        {{ movie.title }}
-                    </div>
-                    <div class="card-body">
-                        This movie released in
-                        {{ movie.year }}
-                    </div>
-                    <div class="card-footer">
-                        Cast 
-                        {{ movie.cast }}
-                        <span *ngIf = "authService.isAuthenticated()"><button id="deleteButton" (click)="delete(movie)" type="button" class="btn btn-danger"><fa name="trash"></fa>Delete</button></span>
-                        <span *ngIf = "authService.isAuthenticated()"><button id="editButton" (click)="edit(movie)" type="button" class="btn"><fa name="edit"></fa>Edit</button></span>
-                    
-                    </div>
+                <div class="row">
+                        <div class="col-sm-3"><a [routerLink] = "['/movies', movie._id]" ><img class="rounded" src="../images/movie.jpg" width="200" height="278"  alt=""></a></div>
+                        <div class="col-sm-9">
+                            <div class="card mb-3">
+                                <div class="card-header" [routerLink] = "['/movies', movie._id]" style = "cursor: pointer">
+                                    <b>{{ movie.title }}</b>  <span id="stars">{{movie.avg_stars}}<fa id="starsFa" name="star"></fa></span>
+                                </div>
+                                <h6 id="subtitle" class="card-subtitle text-muted">{{ movie.year }}</h6>
+                                <div class="card-body">
+                                        
+                                        {{ movie.description }}
+                                </div>
+                                <div class="card-footer">
+                                   <p>
+                                    <b>Cast: </b> 
+                                    {{ movie.cast }}
+                                    <span id="delEdit" *ngIf = "authService.isAuthenticated()"><button id="deleteButton" (click)="delete(movie)" type="button" class="btn btn-danger"><fa name="trash"></fa>Delete</button>
+                                   <button id="editButton" (click)="edit(movie)" type="button" class="btn"><fa name="edit"></fa>Edit</button></span>
+                                
+                                   </p> 
+                                </div>
+                            </div>
+                        </div>
+                        
                 </div>
+                
             </div>
         </div>
     </div>    

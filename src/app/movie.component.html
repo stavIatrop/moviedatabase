@@ -43,19 +43,38 @@
 <div class="container" style="margin-top:100px;">
     <div class="row">
         <div class="col-sm-12">
+                <span *ngIf = "!authService.isAuthenticated()">
+                        <h5 id="text">
+                            Please log in to edit or remove a movie
+                        </h5>
+                <hr>
+                </span>
+
             <div *ngFor = "let movie of webService.movie_list | async">
-                <div class="card  mb-3">
-                    <div class="card-header">
-                        {{ movie.title }}   {{movie.avg_stars}} <fa name="star"></fa>
-                    </div>
-                    <div class="card-body">
-                        This movie released in
-                        {{ movie.year }}
+                <div class="row">
+                    <div class="col-sm-3"><a [routerLink] = "['/movies', movie._id]" ><img class="rounded" src="../images/movie.jpg" width="200" height="278"  alt=""></a></div>
+                   <div class="col-sm-9">
+                        <div class="card  mb-3">
+                                <div class="card-header">
+                                    <b>{{ movie.title }}</b>  <span id="stars">{{movie.avg_stars}}<fa id="starsFa" name="star"></fa></span>
+                                </div>
+                                <h6 id="subtitle" class="card-subtitle text-muted">{{ movie.year }}</h6>
+                                <div class="card-body">
+                                        
+                                        {{ movie.description }}
+                                </div>
+                                <div class="card-footer">
+                                    <p>
+                                        <b>Cast: </b> 
+                                        {{ movie.cast }}
+                                        <span id="delEdit" *ngIf = "authService.isAuthenticated()"><button id="deleteButtonMovie" (click)="delete(movie)" type="button" class="btn btn-danger"><fa name="trash"></fa>Delete</button>
+                                        <button id="editButton" (click)="edit(movie)" type="button" class="btn"><fa name="edit"></fa>Edit</button></span>
+                                    
+                                    </p> 
+                                </div>
+                            
+                        </div>
                         
-                    </div>
-                    <div class="card-footer">
-                        Cast 
-                        {{ movie.cast }}
                     </div>
                 </div>
             </div>
@@ -110,15 +129,16 @@
                 <div class="card-body">
                     {{ review.text }}
                     <hr>
-                    {{ review.stars }}<fa name="star"></fa>
+                    <span id="stars">{{review.stars}}<fa id="starsFa" name="star"></fa></span>
                 </div>
                 <div class="card-footer">
                     <p><strong>Votes:</strong>
                         {{ review.votes.like }} <fa name="thumbs-up"></fa>,
                         {{ review.votes.dislike }} <fa name="thumbs-down"></fa>
-                        <button  class="btn rounded" (click)="likeSubmit(review, i)" id="likeButton{{i}}"><fa name="thumbs-up"></fa>Like!</button> <button  class="btn rounded" (click)="dislikeSubmit(review, i)" id="dislikeButton{{i}}"><fa name="thumbs-down"></fa>Dislike!</button> 
+                        <button *ngIf = "authService.isAuthenticated()" class="btn rounded" (click)="likeSubmit(review, i)" id="likeButton{{i}}"><fa name="thumbs-up"></fa>Like!</button> <button *ngIf = "authService.isAuthenticated()" class="btn rounded" (click)="dislikeSubmit(review, i)" id="dislikeButton{{i}}"><fa name="thumbs-down"></fa>Dislike!</button> 
+                        <span *ngIf = "authService.isAuthenticated()"><button id="deleteButton" (click)="delete(review)" type="button" class="btn btn-danger"><fa name="trash"></fa>Delete</button></span>
+                    
                     </p>
-                    <span *ngIf = "authService.isAuthenticated()"><button id="deleteButton" (click)="delete(review)" type="button" class="btn btn-danger"><fa name="trash"></fa>Delete</button></span>
                     
                    
                    
@@ -140,7 +160,7 @@
         
     </div>
     <span *ngIf = "authService.isAuthenticated()">
-        <h2>Please review this business</h2>
+        <h2>Please review this movie</h2>
         <form [formGroup]="reviewForm" (ngSubmit)="onSubmitReview()">
             <div class="form-group">
                 <label for="name">Name</label>
@@ -152,15 +172,8 @@
             </div>
             <div class="form-group">
                 <label for="stars">Please provide a rating (5 = best)</label>
-                <!-- <select id="stars" name="stars" class="form-control" formControlName="stars">
-                    <option value="1">1 star</option>
-                    <option value="2">2 stars</option>
-                    <option value="3">3 stars</option>
-                    <option value="4">4 stars</option>
-                    <option value="5">5 stars</option>
-                </select> -->
                 <br>
-                <ngb-rating class="form-control" formControlName="stars"  [(ngModel)]="review.stars" name="stars" [(rate)]="currentRate" max="5"></ngb-rating>
+                <ngb-rating style="color: goldenrod;" class="form-control" formControlName="stars"  [(ngModel)]="review.stars" name="stars" [(rate)]="currentRate" max="5"></ngb-rating>
             </div>
             
             <span *ngIf="isIncomplete()">You must complete all fields</span>
@@ -169,7 +182,7 @@
     </span>
     <span *ngIf = "!authService.isAuthenticated()">
             <h5 id="text">
-                Please log in to leave a review for this movie or delete a review
+                Please log in to leave a review for this movie, vote or delete a review
             </h5>
     </span>
         

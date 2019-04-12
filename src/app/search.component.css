@@ -95,6 +95,23 @@ input[type=search]:focus:not([readonly]) {
 
 }
 
+#stars {
+
+    margin-left: 10px;
+}
+
+#starsFa {
+    
+    
+    color: goldenrod;
+
+}
+
+#subtitle {
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
 #toTop {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */

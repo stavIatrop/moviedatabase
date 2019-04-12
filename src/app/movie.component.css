@@ -107,21 +107,78 @@ input[type=search]:focus:not([readonly]) {
     color: white; 
 }
 
-p button {
+p > button {
 
     box-shadow: 0 0 0 1px rgb(19, 47, 71);
     margin-left: 40px;
 }
 
-p button:hover{
+p > button:hover{
 
     background-image: linear-gradient(to bottom right, #235581, #132f47);
 
 }
 
-p button:disabled {
+p > button:disabled {
 
     background-image: none;
+}
+
+#deleteButton {
+
+    float: right;
+    
+}
+
+#delEdit {
+    float: right;
+}
+
+#deleteButtonMovie {
+
+    margin-right: 5px;
+    /* float: right; */
+    /* box-shadow: 0 0 0 1px red; */
+}
+#deleteButtonMovie:hover {
+    
+    background-image: linear-gradient(to bottom right, #bb2828, #f50000);
+}
+
+#editButton {
+
+    box-shadow: 0 0 0 1px rgb(19, 47, 71);
+    background-color: #132f47;
+    color: white;
+    float: right;
+}
+
+#editButton:hover{
+
+    background-image: linear-gradient(to bottom right, #235581, #132f47);
+
+}
+
+#subtitle {
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+#stars {
+
+    margin-left: 10px;
+}
+
+#starsFa {
+    
+    
+    color: goldenrod;
+
+}
+
+#text {
+
+    color: #132f47;
 }
 
 #deleteButton:hover {

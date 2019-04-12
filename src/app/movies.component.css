@@ -97,9 +97,13 @@ input[type=search]:focus:not([readonly]) {
     color: #132f47;
 }
 
+#delEdit {
+    float: right;
+}
 #deleteButton {
 
-    margin-left: 40px;
+    margin-right: 5px;
+    /* float: right; */
     /* box-shadow: 0 0 0 1px red; */
 }
 #deleteButton:hover {
@@ -112,7 +116,7 @@ input[type=search]:focus:not([readonly]) {
     box-shadow: 0 0 0 1px rgb(19, 47, 71);
     background-color: #132f47;
     color: white;
-    margin-left: 40px;
+    float: right;
 }
 
 #editButton:hover{
@@ -120,6 +124,24 @@ input[type=search]:focus:not([readonly]) {
     background-image: linear-gradient(to bottom right, #235581, #132f47);
 
 }
+
+#subtitle {
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+#stars {
+
+    margin-left: 10px;
+}
+
+#starsFa {
+    
+    
+    color: goldenrod;
+
+}
+
 
 #toTop {
     display: none; /* Hidden by default */
