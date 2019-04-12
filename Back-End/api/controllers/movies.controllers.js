@@ -25,7 +25,7 @@ module.exports.search = function(req, res) {
     }
 
     
-    var searchWords = searchString.trim().split(/\s+/).filter(Boolean);
+    var searchWords = searchString.trim().split(/[ ,]+/).filter(Boolean);
     // console.log(searchWords);
     // console.log(start);
     // console.log(perPage);

@@ -138,6 +138,14 @@ input[type=search]:focus:not([readonly]) {
     font-size: 10px;
 }
 
+#genresAsterisk {
+
+    color: red;
+    position: absolute;
+    margin-left: 5px;
+    font-size: 10px;
+}
+
 #compAsterisk {
 
     color: red;

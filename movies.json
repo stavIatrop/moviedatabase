@@ -1,0 +1,2504 @@
+[{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67155"
+	},
+	"title": "The Darkest Minds",
+	"year": 2018,
+	"cast": [
+		"Amandla Stenberg,Mandy Moore,Gwendoline Christie,Harris Dickinson,Skylan Brooks,Miya Cech,Patrick Gibson,Golden Brooks,Bradley Whitford"
+	],
+	"genres": [
+		"Science Fiction,Action,Thriller"
+	],
+	"description": "Imprisoned by an adult world that now fears everyone under 18, a group of teens form a resistance group to fight back and reclaim control of their future.",
+	"avg_stars": 2,
+	"reviews": [
+		{
+			"stars": 2,
+			"_id": {
+				"$oid": "5cafb36b2b71cf250d66fa61"
+			},
+			"username": "miifoo",
+			"votes": {
+				"_id": {
+					"$oid": "5cafb36b2b71cf250d66fa62"
+				},
+				"like": 1,
+				"dislike": 0
+			},
+			"text": "Dark movie...",
+			"movie_id": "5c8d43ecf458d7546ff67155",
+			"date": {
+				"$date": "2019-04-11T21:36:43.937Z"
+			}
+		}
+	],
+	"review_count": 1,
+	"__v": 1
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67156"
+	},
+	"title": "The Spy Who Dumped Me",
+	"year": 2018,
+	"cast": [
+		"Mila Kunis",
+		"Kate McKinnon",
+		"Sam Heughan"
+	],
+	"genres": [
+		"Action",
+		"Comedy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 4,
+	"reviews": [
+		{
+			"stars": 4,
+			"_id": {
+				"$oid": "5cb07ca3f4388f08512c8ddb"
+			},
+			"username": "stav",
+			"votes": {
+				"_id": {
+					"$oid": "5cb07ca3f4388f08512c8ddc"
+				},
+				"like": 1,
+				"dislike": 0
+			},
+			"text": "Funny movie!",
+			"movie_id": "5c8d43ecf458d7546ff67156",
+			"date": {
+				"$date": "2019-04-12T11:55:15.797Z"
+			}
+		}
+	],
+	"review_count": 1
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67157"
+	},
+	"title": "Puzzle",
+	"year": 2018,
+	"cast": [
+		"Kelly Macdonald",
+		"Irrfan Khan",
+		"David Denman",
+		"Bubba Weiler",
+		"Austin Abrams",
+		"Liv Hewson"
+	],
+	"genres": [
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67158"
+	},
+	"title": "Billionaire Boys Club",
+	"year": 2018,
+	"cast": [
+		"Ansel Elgort",
+		"Taron Egerton",
+		"Kevin Spacey",
+		"Jeremy Irvine",
+		"Cary Elwes",
+		"Emma Roberts",
+		"Billie Lourd",
+		"Suki Waterhouse",
+		"Judd Nelson"
+	],
+	"genres": [
+		"Biography",
+		"Crime",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0,
+	"reviews": [],
+	"review_count": 0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67159"
+	},
+	"title": "Never Goin' Back",
+	"year": 2018,
+	"cast": [
+		"Maia Mitchell",
+		"Camila Morrone",
+		"Kyle Mooney",
+		"Joel Allen",
+		"Kendal Smith",
+		"Matthew Holcomb"
+	],
+	"genres": [
+		"Comedy",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0,
+	"reviews": [],
+	"review_count": 0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6715a"
+	},
+	"title": "Dog Days",
+	"year": 2018,
+	"cast": [
+		"Nina Dobrev",
+		"Finn Wolfhard",
+		"Vanessa Hudgens",
+		"Adam Pally",
+		"Eva Longoria"
+	],
+	"genres": [
+		"Comedy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6715b"
+	},
+	"title": "The Miseducation of Cameron Post",
+	"year": 2018,
+	"cast": [
+		"Chloë Grace Moretz",
+		"Sasha Lane",
+		"John Gallagher, Jr.",
+		"Forrest Goodluck",
+		"Jennifer Ehle"
+	],
+	"genres": [
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6715c"
+	},
+	"title": "Christopher Robin",
+	"year": 2018,
+	"cast": [
+		"Ewan McGregor",
+		"Hayley Atwell",
+		"Bronte Carmichael",
+		"Mark Gatiss",
+		"Jim Cummings",
+		"Brad Garrett",
+		"Nick Mohammed",
+		"Peter Capaldi",
+		"Sophie Okonedo",
+		"Sara Sheen",
+		"Toby Jones"
+	],
+	"genres": [
+		"Family",
+		"Comedy",
+		"Drama",
+		"Fantasy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6715d"
+	},
+	"title": "Slender Man",
+	"year": 2018,
+	"cast": [
+		"Joey King",
+		"Julia Goldani Telles",
+		"Jaz Sinclair",
+		"Annalise Basso",
+		"Javier Botet"
+	],
+	"genres": [
+		"Horror",
+		"Thriller"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6715e"
+	},
+	"title": "A Prayer Before Dawn",
+	"year": 2018,
+	"cast": [
+		"Joe Cole"
+	],
+	"genres": [
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6715f"
+	},
+	"title": "Hot Summer Nights",
+	"year": 2018,
+	"cast": [
+		"Timothée Chalamet",
+		"Maika Monroe",
+		"Alex Roe",
+		"Maia Mitchell"
+	],
+	"genres": [
+		"Drama"
+	],
+	"description": "Circa 1980s, a sheltered teenage boy comes of age during a wild summer he spends in Cape Cod getting rich from selling pot to gangsters, falling in love for the first time, partying and eventually realizing that he is in over his head. ",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67160"
+	},
+	"title": "Alpha",
+	"year": 2018,
+	"cast": [
+		"Kodi Smit-McPhee",
+		"Leonor Varela",
+		"Jens Hultén"
+	],
+	"genres": [
+		"Adventure",
+		"Fantasy",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67161"
+	},
+	"title": "Crazy Rich Asians",
+	"year": 2018,
+	"cast": [
+		"Constance Wu",
+		"Henry Golding",
+		"Gemma Chan",
+		"Awkwafina",
+		"Nico Santos",
+		"Lisa Lu",
+		"Ken Jeong",
+		"Michelle Yeoh"
+	],
+	"genres": [
+		"Romance",
+		"Comedy",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67162"
+	},
+	"title": "BlacKkKlansman",
+	"year": 2018,
+	"cast": [
+		"John David Washington",
+		"Adam Driver",
+		"Laura Harrier",
+		"Topher Grace"
+	],
+	"genres": [
+		"Crime",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67163"
+	},
+	"title": "Mile 22",
+	"year": 2018,
+	"cast": [
+		"Mark Wahlberg",
+		"John Malkovich",
+		"Lauren Cohan",
+		"Iko Uwais",
+		"Ronda Rousey"
+	],
+	"genres": [
+		"Action",
+		"Thriller"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67164"
+	},
+	"title": "Down a Dark Hall",
+	"year": 2018,
+	"cast": [
+		"AnnaSophia Robb",
+		"Uma Thurman",
+		"Isabelle Fuhrman",
+		"Kirsty Mitchell",
+		"Taylor Russell",
+		"Jim Sturgeon",
+		"Victoria Moroles"
+	],
+	"genres": [
+		"Fantasy",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67165"
+	},
+	"title": "The Wife",
+	"year": 2018,
+	"cast": [
+		"Glenn Close",
+		"Jonathan Pryce",
+		"Christian Slater",
+		"Max Irons",
+		"Annie Starke",
+		"Harry Lloyd",
+		"Elizabeth McGovern"
+	],
+	"genres": [
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67166"
+	},
+	"title": "The Happytime Murders",
+	"year": 2018,
+	"cast": [
+		"Melissa McCarthy",
+		"Maya Rudolph",
+		"Joel McHale",
+		"Elizabeth Banks"
+	],
+	"genres": [
+		"Comedy",
+		"Thriller"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67167"
+	},
+	"title": "Searching",
+	"year": 2018,
+	"cast": [
+		"John Cho",
+		"Debra Messing"
+	],
+	"genres": [
+		"Thriller"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67168"
+	},
+	"title": "The Meg",
+	"year": 2018,
+	"cast": [
+		"Jason Statham",
+		"Li Bingbing",
+		"Rainn Wilson",
+		"Ruby Rose",
+		"Winston Chao",
+		"Cliff Curtis"
+	],
+	"genres": [
+		"Action",
+		"Horror",
+		"Thriller",
+		"Science Fiction"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67169"
+	},
+	"title": "Papillon",
+	"year": 2018,
+	"cast": [
+		"Charlie Hunnam",
+		"Rami Malek"
+	],
+	"genres": [
+		"Biography"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6716a"
+	},
+	"title": "A.X.L.",
+	"year": 2018,
+	"cast": [
+		"Alex Neustaedter",
+		"Becky G",
+		"Alex MacNicoll",
+		"Thomas Jane",
+		"Lou Taylor Pucci",
+		"Patricia de Leon"
+	],
+	"genres": [
+		"Science Fiction",
+		"Adventure"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6716b"
+	},
+	"title": "Operation Finale",
+	"year": 2018,
+	"cast": [
+		"Oscar Isaac",
+		"Ben Kingsley",
+		"Lior Raz",
+		"Mélanie Laurent",
+		"Nick Kroll",
+		"Joe Alwyn"
+	],
+	"genres": [
+		"Historical",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6716c"
+	},
+	"title": "Kin",
+	"year": 2018,
+	"cast": [
+		"Myles Truitt",
+		"Jack Reynor",
+		"Zoë Kravitz",
+		"Carrie Coon",
+		"Dennis Quaid",
+		"James Franco"
+	],
+	"genres": [
+		"Science Fiction",
+		"Action",
+		"Crime",
+		"Thriller"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6716d"
+	},
+	"title": "Juliet, Naked",
+	"year": 2018,
+	"cast": [
+		"Ethan Hawke",
+		"Rose Byrne"
+	],
+	"genres": [
+		"Romance",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6716e"
+	},
+	"title": "Destination Wedding",
+	"year": 2018,
+	"cast": [
+		"Winona Ryder",
+		"Keanu Reeves"
+	],
+	"genres": [
+		"Romance",
+		"Comedy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6716f"
+	},
+	"title": "The Nun",
+	"year": 2018,
+	"cast": [
+		"Demián Bichir",
+		"Taissa Farmiga",
+		"Jonas Bloquet",
+		"Charlotte Hope",
+		"Ingrid Bisu",
+		"Bonnie Aarons"
+	],
+	"genres": [
+		"Horror"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67170"
+	},
+	"title": "Peppermint",
+	"year": 2018,
+	"cast": [
+		"Jennifer Garner",
+		"John Ortiz",
+		"Juan Pablo Raba",
+		"John Gallagher Jr.",
+		"Annie Ilonzeh",
+		"Richard Cabral"
+	],
+	"genres": [
+		"Action",
+		"Thriller"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67171"
+	},
+	"title": "The Children Act",
+	"year": 2018,
+	"cast": [
+		"Emma Thompson",
+		"Stanley Tucci",
+		"Fionn Whitehead"
+	],
+	"genres": [
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67172"
+	},
+	"title": "Lizzie",
+	"year": 2018,
+	"cast": [
+		"Chloë Sevigny",
+		"Kristen Stewart",
+		"Jay Huguley",
+		"Fiona Shaw",
+		"Jamey Sheridan",
+		"Kim Dickens",
+		"Denis O'Hare",
+		"Jeff Perry"
+	],
+	"genres": [
+		"Biography",
+		"Thriller"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67173"
+	},
+	"title": "Unbroken: Path to Redemption",
+	"year": 2018,
+	"cast": [
+		"Samuel Hunt",
+		"Merritt Patterson",
+		"Vanessa Bell Calloway",
+		"Bobby Campo",
+		"David DeLuise",
+		"David Sakurai",
+		"WIll Graham"
+	],
+	"genres": [
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67174"
+	},
+	"title": "The House with a Clock in Its Walls",
+	"year": 2018,
+	"cast": [
+		"Jack Black",
+		"Cate Blanchett",
+		"Owen Vaccaro",
+		"Kyle MacLachlan",
+		"Renée Elise Goldsberry",
+		"Sunny Suljic",
+		"Vanessa Anne Williams",
+		"Colleen Camp"
+	],
+	"genres": [
+		"Fantasy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67175"
+	},
+	"title": "A Simple Favor",
+	"year": 2018,
+	"cast": [
+		"Anna Kendrick",
+		"Blake Lively",
+		"Henry Golding",
+		"Andrew Rannells"
+	],
+	"genres": [
+		"Thriller",
+		"Drama",
+		"Comedy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67176"
+	},
+	"title": "Life Itself",
+	"year": 2018,
+	"cast": [
+		"Oscar Isaac",
+		"Olivia Wilde",
+		"Mandy Patinkin",
+		"Olivia Cooke",
+		"Laia Costa",
+		"Annette Bening",
+		"Antonio Banderas"
+	],
+	"genres": [
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67177"
+	},
+	"title": "The Sisters Brothers",
+	"year": 2018,
+	"cast": [
+		"John C. Reilly",
+		"Joaquin Phoenix",
+		"Jake Gyllenhaal",
+		"Riz Ahmed"
+	],
+	"genres": [
+		"Western",
+		"Comedy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67178"
+	},
+	"title": "Colette",
+	"year": 2018,
+	"cast": [
+		"Keira Knightley",
+		"Dominic West"
+	],
+	"genres": [
+		"Biography",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67179"
+	},
+	"title": "Fahrenheit 11/9",
+	"year": 2018,
+	"cast": [],
+	"genres": [
+		"Documentary"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6717a"
+	},
+	"title": "Assassination Nation",
+	"year": 2018,
+	"cast": [
+		"Odessa Young",
+		"Suki Waterhouse",
+		"Hari Nef",
+		"Abra",
+		"Bella Thorne",
+		"Bill Skarsgård",
+		"Cody Christian",
+		"Joel McHale",
+		"Maude Apatow",
+		"Colman Domingo",
+		"Anika Noni Rose"
+	],
+	"genres": [
+		"Crime",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6717b"
+	},
+	"title": "The Predator",
+	"year": 2018,
+	"cast": [
+		"Boyd Holbrook",
+		"Trevante Rhodes",
+		"Jacob Tremblay",
+		"Keegan-Michael Key",
+		"Olivia Munn",
+		"Thomas Jane",
+		"Alfie Allen",
+		"Sterling K. Brown",
+		"Augusto Aguilera",
+		"Yvonne Strahovski",
+		"Jake Busey"
+	],
+	"genres": [
+		"Horror",
+		"Action",
+		"Science Fiction"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6717c"
+	},
+	"title": "White Boy Rick",
+	"year": 2018,
+	"cast": [
+		"Matthew McConaughey",
+		"Richie Merritt",
+		"Bel Powley",
+		"Jennifer Jason Leigh",
+		"Brian Tyree Henry",
+		"Rory Cochrane",
+		"RJ Cyler",
+		"Jonathan Majors",
+		"Eddie Marsan",
+		"Bruce Dern",
+		"Piper Laurie"
+	],
+	"genres": [
+		"Crime",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6717d"
+	},
+	"title": "Night School",
+	"year": 2018,
+	"cast": [
+		"Kevin Hart",
+		"Tiffany Haddish",
+		"Taran Killam",
+		"Rob Riggle",
+		"Ben Schwartz",
+		"Yvonne Orji"
+	],
+	"genres": [
+		"Comedy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6717e"
+	},
+	"title": "Power of the Air",
+	"year": 2018,
+	"cast": [
+		"Nicholas X. Parsons",
+		"Patty Duke",
+		"Michael Gross",
+		"Tracy Goode",
+		"Karyn Williams",
+		"Wendell Kinney",
+		"Veryl Jones"
+	],
+	"genres": [
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6717f"
+	},
+	"title": "The Old Man \u0026 the Gun",
+	"year": 2018,
+	"cast": [
+		"Robert Redford",
+		"Casey Affleck",
+		"Danny Glover",
+		"Tika Sumpter",
+		"Tom Waits",
+		"Sissy Spacek"
+	],
+	"genres": [
+		"Action",
+		"Thriller"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67180"
+	},
+	"title": "Venom",
+	"year": 2018,
+	"cast": [
+		"Tom Hardy",
+		"Michelle Williams",
+		"Riz Ahmed",
+		"Scott Haze",
+		"Reid Scott",
+		"Jenny Slate"
+	],
+	"genres": [
+		"Superhero",
+		"Horror",
+		"Action",
+		"Science Fiction",
+		"Thriller"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67181"
+	},
+	"title": "Hell Fest",
+	"year": 2018,
+	"cast": [
+		"Bex Taylor-Klaus",
+		"Amy Forsyth",
+		"Reign Edwards",
+		"Christian James",
+		"Matt Mercurio",
+		"Roby Attal"
+	],
+	"genres": [
+		"Horror"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67182"
+	},
+	"title": "A Star Is Born",
+	"year": 2018,
+	"cast": [
+		"Bradley Cooper",
+		"Lady Gaga",
+		"Andrew Dice Clay",
+		"Dave Chappelle",
+		"Sam Elliott"
+	],
+	"genres": [
+		"Romance",
+		"Drama",
+		"Musical"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67183"
+	},
+	"title": "The Hate U Give",
+	"year": 2018,
+	"cast": [
+		"Amandla Stenberg",
+		"Regina Hall",
+		"Russell Hornsby",
+		"KJ Apa",
+		"Algee Smith",
+		"Lamar Johnson",
+		"Issa Rae",
+		"Sabrina Carpenter",
+		"Common",
+		"Anthony Mackie"
+	],
+	"genres": [
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67184"
+	},
+	"title": "First Man",
+	"year": 2018,
+	"cast": [
+		"Ryan Gosling",
+		"Claire Foy",
+		"Jason Clarke",
+		"Kyle Chandler",
+		"Corey Stoll",
+		"Ciaran Hinds",
+		"Christopher Abbott",
+		"Patrick Fugit",
+		"Lukas Haas"
+	],
+	"genres": [
+		"Biography",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67185"
+	},
+	"title": "Smallfoot",
+	"year": 2018,
+	"cast": [
+		"Channing Tatum,James Corden,Zendaya,Common,LeBron James,Gina Rodriguez,Danny DeVito,Yara Shahidi,Ely Henry,Jimmy Tatro"
+	],
+	"genres": [
+		"Animated,Fantasy,Comedy"
+	],
+	"description": "A Yeti is convinced that the elusive creatures known as \"humans\" really do exist.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0,
+	"__v": 1
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67186"
+	},
+	"title": "The Oath",
+	"year": 2018,
+	"cast": [
+		"Ike Barinholtz",
+		"Tiffany Haddish",
+		"John Cho",
+		"Carrie Brownstein",
+		"Billy Magnussen",
+		"Meredith Hagner",
+		"Jon Barinholtz",
+		"Nora Dunn",
+		"Chris Ellis"
+	],
+	"genres": [
+		"Comedy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67187"
+	},
+	"title": "Halloween",
+	"year": 2018,
+	"cast": [
+		"Jamie Lee Curtis",
+		"Judy Greer",
+		"Andi Matichak",
+		"Will Patton",
+		"Virginia Gardner",
+		"Nick Castle",
+		"James Jude Courtney"
+	],
+	"genres": [
+		"Horror"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67188"
+	},
+	"title": "Can You Ever Forgive Me?",
+	"year": 2018,
+	"cast": [
+		"Melissa McCarthy",
+		"Richard E. Grant",
+		"Jane Curtin",
+		"Anna Deavere Smith",
+		"Dolly Wells",
+		"Jennifer Westfeldt"
+	],
+	"genres": [
+		"Biography",
+		"Drama",
+		"Comedy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67189"
+	},
+	"title": "Goosebumps 2: Haunted Halloween",
+	"year": 2018,
+	"cast": [
+		"Wendi McLendon-Covey",
+		"Madison Iseman",
+		"Jeremy Ray Taylor",
+		"Caleel Harris",
+		"Chris Parnell",
+		"Ken Jeong",
+		"Jack Black"
+	],
+	"genres": [
+		"Horror",
+		"Comedy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6718a"
+	},
+	"title": "Mid90s",
+	"year": 2018,
+	"cast": [
+		"Sunny Suljic",
+		"Lucas Hedges",
+		"Katherine Waterston"
+	],
+	"genres": [
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6718b"
+	},
+	"title": "Serenity",
+	"year": 2018,
+	"cast": [
+		"Matthew McConaughey",
+		"Anne Hathaway",
+		"Diane Lane",
+		"Jason Clarke",
+		"Djimon Hounsou",
+		"Jeremy Strong"
+	],
+	"genres": [
+		"Noir",
+		"Thriller",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6718c"
+	},
+	"title": "What They Had",
+	"year": 2018,
+	"cast": [
+		"Hilary Swank",
+		"Michael Shannon",
+		"Robert Forster",
+		"Blythe Danner",
+		"Taissa Farmiga",
+		"Josh Lucas"
+	],
+	"genres": [
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6718d"
+	},
+	"title": "Bad Times at the El Royale",
+	"year": 2018,
+	"cast": [
+		"Jeff Bridges",
+		"Cynthia Erivo",
+		"Chris Hemsworth",
+		"Dakota Johnson",
+		"Jon Hamm",
+		"Cailee Spaeny",
+		"Lewis Pullman",
+		"Nick Offerman"
+	],
+	"genres": [
+		"Drama",
+		"Action"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6718e"
+	},
+	"title": "Beautiful Boy",
+	"year": 2018,
+	"cast": [
+		"Steve Carell",
+		"Timothée Chalamet",
+		"Maura Tierney",
+		"Amy Ryan"
+	],
+	"genres": [
+		"Biography",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6718f"
+	},
+	"title": "Hunter Killer",
+	"year": 2018,
+	"cast": [
+		"Gerard Butler",
+		"Gary Oldman",
+		"Common",
+		"Toby Stephens",
+		"Linda Cardellini",
+		"David Gyasi",
+		"Gabriel Chavarria",
+		"Zane Holtz",
+		"Michael Nyqvist"
+	],
+	"genres": [
+		"Action",
+		"Thriller"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67190"
+	},
+	"title": "The Nutcracker and the Four Realms",
+	"year": 2018,
+	"cast": [
+		"Keira Knightley",
+		"Mackenzie Foy",
+		"Eugenio Derbez",
+		"Matthew Macfadyen",
+		"Richard E. Grant",
+		"Misty Copeland",
+		"Helen Mirren",
+		"Morgan Freeman"
+	],
+	"genres": [
+		"Fantasy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67191"
+	},
+	"title": "Indivisible",
+	"year": 2018,
+	"cast": [
+		"Justin Bruening",
+		"Sarah Drew",
+		"Jason George",
+		"Tia Mowry",
+		"Michael O'Neill",
+		"Eric Close",
+		"Madeline Carroll",
+		"Tanner Stine",
+		"Skye P. Marshall"
+	],
+	"genres": [
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67192"
+	},
+	"title": "Bohemian Rhapsody",
+	"year": 2018,
+	"cast": [
+		"Rami Malek",
+		"Lucy Boynton",
+		"Gwilym Lee",
+		"Ben Hardy",
+		"Joseph Mazzello",
+		"Aidan Gillen",
+		"Tom Hollander",
+		"Allen Leech",
+		"Mike Myers"
+	],
+	"genres": [
+		"Biography",
+		"Drama",
+		"Musical"
+	],
+	"description": "The story of the legendary rock band Queen and lead singer Freddie Mercury, leading up to their famous performance at Live Aid (1985).",
+	"avg_stars": 4.5,
+	"reviews": [
+		{
+			"stars": 4,
+			"_id": {
+				"$oid": "5cab390a431d111a312bf7d3"
+			},
+			"username": "Groot",
+			"votes": {
+				"_id": {
+					"$oid": "5cab390a431d111a312bf7d4"
+				},
+				"like": 1,
+				"dislike": 0
+			},
+			"text": "Really nice movie!",
+			"movie_id": "5c8d43ecf458d7546ff67192",
+			"date": {
+				"$date": "2019-04-08T12:05:30.474Z"
+			}
+		},
+		{
+			"stars": 5,
+			"_id": {
+				"$oid": "5cac7898b6217813f478149d"
+			},
+			"username": "stav",
+			"votes": {
+				"_id": {
+					"$oid": "5cac7898b6217813f478149e"
+				},
+				"like": 1,
+				"dislike": 0
+			},
+			"text": "Rami Malek for the Oscar!",
+			"movie_id": "5c8d43ecf458d7546ff67192",
+			"date": {
+				"$date": "2019-04-09T10:48:56.487Z"
+			}
+		}
+	],
+	"review_count": 2
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67193"
+	},
+	"title": "Nobody's Fool",
+	"year": 2018,
+	"cast": [
+		"Tiffany Haddish",
+		"Tika Sumpter",
+		"Omari Hardwick",
+		"Whoopi Goldberg",
+		"Amber Riley"
+	],
+	"genres": [
+		"Comedy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67194"
+	},
+	"title": "Boy Erased",
+	"year": 2018,
+	"cast": [
+		"Lucas Hedges",
+		"Joel Edgerton",
+		"Nicole Kidman",
+		"Russell Crowe"
+	],
+	"genres": [
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67195"
+	},
+	"title": "A Private War",
+	"year": 2018,
+	"cast": [
+		"Rosamund Pike",
+		"Jamie Dornan",
+		"Stanley Tucci",
+		"Tom Hollander"
+	],
+	"genres": [
+		"Biography",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67196"
+	},
+	"title": "Bodied",
+	"year": 2018,
+	"cast": [
+		"Calum Worthy",
+		"Jackie Long",
+		"Rory Uphold",
+		"Dumbfoundead",
+		"Walter Perez",
+		"Anthony Michael Hall"
+	],
+	"genres": [
+		"Comedy",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67197"
+	},
+	"title": "Suspiria",
+	"year": 2018,
+	"cast": [
+		"Dakota Johnson",
+		"Tilda Swinton",
+		"Mia Goth",
+		"Lutz Ebersdorf",
+		"Jessica Harper",
+		"Chloë Grace Moretz"
+	],
+	"genres": [
+		"Horror"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67198"
+	},
+	"title": "Wildlife",
+	"year": 2018,
+	"cast": [
+		"Carey Mulligan",
+		"Jake Gyllenhaal",
+		"Ed Oxenbould",
+		"Bill Camp"
+	],
+	"genres": [
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff67199"
+	},
+	"title": "Overlord",
+	"year": 2018,
+	"cast": [
+		"Jovan Adepo",
+		"Wyatt Russell",
+		"Jacob Anderson",
+		"Dominic Applewhite",
+		"Pilou Asbæk",
+		"Iain De Caestecker",
+		"John Magaro",
+		"Mathilde Ollivier",
+		"Bokeem Woodbine"
+	],
+	"genres": [
+		"Action",
+		"Horror",
+		"Thriller"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6719a"
+	},
+	"title": "The Grinch",
+	"year": 2018,
+	"cast": [
+		"Benedict Cumberbatch",
+		"Rashida Jones",
+		"Kenan Thompson",
+		"Cameron Seely",
+		"Angela Lansbury",
+		"Pharrell Williams"
+	],
+	"genres": [
+		"Animated",
+		"Family",
+		"Comedy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6719b"
+	},
+	"title": "Conundrum: Secrets Among Friends",
+	"year": 2018,
+	"cast": [
+		"Shaun Cairo (Screenplay)",
+		"Jo Marie Payton",
+		"Gary Leroi Gray",
+		"Paula Jai Parker",
+		"Parker McKenna Posey"
+	],
+	"genres": [
+		"Drama",
+		"Thriller"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6719c"
+	},
+	"title": "Fantastic Beasts: The Crimes of Grindelwald",
+	"year": 2018,
+	"cast": [
+		"Eddie Redmayne",
+		"Katherine Waterston",
+		"Alison Sudol",
+		"Dan Fogler",
+		"Ezra Miller",
+		"Jude Law",
+		"Johnny Depp",
+		"Zoë Kravitz",
+		"Callum Turner",
+		"Claudia Kim",
+		"William Nadylam",
+		"Carmen Ejogo",
+		"Kevin Guthrie",
+		"Poppy Corby-Tuech"
+	],
+	"genres": [
+		"Fantasy",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6719d"
+	},
+	"title": "Widows",
+	"year": 2018,
+	"cast": [
+		"Viola Davis",
+		"Michelle Rodriguez",
+		"Elizabeth Debicki",
+		"Cynthia Erivo",
+		"Colin Farrell",
+		"Brian Tyree Henry",
+		"Daniel Kaluuya",
+		"Garret Dillahunt",
+		"Carrie Coon",
+		"Jacki Weaver",
+		"Jon Bernthal",
+		"Manuel Garcia-Rulfo",
+		"Robert Duvall",
+		"Liam Neeson"
+	],
+	"genres": [
+		"Action",
+		"Thriller"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6719e"
+	},
+	"title": "Instant Family",
+	"year": 2018,
+	"cast": [
+		"Mark Wahlberg",
+		"Rose Byrne",
+		"Isabela Moner",
+		"Tig Notaro",
+		"Octavia Spencer"
+	],
+	"genres": [
+		"Comedy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff6719f"
+	},
+	"title": "Ralph Breaks the Internet",
+	"year": 2018,
+	"cast": [
+		"John C. Reilly",
+		"Sarah Silverman",
+		"Jack McBrayer",
+		"Jane Lynch",
+		"Taraji P. Henson",
+		"Gal Gadot",
+		"Alan Tudyk",
+		"Bill Hader",
+		"Alfred Molina"
+	],
+	"genres": [
+		"Animated",
+		"Fantasy",
+		"Adventure",
+		"Comedy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671a0"
+	},
+	"title": "The Front Runner",
+	"year": 2018,
+	"cast": [
+		"Hugh Jackman",
+		"Vera Farmiga",
+		"J. K. Simmons",
+		"Alfred Molina"
+	],
+	"genres": [
+		"Biography",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671a1"
+	},
+	"title": "The Girl in the Spider's Web",
+	"year": 2018,
+	"cast": [
+		"Claire Foy",
+		"Sverrir Gudnason",
+		"Lakeith Stanfield",
+		"Sylvia Hoeks",
+		"Stephen Merchant"
+	],
+	"genres": [
+		"Crime",
+		"Thriller"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671a2"
+	},
+	"title": "The Favourite",
+	"year": 2018,
+	"cast": [
+		"Emma Stone",
+		"Rachel Weisz",
+		"Olivia Colman",
+		"Nicholas Hoult",
+		"Joe Alwyn",
+		"Mark Gatiss"
+	],
+	"genres": [
+		"Biography",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671a3"
+	},
+	"title": "Creed II",
+	"year": 2018,
+	"cast": [
+		"Michael B. Jordan",
+		"Sylvester Stallone",
+		"Tessa Thompson",
+		"Dolph Lundgren",
+		"Florian Munteanu",
+		"Phylicia Rashad",
+		"Andre Ward",
+		"Wood Harris",
+		"Brigitte Nielsen"
+	],
+	"genres": [
+		"Sports",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671a4"
+	},
+	"title": "Anna and the Apocalypse",
+	"year": 2018,
+	"cast": [
+		"Ella Hunt",
+		"Malcolm Cumming",
+		"Marli Siu",
+		"Sarah Swire",
+		"Christopher Leveaux",
+		"Ben Wiggins"
+	],
+	"genres": [
+		"Horror",
+		"Musical",
+		"Comedy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671a5"
+	},
+	"title": "If Beale Street Could Talk",
+	"year": 2018,
+	"cast": [
+		"Kiki Layne",
+		"Stephan James",
+		"Teyonah Parris",
+		"Regina King",
+		"Dave Franco",
+		"Ed Skrein",
+		"Diego Luna",
+		"Emily Rios"
+	],
+	"genres": [
+		"Drama",
+		"Romance"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671a6"
+	},
+	"title": "Mary Queen of Scots",
+	"year": 2018,
+	"cast": [
+		"Saoirse Ronan",
+		"Margot Robbie",
+		"Jack Lowden",
+		"Martin Compston",
+		"Joe Alwyn",
+		"Brendan Coyle",
+		"David Tennant",
+		"Guy Pearce"
+	],
+	"genres": [
+		"Historical",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671a7"
+	},
+	"title": "Under the Silver Lake",
+	"year": 2018,
+	"cast": [
+		"Andrew Garfield",
+		"Riley Keough",
+		"Topher Grace",
+		"Zosia Mamet",
+		"Jimmi Simpson",
+		"Luke Baines",
+		"Patrick Fischler"
+	],
+	"genres": [
+		"Noir",
+		"Crime",
+		"Thriller"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671a8"
+	},
+	"title": "The Silence",
+	"year": 2018,
+	"cast": [
+		"Miranda Otto",
+		"Stanley Tucci",
+		"John Corbett"
+	],
+	"genres": [
+		"Drama",
+		"Thriller"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671a9"
+	},
+	"title": "Green Book",
+	"year": 2018,
+	"cast": [
+		"Viggo Mortensen",
+		"Mahershala Ali",
+		"Linda Cardellini"
+	],
+	"genres": [
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671aa"
+	},
+	"title": "Robin Hood",
+	"year": 2018,
+	"cast": [
+		"Taron Egerton",
+		"Jamie Foxx",
+		"Ben Mendelsohn",
+		"Eve Hewson",
+		"Jamie Dornan",
+		"Tim Minchin",
+		"Paul Anderson"
+	],
+	"genres": [
+		"Action",
+		"Adventure"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671ab"
+	},
+	"title": "This One's for the Ladies",
+	"year": 2018,
+	"cast": [
+		"C-Pudding",
+		"Poundcake",
+		"Tyga \u0026 Raw Dawg",
+		"Sweet Tea",
+		"Young Rider",
+		"Blaze",
+		"Michele",
+		"Double Trouble",
+		"Satan",
+		"Fever"
+	],
+	"genres": [
+		"Documentary"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671ac"
+	},
+	"title": "The Mule",
+	"year": 2018,
+	"cast": [
+		"Clint Eastwood",
+		"Bradley Cooper",
+		"Laurence Fishburne",
+		"Michael Peña",
+		"Dianne Wiest",
+		"Andy Garcia"
+	],
+	"genres": [
+		"Drama",
+		"Crime",
+		"Biography"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671ad"
+	},
+	"title": "Spider-Man: Into the Spider-Verse",
+	"year": 2018,
+	"cast": [
+		"Shameik Moore",
+		"Hailee Steinfeld",
+		"Mahershala Ali",
+		"Jake Johnson",
+		"Liev Schreiber",
+		"Brian Tyree Henry",
+		"Luna Lauren Velez",
+		"Lily Tomlin",
+		"John Mulaney",
+		"Kimiko Glenn",
+		"Nicholas Cage"
+	],
+	"genres": [
+		"Animated",
+		"Superhero",
+		"Action",
+		"Comedy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671ae"
+	},
+	"title": "Mortal Engines",
+	"year": 2018,
+	"cast": [
+		"Hera Hilmar",
+		"Robert Sheehan",
+		"Hugo Weaving",
+		"Jihae",
+		"Ronan Raftery",
+		"Leila George",
+		"Patrick Malahide",
+		"Stephen Lang"
+	],
+	"genres": [
+		"Science Fiction",
+		"Action",
+		"Adventure"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671af"
+	},
+	"title": "Second Act",
+	"year": 2018,
+	"cast": [
+		"Jennifer Lopez",
+		"Vanessa Hudgens",
+		"Leah Remini",
+		"Annaleigh Ashford",
+		"Freddie Stroma",
+		"Dan Bucatinsky",
+		"Milo Ventimiglia",
+		"Treat Williams",
+		"Larry Miller"
+	],
+	"genres": [
+		"Romance",
+		"Comedy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671b0"
+	},
+	"title": "Vice",
+	"year": 2018,
+	"cast": [
+		"Christian Bale",
+		"Amy Adams",
+		"Steve Carell",
+		"Sam Rockwell",
+		"Alison Pill",
+		"Jesse Plemons",
+		"Lily Rabe",
+		"Bill Pullman",
+		"Tyler Perry"
+	],
+	"genres": [
+		"Biography",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671b1"
+	},
+	"title": "Mary Poppins Returns",
+	"year": 2018,
+	"cast": [
+		"Emily Blunt",
+		"Lin-Manuel Miranda",
+		"Ben Whishaw",
+		"Emily Mortimer",
+		"Julie Walters",
+		"Colin Firth",
+		"Meryl Streep",
+		"Dick Van Dyke",
+		"Angela Lansbury"
+	],
+	"genres": [
+		"Musical",
+		"Fantasy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671b2"
+	},
+	"title": "Aquaman",
+	"year": 2018,
+	"cast": [
+		"Jason Momoa",
+		"Amber Heard",
+		"Willem Dafoe",
+		"Patrick Wilson",
+		"Dolph Lundgren",
+		"Yahya Abdul-Mateen II",
+		"Nicole Kidman"
+	],
+	"genres": [
+		"Superhero",
+		"Action",
+		"Adventure"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671b3"
+	},
+	"title": "Bumblebee",
+	"year": 2018,
+	"cast": [
+		"Hailee Steinfeld",
+		"John Cena",
+		"Jorge Lendeborg Jr.",
+		"Jason Drucker",
+		"Rachel Crow",
+		"Pamela Adlon"
+	],
+	"genres": [
+		"Action",
+		"Adventure",
+		"Science Fiction"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671b4"
+	},
+	"title": "Ben Is Back",
+	"year": 2018,
+	"cast": [
+		"Lucas Hedges",
+		"Julia Roberts",
+		"Kathryn Newton",
+		"Courtney B. Vance"
+	],
+	"genres": [
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671b5"
+	},
+	"title": "Welcome to Marwen",
+	"year": 2018,
+	"cast": [
+		"Steve Carell",
+		"Leslie Mann",
+		"Diane Kruger",
+		"Falk Hentschel",
+		"Janelle Monáe",
+		"Eiza Gonzalez",
+		"Gwendoline Christie"
+	],
+	"genres": [
+		"Fantasy",
+		"Drama"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5c8d43ecf458d7546ff671b8"
+	},
+	"title": "Holmes and Watson",
+	"year": 2018,
+	"cast": [
+		"Will Ferrell",
+		"John C. Reilly",
+		"Rebecca Hall",
+		"Ralph Fiennes",
+		"Rob Brydon",
+		"Kelly Macdonald",
+		"Lauren Lapkus",
+		"Hugh Laurie"
+	],
+	"genres": [
+		"Action",
+		"Mystery",
+		"Comedy"
+	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui ut risus rutrum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas feugiat vel enim eget pellentesque. Sed et velit nisl. Mauris congue est non diam lobortis, at tincidunt lorem tincidunt.",
+	"avg_stars": 0.0,
+	"reviews": [],
+	"review_count": 0.0
+},
+{
+	"_id": {
+		"$oid": "5cacdfda48074a0b2e4ff0b1"
+	},
+	"cast": [
+		" Daniel Day-Lewis",
+		"Paul Dano",
+		"Ciarán Hinds"
+	],
+	"genres": [
+		"Drama"
+	],
+	"avg_stars": 0,
+	"title": "There Will be blood",
+	"year": 2007,
+	"review_count": 0,
+	"reviews": [],
+	"description": "A story of family, religion, hatred, oil and madness, focusing on a turn-of-the-century prospector in the early days of the business.",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5caf3574c9939b08f1e7d61d"
+	},
+	"cast": [
+		"Jamie Foxx,Christoph Waltz,Leonardo DiCaprio"
+	],
+	"genres": [
+		"Drama,Western"
+	],
+	"avg_stars": 0,
+	"title": "Django Unchained",
+	"year": 2012,
+	"review_count": 0,
+	"reviews": [],
+	"description": "With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5cb09539b2dab00f57519cb0"
+	},
+	"cast": [
+		"Robert Downey Jr.,Chris Hemsworth,Mark Ruffalo"
+	],
+	"genres": [
+		"Action,Adventure,Sci-Fi"
+	],
+	"avg_stars": 5,
+	"title": "Avengers: Infinity War",
+	"year": 2018,
+	"review_count": 1,
+	"reviews": [
+		{
+			"stars": 5,
+			"_id": {
+				"$oid": "5cb095b0b2dab00f57519cb9"
+			},
+			"username": "Vana",
+			"votes": {
+				"_id": {
+					"$oid": "5cb095b0b2dab00f57519cba"
+				},
+				"like": 1,
+				"dislike": 0
+			},
+			"text": "Masterpiece!",
+			"movie_id": "5cb09539b2dab00f57519cb0",
+			"date": {
+				"$date": "2019-04-12T13:42:08.251Z"
+			}
+		}
+	],
+	"description": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5cb0b34830f5c420c02fd000"
+	},
+	"cast": [
+		""
+	],
+	"genres": [
+		"Biography,Crime,Drama"
+	],
+	"avg_stars": 0,
+	"title": "The Wolf Of Wall Street",
+	"year": 2013,
+	"review_count": 0,
+	"reviews": [],
+	"description": "",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5cb0b3f630f5c420c02fd001"
+	},
+	"cast": [
+		"Brad Pitt,Edward Norton,Meat Loaf"
+	],
+	"genres": [
+		"Drama"
+	],
+	"avg_stars": 0,
+	"title": "Fight Club",
+	"year": 1999,
+	"review_count": 0,
+	"reviews": [],
+	"description": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
+	"__v": 1
+},
+{
+	"_id": {
+		"$oid": "5cb0b46030f5c420c02fd002"
+	},
+	"cast": [
+		"Leonardo DiCaprio,Emily Mortimer,Mark Ruffalo"
+	],
+	"genres": [
+		"Mystery,Thriller"
+	],
+	"avg_stars": 0,
+	"title": "Shutter Island",
+	"year": 2010,
+	"review_count": 0,
+	"reviews": [],
+	"description": "In 1954, a U.S. Marshal investigates the disappearance of a murderer, who escaped from a hospital for the criminally insane.",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5cb0b4e930f5c420c02fd003"
+	},
+	"cast": [
+		"Guy Pearce,Carrie-Anne Moss,Joe Pantoliano"
+	],
+	"genres": [
+		"Mystery,Thriller"
+	],
+	"avg_stars": 0,
+	"title": "Memento",
+	"year": 2000,
+	"review_count": 0,
+	"reviews": [],
+	"description": "A man with short-term memory loss attempts to track down his wife's murderer.",
+	"__v": 0
+}]
+

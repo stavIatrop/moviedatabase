@@ -26,7 +26,7 @@ export class EditMovieComponent {
                 title: ['', Validators.required],
                 year: ['', Validators.required],
                 cast : [String],
-                genres : [String],
+                genres : ['', Validators.required],
                 description : ''
 
               })
@@ -113,8 +113,8 @@ export class EditMovieComponent {
     isIncomplete() {
 
     
-    return (this.isInvalid('title') ||
-            this.isInvalid('year') || this.movieForm.value.title == "" || this.movieForm.value.year == "");
+    return (this.isInvalid('genres') || this.isInvalid('title') ||
+    this.isInvalid('year') || this.movieForm.value.title == "" || this.movieForm.value.year == "" || this.movieForm.value.genres == "");
     }
 
     @HostListener('window:scroll') onScroll() {
