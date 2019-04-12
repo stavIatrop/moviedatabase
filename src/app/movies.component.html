@@ -89,7 +89,7 @@
                                 <div class="card-header" [routerLink] = "['/movies', movie._id]" style = "cursor: pointer">
                                     <b>{{ movie.title }}</b>  <span id="stars">{{movie.avg_stars}}<fa id="starsFa" name="star"></fa></span>
                                 </div>
-                                <h6 id="subtitle" class="card-subtitle text-muted">{{ movie.year }}</h6>
+                                <h6 id="subtitle" class="card-subtitle text-muted">({{ movie.year }}), {{movie.genres}}</h6>
                                 <div class="card-body">
                                         
                                         {{ movie.description }}
@@ -99,7 +99,8 @@
                                     <b>Cast: </b> 
                                     {{ movie.cast }}
                                     <span id="delEdit" *ngIf = "authService.isAuthenticated()"><button id="deleteButton" (click)="delete(movie)" type="button" class="btn btn-danger"><fa name="trash"></fa>Delete</button>
-                                   <button id="editButton" (click)="edit(movie)" type="button" class="btn"><fa name="edit"></fa>Edit</button></span>
+                                        <button id="editButton" (click)="edit(movie)" type="button" class="btn"><fa name="edit"></fa>Edit</button>
+                                    </span>
                                 
                                    </p> 
                                 </div>

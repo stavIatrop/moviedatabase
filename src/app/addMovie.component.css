@@ -123,11 +123,27 @@ input[type=search]:focus:not([readonly]) {
     font-size: 10px;
 }
 
+#genresAsterisk {
+
+    color: red;
+    position: absolute;
+    margin-left: 5px;
+    font-size: 10px;
+}
+
 #compAsterisk {
 
     color: red;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-size: 10px;
+    margin-left: 2px;
+}
+
+#saved {
+
+    color: green;
+    display: none;
+    margin-left: 10px;
 }
 
 #toTop {

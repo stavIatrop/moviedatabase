@@ -397,6 +397,13 @@ export class MovieComponent {
       this.webService.deleteReview(this.webService.movieID, review, this.selectedOptionSort);
     }
 
+    edit(movie) {
+
+      sessionStorage.setItem("movieEdit", JSON.stringify(movie));
+      this.router.navigate(["/editMovie"]);
+
+    }
+
     @HostListener('window:scroll') onScroll() {
       
       this.scrollFunction();

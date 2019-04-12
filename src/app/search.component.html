@@ -58,6 +58,8 @@
                             <select (change)="onChangeSort()" [(ngModel)]="selectedOptionSort"  id="selectSort">
                                 <option value="0" selected>Choose...</option>
                                 <option value='relevance'>Relevance</option>
+                                <option value='-avg_stars'>Rating (Top Rated First)</option>
+                                <option value='avg_stars'>Rating (Less Rated First)</option>
                                 <option value='title'>Title (Ascending)</option>
                                 <option value='-title'>Title (Descending)</option>
                                 <option value='year'>Year (Older First) </option>
@@ -84,13 +86,19 @@
                                                 <div class="card-header"  [routerLink] = "['/movies', movie._id]" style = "cursor: pointer">
                                                         {{ movie.title }} <span id="stars">{{movie.avg_stars}}<fa id="starsFa" name="star"></fa></span>
                                                 </div>
-                                                <h6 id="subtitle" class="card-subtitle text-muted">{{ movie.year }}</h6>
+                                                <h6 id="subtitle" class="card-subtitle text-muted">({{ movie.year }}), {{movie.genres}}</h6>
                                                 <div class="card-body">
                                                         
                                                         {{ movie.description }}
                                                 </div>
-                                                <div class="card-footer" style = "border:none;cursor: pointer">
-                                                    <a style="color:#132f47" [routerLink] = "['/movies', movie._id]">More...</a>
+                                                <div class="card-footer" style = "border:none;">
+                                                    <p>
+                                                        <a style="color:#132f47" [routerLink] = "['/movies', movie._id]">More...</a>
+                                                        <span id="delEdit" *ngIf = "authService.isAuthenticated()"><button id="deleteButton" (click)="delete(movie)" type="button" class="btn btn-danger"><fa name="trash"></fa>Delete</button>
+                                                            <button id="editButton" (click)="edit(movie)" type="button" class="btn"><fa name="edit"></fa>Edit</button>
+                                                        </span>
+                                                    </p>
+                                                    
                                                 </div>
                                             </div>
                                         </div>

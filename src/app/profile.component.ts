@@ -32,6 +32,7 @@ export class ProfileComponent {
         if(sessionStorage.movieEdit) {
             sessionStorage.removeItem("movieEdit");
         }
+        
         if(this.route.snapshot.params.username == "") {
             this.router.navigate(['/']);
         }

@@ -55,8 +55,9 @@ module.exports.search = function(req, res) {
                     
                     var relevance = 0;
                     var titleWords = docs[i].title.trim().split(/[ ,]+/).filter(Boolean);
-                    var genres = docs[i].genres; 
-
+                    var genres = docs[i].genres.toString();
+                    genres = genres.trim().split(/[ ,]+/).filter(Boolean);
+                    
                     for(var j = 0; j < searchWords.length; j++) {
 
                         
@@ -78,10 +79,10 @@ module.exports.search = function(req, res) {
                         }
 
                         
-                        //console.log(genres);
+                        // console.log(genres);
 
-                        for( var k = 0; k < genres.length; k++) {
-
+                        for( var k = 0; k < genres.length; k++) {    
+                            
                             if(genres[k].toUpperCase() === searchWords[j].toUpperCase()) {      //if search word matches one of genres
                             
                                 //docs2.push(docs[i]);
@@ -170,7 +171,7 @@ module.exports.moviesGetAll = function(req, res) {
     //     return;
     // }
     
-    console.log(sort);
+    
 
     Movie
         .find()

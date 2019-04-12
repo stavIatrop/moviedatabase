@@ -107,10 +107,41 @@ input[type=search]:focus:not([readonly]) {
 
 }
 
+
 #subtitle {
     margin-top: 5px;
     margin-left: 20px;
 }
+
+
+#delEdit {
+    float: right;
+}
+#deleteButton {
+
+    margin-right: 5px;
+    /* float: right; */
+    /* box-shadow: 0 0 0 1px red; */
+}
+#deleteButton:hover {
+    
+    background-image: linear-gradient(to bottom right, #bb2828, #f50000);
+}
+
+#editButton {
+
+    box-shadow: 0 0 0 1px rgb(19, 47, 71);
+    background-color: #132f47;
+    color: white;
+    float: right;
+}
+
+#editButton:hover{
+
+    background-image: linear-gradient(to bottom right, #235581, #132f47);
+
+}
+
 
 #toTop {
     display: none; /* Hidden by default */

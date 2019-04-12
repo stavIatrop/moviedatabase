@@ -26,7 +26,7 @@ export class AddMovieComponent {
                     title: ['', Validators.required],
                     year: ['', Validators.required],
                     cast : [String],
-                    genres : [String],
+                    genres : ['', Validators.required],
                     description : ''
 
                   })
@@ -61,14 +61,17 @@ export class AddMovieComponent {
 
     onSubmitMovie() {
 
-      var cast = this.movieForm.value.cast.split(/[,]/);
+      var cast = this.movieForm.value.cast.toString();
+        
+      cast = cast.split(/[,]/);
       
       for(var i = 0; i < cast.length;  i++) {
         cast[i] = cast[i].trim();
       }
       cast = cast.filter(Boolean);
       
-      var genres = this.movieForm.value.genres.split(/[,]/);
+      var genres = this.movieForm.value.genres.toString();
+      genres = genres.split(/[,]/);
       
       for(var i = 0; i < genres.length;  i++) {
         genres[i] = genres[i].trim();
@@ -81,6 +84,11 @@ export class AddMovieComponent {
       
     }
 
+    onChange() {
+      
+      document.getElementById("saved").style.display = "none";
+    }
+    
     isInvalid(control) {
       return this.movieForm.controls[control].invalid &&
               this.movieForm.controls[control].touched
@@ -89,8 +97,8 @@ export class AddMovieComponent {
     isIncomplete() {
 
       
-      return (this.isInvalid('title') ||
-              this.isInvalid('year') || this.movieForm.value.title == "" || this.movieForm.value.year == "");
+      return (this.isInvalid('genres') || this.isInvalid('title') ||
+              this.isInvalid('year') || this.movieForm.value.title == "" || this.movieForm.value.year == "" || this.movieForm.value.genres == "");
     }
 
 

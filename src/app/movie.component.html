@@ -43,12 +43,12 @@
 <div class="container" style="margin-top:100px;">
     <div class="row">
         <div class="col-sm-12">
-                <span *ngIf = "!authService.isAuthenticated()">
+                <!-- <span *ngIf = "!authService.isAuthenticated()">
                         <h5 id="text">
                             Please log in to edit or remove a movie
                         </h5>
                 <hr>
-                </span>
+                </span> -->
 
             <div *ngFor = "let movie of webService.movie_list | async">
                 <div class="row">
@@ -58,7 +58,7 @@
                                 <div class="card-header">
                                     <b>{{ movie.title }}</b>  <span id="stars">{{movie.avg_stars}}<fa id="starsFa" name="star"></fa></span>
                                 </div>
-                                <h6 id="subtitle" class="card-subtitle text-muted">{{ movie.year }}</h6>
+                                <h6 id="subtitle" class="card-subtitle text-muted">({{ movie.year }}), {{movie.genres}}</h6>
                                 <div class="card-body">
                                         
                                         {{ movie.description }}
@@ -67,8 +67,10 @@
                                     <p>
                                         <b>Cast: </b> 
                                         {{ movie.cast }}
-                                        <span id="delEdit" *ngIf = "authService.isAuthenticated()"><button id="deleteButtonMovie" (click)="delete(movie)" type="button" class="btn btn-danger"><fa name="trash"></fa>Delete</button>
-                                        <button id="editButton" (click)="edit(movie)" type="button" class="btn"><fa name="edit"></fa>Edit</button></span>
+                                        <span id="delEdit" *ngIf = "authService.isAuthenticated()">
+                                            <!-- <button id="deleteButtonMovie" (click)="delete(movie)" type="button" class="btn btn-danger"><fa name="trash"></fa>Delete</button> -->
+                                            <button id="editButton" (click)="edit(movie)" type="button" class="btn"><fa name="edit"></fa>Edit</button>
+                                    </span>
                                     
                                     </p> 
                                 </div>

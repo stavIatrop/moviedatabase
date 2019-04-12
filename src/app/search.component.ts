@@ -15,7 +15,8 @@ export class SearchComponent {
 
     constructor(private webService: WebService,
                 private formBuilder: FormBuilder,
-                private router: Router){
+                private router: Router,
+                private authService: AuthService,){
 
                     this.searchForm = formBuilder.group ( {
                         searchWords: ""
@@ -299,6 +300,25 @@ export class SearchComponent {
       {
         this.webService.getResults(this.start, this.selectedOptionSort)
       }
+    }
+
+    delete(movie) {
+      
+      console.log(this.start);
+      if(this.start == this.webService.numberOfResults - 1) {
+        this.start = Number(this.start) - this.webService.searchRes_per_page;
+        if(this.start < 0) {
+          this.start = Number(this.start) + this.webService.searchRes_per_page;
+        }
+      }
+      this.webService.deleteMovieSearch( movie, this.start, this.selectedOptionSort);
+    }
+
+    edit(movie) {
+
+      sessionStorage.setItem("movieEdit", JSON.stringify(movie));
+      this.router.navigate(["/editMovie"]);
+
     }
 
     @HostListener('window:scroll') onScroll() {

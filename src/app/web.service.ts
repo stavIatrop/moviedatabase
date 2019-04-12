@@ -288,7 +288,7 @@ export class WebService {
         this.http.post("http://localhost:3000/api/movies", urlSearchParams)
                 .subscribe(
                     response => {
-                        console.log(response.json());
+                        document.getElementById("saved").style.display = "inline-block";
                     }
                 )
         
@@ -305,8 +305,18 @@ export class WebService {
 
                                 }
                             )
+    }
 
+    deleteMovieSearch(movie, start, sort)  {
 
+        
+        this.http.delete("http://localhost:3000/api/movies/" + movie._id)
+                            .subscribe(
+                                response => {
+                                    this.getResults(start, sort );
+
+                                }
+                            )
     }
 
     updateMovie(movieId, movie) {
