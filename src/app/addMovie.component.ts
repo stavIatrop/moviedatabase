@@ -46,10 +46,13 @@ export class AddMovieComponent {
 
     ngOnInit() {
 
+      if(sessionStorage.movieEdit) {
+        sessionStorage.removeItem("movieEdit");
+      }
       this.webService.fillYearArray();
     }
 
-    onSubmit() {
+    onSubmitSearch() {
     
         console.log(this.searchForm.value.searchWords);
         sessionStorage.setItem("searchString", this.searchForm.value.searchWords);

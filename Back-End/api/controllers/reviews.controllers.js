@@ -1,6 +1,36 @@
 var mongoose = require('mongoose');
 var Movie = mongoose.model('Movie');
 
+module.exports.reviewsByUsername = function(req, res) {
+
+    var username = req.params.username;
+    console.log("GET reviews from " + username);
+
+    Movie
+        .find({"reviews.username" : username})
+        .select("reviews title")
+        .exec(function(err, doc) {
+
+            var response = {
+                status : 200,
+                message : doc
+            }
+            if(err) {
+                response.status = 500;
+                response.message = err;
+
+            }else if (!doc){
+                response.status = 404;
+                response.message = { "message" : 
+                                        "Reviews for " + username + " not found"};
+            }
+            res
+                .status(response.status)
+                .json(response.message);
+            
+        });
+}
+
 module.exports.reviewsGetAll = function(req, res) {
 
     var movieID = req.params.movieID;

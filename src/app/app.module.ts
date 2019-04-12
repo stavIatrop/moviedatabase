@@ -23,7 +23,7 @@ import { SearchComponent } from './search.component';
 import { AddMovieComponent } from './addMovie.component';
 import { FooterComponent } from './foot.component';
 import { EditMovieComponent } from './editMovie.component';
-
+import { ProfileComponent } from './profile.component';
 
 var routes = [
   {
@@ -65,6 +65,10 @@ var routes = [
   {
     path: 'editMovie',
     component: EditMovieComponent
+  },
+  {
+    path: 'profile/:username',
+    component: ProfileComponent
   }
 
 
@@ -74,7 +78,7 @@ var routes = [
   declarations: [
     AppComponent, MoviesComponent, HomeComponent,
     MovieComponent, LoginComponent, SignUpComponent, UnderConstructionComponent, CallbackComponent, NavComponent,
-    SearchComponent, AddMovieComponent, FooterComponent, EditMovieComponent
+    SearchComponent, AddMovieComponent, FooterComponent, EditMovieComponent, ProfileComponent
   ],
   imports: [
     BrowserModule, HttpModule, RouterModule.forRoot(routes),

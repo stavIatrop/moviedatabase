@@ -32,6 +32,9 @@ export class HomeComponent {
   }
   ngOnInit() {
 
+    if(sessionStorage.movieEdit) {
+      sessionStorage.removeItem("movieEdit");
+    }
     // if(sessionStorage.user) {
 
     //   this.userLoggedIn = 1;

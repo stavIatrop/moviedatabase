@@ -53,19 +53,14 @@ export class MovieComponent {
     selectedOptionSort = "0";
 
     ngOnInit() {
-      this.webService.getMovie(this.route.snapshot.params.id, this.selectedOptionSort);
-      // let roundedItems = document.getElementsByClassName("rounded") as HTMLCollectionOf<HTMLElement>;
-      // for(var i = 0; i < roundedItems.length; i++ ) {
 
-      //   roundedItems[i].style.boxShadow = "0 0 0 1px rgb(19, 47, 71)";
-      //   roundedItems[i].style.marginLeft = "40px;";
-      // }
-      //this.webService.getReviews(this.route.snapshot.params.id, this.start, "default" );
-      //this.currentRate = 3;
-      // this.webService.movie_list
-      //     .subscribe(movies => {
-      //         this.movie_list = movies
-      //     })
+      if(sessionStorage.movieEdit) {
+        sessionStorage.removeItem("movieEdit");
+      }
+
+      this.webService.getMovie(this.route.snapshot.params.id, this.selectedOptionSort);
+     
+      
     }
 
 

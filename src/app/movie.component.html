@@ -123,7 +123,7 @@
         <div class="col-sm-12">
             <div class="card bg-light mb-3" *ngFor ="let review of webService.reviews | async; index as i">
                 <div class="card-header">
-                    Review by {{ review.username }}
+                    Review by <a style="color:#132f47;text-decoration: underline;" [routerLink]="['/profile', review.username]"><b>{{ review.username }}</b></a>
                     on {{ review.date | date }}
                 </div>
                 <div class="card-body">
@@ -133,9 +133,9 @@
                 </div>
                 <div class="card-footer">
                     <p><strong>Votes:</strong>
-                        {{ review.votes.like }} <fa name="thumbs-up"></fa>,
-                        {{ review.votes.dislike }} <fa name="thumbs-down"></fa>
-                        <button *ngIf = "authService.isAuthenticated()" class="btn rounded" (click)="likeSubmit(review, i)" id="likeButton{{i}}"><fa name="thumbs-up"></fa>Like!</button> <button *ngIf = "authService.isAuthenticated()" class="btn rounded" (click)="dislikeSubmit(review, i)" id="dislikeButton{{i}}"><fa name="thumbs-down"></fa>Dislike!</button> 
+                        {{ review.votes.like }} <fa style="color: green;" name="thumbs-up"></fa>,
+                        {{ review.votes.dislike }} <fa  style="color: red;" name="thumbs-down"></fa>
+                        <button *ngIf = "authService.isAuthenticated()" class="btn rounded" (click)="likeSubmit(review, i)" id="likeButton{{i}}"><fa  name="thumbs-up"></fa>Like!</button> <button *ngIf = "authService.isAuthenticated()" class="btn rounded" (click)="dislikeSubmit(review, i)" id="dislikeButton{{i}}"><fa name="thumbs-down"></fa>Dislike!</button> 
                         <span *ngIf = "authService.isAuthenticated()"><button id="deleteButton" (click)="delete(review)" type="button" class="btn btn-danger"><fa name="trash"></fa>Delete</button></span>
                     
                     </p>

@@ -28,6 +28,11 @@ export class MoviesComponent {
     // }
 
     ngOnInit() {
+
+      if(sessionStorage.movieEdit) {
+        sessionStorage.removeItem("movieEdit");
+      }
+      
       if (sessionStorage.start) {
         this.start = sessionStorage.start;
       }

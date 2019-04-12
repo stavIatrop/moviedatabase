@@ -104,7 +104,11 @@ export class SearchComponent {
 
     ngOnInit() {
 
-        this.webService.getResults(this.start, "default");
+      if(sessionStorage.movieEdit) {
+        sessionStorage.removeItem("movieEdit");
+      }
+
+      this.webService.getResults(this.start, "default");
         
     }
 

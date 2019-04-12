@@ -39,6 +39,10 @@ router
 router
     .route('/search')
     .get(moviesController.search);
+
+router
+    .route('/profile/:username')
+    .get(reviewsController.reviewsByUsername);
     
 router
     .route('/users')

@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { WebService } from './web.service';
-import { ActivatedRoute } from '@angular/router';
-import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'underConstruction',
@@ -9,4 +6,11 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./underConstruction.component.css']
 })
 
-export class UnderConstructionComponent {}
+export class UnderConstructionComponent {
+
+  ngOnInit() {
+    if(sessionStorage.movieEdit) {
+      sessionStorage.removeItem("movieEdit");
+    }
+  }
+}

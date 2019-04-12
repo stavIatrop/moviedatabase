@@ -242,6 +242,39 @@ export class WebService {
                 }
             )
     }
+    username;
+    
+    private userReviews_private_list = [];
+    private userRevSubject = new Subject();
+    userReviews_list = this.userRevSubject.asObservable();
+    totalReviews;
+    getProfile(username) {
+
+        this.username = username;
+        this.http.get("http://localhost:3000/api/profile/" + username )
+                    .subscribe(
+                        response => {
+
+                            var res = response.json();
+                            
+                            this.userReviews_private_list = [];
+                            for(var i = 0; i < res.length; i++) {
+                                var revs = res[i].reviews;
+                                for(var j = 0; j < revs.length; j++) {
+
+                                    if(revs[j].username == username) {
+                                        this.userReviews_private_list.push(revs[j]);
+                                        this.userReviews_private_list[this.userReviews_private_list.length - 1].title = res[i].title;
+                                    }
+                                }
+                            }
+                            this.totalReviews = this.userReviews_private_list.length;
+                           
+                            this.userRevSubject.next(this.userReviews_private_list);
+
+                        }
+                    )
+    }
 
     postMovie(movie, cast, genres) {
 
