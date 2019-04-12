@@ -48,6 +48,11 @@ input[type=search]:focus:not([readonly]) {
     list-style: none;
 }
 
+#text {
+
+    color: #132f47;
+}
+
 #moviesFa {
 
     
@@ -73,13 +78,13 @@ input[type=search]:focus:not([readonly]) {
     margin-top: 30px;
 }
 
-#selectView {
+/* #selectView {
 
     margin-top: -43px;
     margin-left: 75px;
     height: 30px;
 
-}
+} */
 
 #pageButton:focus {
 
@@ -87,13 +92,13 @@ input[type=search]:focus:not([readonly]) {
     background-color: #132f47;
 }
 
-#selectSort {
+/* #selectSort {
 
     margin-bottom: 10%;
     margin-left: 10px;
     height: 30px;
 
-}
+} */
 
 #stars {
 
@@ -113,6 +118,21 @@ input[type=search]:focus:not([readonly]) {
     margin-left: 20px;
 }
 
+#selectSort {
+
+    margin-bottom: 10%;
+    margin-left: 10px;
+    height: 30px;
+
+}
+
+#selectView {
+
+    margin-top: 0px;
+    margin-left: 10px;
+    height: 30px;
+
+}
 
 #delEdit {
     float: right;

@@ -12,8 +12,8 @@ export class CallbackComponent {
     constructor(private router: Router) {}
 
     ngOnInit() {
-        // window.setTimeout(
-        //     "window.location.href = sessionStorage.url;",200)
-        window.location.href = sessionStorage.url;
+        window.setTimeout(
+            "window.location.href = sessionStorage.url;",300)
+        //window.location.href = sessionStorage.url;
     }
 }
