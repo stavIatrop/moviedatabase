@@ -3,11 +3,11 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 
 
-##Prerequisites
+## Prerequisites
 
 There a couple of things that need to be installed to run the application.
 
-###Install Node.js
+### Install Node.js
 
 The application requires [Node.js](https://nodejs.org/) to run.
 
@@ -21,7 +21,7 @@ Npm, Node.js package manager is also required.
 ```sh
 $ sudo apt npm
 ```
-###Install MongoDB
+### Install MongoDB
 
 After installing Node.js, [MongoDB](http://www.mongodb.org) is required to be installed.
 
@@ -47,7 +47,7 @@ To start the server:
 $ sudo systemctl start mongodb
 ```
 
-###Install Angular
+### Install Angular
 
 ```sh
 $ npm -g install @angular/cli
@@ -65,12 +65,12 @@ Navigate to the moviedatabase directory and type:
 $ npm install
 ```
 
-###Import database
+### Import database
 
 ```sh
 $ mongoimport --db moviesDB --collection movies --jsonArray movies.json
 ```
-##Running the application
+## Running the application
 
 Navigate to the moviedatabase directory and type:
 
@@ -85,5 +85,5 @@ $ node app.js
 
 Then, open the browser and type [http://localhost:4200/] and the application is running!
 
-###Note
+### Note
 Login only works with google account.
