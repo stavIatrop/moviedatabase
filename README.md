@@ -2,26 +2,88 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+##Prerequisites
 
-## Code scaffolding
+There a couple of things that need to be installed to run the application.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+###Install Node.js
 
-## Build
+The application requires [Node.js](https://nodejs.org/) to run.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```sh
+$ sudo apt update
+$ sudo apt install nodejs
+```
 
-## Running unit tests
+Npm, Node.js package manager is also required.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```sh
+$ sudo apt npm
+```
+###Install MongoDB
 
-## Running end-to-end tests
+After installing Node.js, [MongoDB](http://www.mongodb.org) is required to be installed.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```sh
+$ sudo apt update
+$ sudo apt install -y mongodb
+```
+To verify the status of the server:
 
-## Further help
+```sh
+$ sudo systemctl status mongodb
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To stop the server:
+
+```sh
+$ sudo systemctl stop mongodb
+```
+
+To start the server:
+
+```sh
+$ sudo systemctl start mongodb
+```
+
+###Install Angular
+
+```sh
+$ npm -g install @angular/cli
+```
+
+Downgrade Angular so that is compatible with Node.js v8.10.0:
+
+```sh
+$ npm -g install @angular/cli@1.6.8
+```
+
+Navigate to the moviedatabase directory and type:
+
+```sh
+$ npm install
+```
+
+###Import database
+
+```sh
+$ mongoimport --db moviesDB --collection movies --jsonArray movies.json
+```
+##Running the application
+
+Navigate to the moviedatabase directory and type:
+
+```sh
+$ ng serve
+```
+Then, navigate to Back-End directory and type:
+
+```sh
+$ node app.js
+```
+
+Then, open the browser and type [http://localhost:4200/] and the application is running!
+
+###Note
+Login only works with google account.
